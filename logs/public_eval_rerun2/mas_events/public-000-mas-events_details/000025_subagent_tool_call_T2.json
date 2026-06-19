@@ -1,0 +1,22 @@
+{
+  "seq": 25,
+  "timestamp": "2026-06-19T02:14:41.738607+00:00",
+  "event_type": "tool_call",
+  "component": "subagent",
+  "iteration": null,
+  "assignment_id": "T2",
+  "payload": {
+    "agent_name": "RegulatoryNewsAgent",
+    "round": 0,
+    "call": {
+      "tool_name": "web_search",
+      "args": {
+        "search_query": "US Steel Nippon Steel merger CFIUS DOJ status 2025",
+        "number_of_results": 10,
+        "start_date": "2024-01-01",
+        "end_date": "2025-04-07"
+      },
+      "purpose": "Find latest regulatory and news updates on the Nippon Steel/US Steel merger, especially CFIUS and DOJ actions, and any company statements."
+    }
+  }
+}

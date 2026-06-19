@@ -1,0 +1,73 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "The Q2 2024 guidance was provided during the Q1 2024 earnings release. Let me look for the exact AMD press release from April/May 2024. But actually, I also found one source (Shacknews) that says:\n\n\"AMD shared its revenue forecast in its Q1 2024 earnings report this afternoon. The company is expecting $5.7 billion in Q2 2024\" - This suggests the midpoint was $5.7 billion.\n\nAnd from Benzinga, Sahm Capital and other sources: \"Guidance from the company calls for second-quarter revenue in a range of $5.4 billion to $6.0 billion.\"\n\nAnd the Yahoo Finance article says: \"AMD said it expects Q2 revenue of between $5.4 billion and $6 billion.\"\n\nLet me also get the exact AMD press release for Q1 2024 earnings.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 0.0011011,
+        "output": 0.00014454,
+        "reasoning": 0.00039858,
+        "cache_read": 0.005555200000000001,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.007199420000000001,
+        "total_input": 0.0066563,
+        "total_output": 0.00054312
+      },
+      "duration_seconds": 3.3980403329769615,
+      "in_tokens": 2002,
+      "out_tokens": 66,
+      "reasoning_tokens": 182,
+      "cache_read_tokens": 39680,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 41682,
+      "total_output_tokens": 248
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_tw76U5LWdtqlXLdr2rlV2346",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD Q1 2024 earnings press release \\\"second quarter\\\" \\\"approximately\\\" revenue guidance globenewswire\"}",
+        "parsed_args": {
+          "search_query": "AMD Q1 2024 earnings press release \"second quarter\" \"approximately\" revenue guidance globenewswire"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_tw76U5LWdtqlXLdr2rlV2346",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD Q1 2024 earnings press release \\\"second quarter\\\" \\\"approximately\\\" revenue guidance globenewswire\"}",
+        "parsed_args": {
+          "search_query": "AMD Q1 2024 earnings press release \"second quarter\" \"approximately\" revenue guidance globenewswire"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://247wallst.com/companies/amd/earnings/2024/Q1\", \"title\": \"AMD (AMD) Earnings Report Q1 2024 | Beat, EPS & Revenue | 24/7 Wall St.\", \"content\": \"For Q2 2026, AMD expects revenue of approximately $11.2 billion, plus or minus $300 million, representing year-over-year growth of approximately 46% and sequential growth of approximately 9%. Non-GAAP gross margin is expected to be approximately 56%. Non-GAAP operating expenses are expected to be approximately $3.3 billion. The company expects non-GAAP interest expense/other income (expense), net of $60 million, a non-GAAP effective tax rate of 13% of pre-tax income, and diluted share count of\", \"score\": 0.9303372356122012, \"raw_content\": null}, {\"url\": \"https://ca.investing.com/news/stock-market-news/amd-posts-q1-earnings-beat-but-weak-guidance-sends-shares-lower-3376728\", \"title\": \"AMD posts Q1 earnings beat but weak guidance sends shares lower By Proactive Investors\", \"content\": \"For Q2, AMD guided revenue in the range of $5.4 billion to $6 billion, representing year-over-year growth of 6% at the midpoint of $5.7 billion, slightly below the Wall Street consensus of $5.72 billion.\\n\\nAMD\\u2019s adjusted gross margin is expected to be approximately 53%.\\n\\nFor Q1, revenue of $5.5 billion was ahead of AMD\\u2019s guidance of $5.4 billion and Wall Street estimates of $5.42 billion.\\n\\nIt marked a 2% increase over the year-ago quarter but 11% drop sequentially from $6.2 billion in Q4.\", \"score\": 0.9267729883339554, \"raw_content\": null}, {\"url\": \"https://investors.costargroup.com/static-files/a4069647-e7e4-4c99-a56b-07bfafd5accc\", \"title\": \"Q1 2024 Earnings Press Release\", \"content\": \"Q1 2024 Earnings Press Release\", \"score\": 0.9246367324500067, \"raw_content\": null}, {\"url\": \"https://www.thecanadianpressnews.ca/globenewswire_press_releases/gatos-silver-reports-q1-2024-production-results-at-top-end-of-guidance/article_2e26c549-dfdd-57b9-bc2c-95976cb59220.html\", \"title\": \"Gatos Silver Reports Q1 2024 Production Results at Top End of Guidance | GlobeNewswire Press Releases | thecanadianpressnews.ca\", \"content\": \"speak only as of the date of this press release.\", \"score\": 0.9138101777663066, \"raw_content\": null}, {\"url\": \"https://www.prnewswire.com/apac/news-releases/trane-technologies-reports-strong-second-quarter-results-and-raises-2024-revenue-and-eps-guidance-302213205.html\", \"title\": \"Trane Technologies Reports Strong Second Quarter Results and Raises 2024 Revenue and EPS Guidance\", \"content\": \"The Company expects full-year reported and organic revenue growth of approximately 10 percent; reported revenue growth includes approximately 1 percentage point of M&A offset by approximately 1 percentage point of negative foreign exchange.\\n   The Company expects GAAP and adjusted continuing EPS for full-year 2024 of approximately $10.80.\", \"score\": 0.9099368947327799, \"raw_content\": null}, {\"url\": \"https://markets.financialcontent.com/stocks/article/gnwcq-2024-7-16-cvr-energy-to-release-second-quarter-2024-earnings-results\", \"title\": \"FinancialContent - CVR Energy to Release Second Quarter 2024 Earnings Results\", \"content\": \"CVR Energy\\u2019s second quarter 2024 earnings news release will be distributed via GlobeNewswire and posted at www.CVREnergy.com.\", \"score\": 0.9034901775202124, \"raw_content\": null}, {\"url\": \"https://www.cnbc.com/2018/04/25/amd-earnings-q1-2018.html\", \"title\": \"AMD earnings Q1 2018\", \"content\": \"AMD issues stronger-than-expected Q2 revenue guidance\\n\\nwatch now\\n\\nVIDEO0:2700:27\\n\\nAMD issues stronger-than-expected Q2 revenue guidance\\n\\nClosing Bell\\n\\nAMD shares jumped 11 percent on Wednesday after the chipmaker reported better-than-expected first quarter results.\\n\\n Earnings: 11 cents per share, excluding certain items, vs. 9 cents per share as expected by analysts, according to Thomson Reuters.\\n Revenue: $1.65 billion vs. $1.57 billion as expected by analysts, according to Thomson Reuters.\", \"score\": 0.9025025920669496, \"raw_content\": null}, {\"url\": \"https://www.entergy.com/news/entergy-provides-preliminary-second-quarter-earnings-guidance\", \"title\": \"Entergy Provides Preliminary Second Quarter Earnings Guidance - Entergy\", \"content\": \"annual revenues of more than $11 billion and approximately 14,000 employees.\", \"score\": 0.9007571049961518, \"raw_content\": null}, {\"url\": \"https://www.thecanadianpressnews.ca/globenewswire_press_releases/badger-infrastructure-solutions-ltd-delivers-solid-growth-in-2024-second-quarter-revenue-adjusted-ebitda-and/article_2f59ecf7-f3f5-5885-9fbf-dd3257430930.html\", \"title\": \"Badger Infrastructure Solutions Ltd. Delivers Solid Growth in 2024 Second Quarter Revenue, Adjusted EBITDA and Adjusted Net | GlobeNewswire Press Releases | thecanadianpressnews.ca\", \"content\": \"\\u201cforward-looking information\\u201d within the meaning of applicable Canadian securities legislation. + Badger\\u2019s continued focus on operational, functional and administrative scalability to drive operating leverage and continue growing Adjusted EBITDA margins and Adjusted net earnings at a higher rate than revenue growth;. The forward-looking information and statements made in this press release rely on certain expected economic conditions and overall demand for Badger\\u2019s services and are based on\", \"score\": 0.8850017353425722, \"raw_content\": null}, {\"url\": \"https://www.thecanadianpressnews.ca/globenewswire_press_releases/bird-construction-inc-announces-2024-second-quarter-financial-results/article_cbc6106a-53d9-51c4-8a06-9e3ce8fa15a3.html\", \"title\": \"Bird Construction Inc. Announces 2024 Second Quarter Financial Results | GlobeNewswire Press Releases | thecanadianpressnews.ca\", \"content\": \"This News Release contains terminology and financial measures that do not have standard meanings under IFRS and may not be comparable with similar measures presented by other companies. Further information regarding these measures can be found in the \\u201cTerminology and Non-GAAP & Other Financial Measures\\u201d section of this News Release.\\n\\nHIGHLIGHTS\", \"score\": 0.878378129463521, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.139,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 4.553,
+  "retry_overhead_seconds": 0.013,
+  "effective_duration_seconds": 4.54
+}

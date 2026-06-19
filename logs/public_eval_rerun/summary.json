@@ -1,0 +1,27 @@
+{
+  "num_questions": 6,
+  "labels": [
+    "baseline",
+    "mas",
+    "reference"
+  ],
+  "average_scores": {
+    "baseline": 0.8190740740740741,
+    "mas": 0.5981666666666666,
+    "reference": 1.0
+  },
+  "pass_rates": {
+    "baseline": 0.5,
+    "mas": 0.3333333333333333,
+    "reference": 1.0
+  },
+  "mas_vs_baseline": {
+    "comparable": 6,
+    "mas_wins": 0,
+    "baseline_wins": 4,
+    "ties": 2,
+    "mas_win_rate_excluding_ties": 0.0,
+    "mas_non_loss_rate": 0.3333333333333333
+  },
+  "reference_average_score": 1.0
+}

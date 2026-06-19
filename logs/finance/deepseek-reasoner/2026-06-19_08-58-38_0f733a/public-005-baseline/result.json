@@ -1,0 +1,1311 @@
+{
+  "final_answer": "## Answer: Amazon (AMZN) plans to spend the most in capex in 2025.\n\n### Detailed Analysis\n\nBased on the most recent official guidance provided by each company as of April 7, 2025, here are the planned 2025 capital expenditures:\n\n| Company | Ticker | 2025 Capex Plan | Source |\n|---------|--------|----------------|--------|\n| **Amazon** | **AMZN** | **~$100–105 billion** | CEO Andy Jassy & CFO Brian Olsavsky on Q4 2024 earnings call (Feb 6, 2025) |\n| **Alphabet (Google)** | **GOOG** | **~$75 billion** | CEO Sundar Pichai on Q4 2024 earnings call (Feb 4, 2025) |\n| **Meta (Meta)** | **META** | **$60–65 billion** | CEO Mark Zuckerberg on Q4 2024 earnings call (Jan 29, 2025) |\n\n### Breakdown\n\n1. **Amazon (AMZN)** – ~$100–105 billion: On their Q4 2024 earnings call (February 6, 2025), CEO Andy Jassy announced plans to spend $100 billion on capital expenditures in 2025, calling it a \"once-in-a-lifetime type of business opportunity.\" CFO Brian Olsavsky noted that Q4 2024 capex of $26.3 billion would be \"reasonably representative\" of the 2025 quarterly run rate, implying approximately $105 billion for the full year. The vast majority of this spending is directed toward AI infrastructure for AWS.\n\n2. **Alphabet/Google (GOOG)** – ~$75 billion: On their Q4 2024 earnings call (February 4, 2025), CEO Sundar Pichai stated the company expects to invest approximately $75 billion in capital expenditures in 2025, primarily for AI and technical infrastructure including data centers and servers.\n\n3. **Meta (META)** – $60–65 billion: CEO Mark Zuckerberg announced in a Facebook post (January 24, 2025) and confirmed on the Q4 2024 earnings call (January 29, 2025) that Meta plans to invest between $60 billion and $65 billion in capital expenditures in 2025, with most of the investment going toward AI infrastructure and data centers.\n\n### Conclusion\n\n**Amazon (AMZN)** plans to spend the most on capital expenditures in 2025, with guidance of approximately **$100–105 billion**. This significantly exceeds Alphabet/Google's ~$75 billion and Meta's $60–65 billion. \n\n### Sources\n\n{\n    \"sources\": [\n        {\n            \"url\": \"https://www.cnbc.com/2025/02/06/amazon-expects-to-spend-100-billion-on-capital-expenditures-in-2025.html\",\n            \"name\": \"CNBC - Amazon expects to spend $100 billion on capital expenditures in 2025\"\n        },\n        {\n            \"url\": \"https://www.cnbc.com/2025/02/04/alphabet-expects-to-invest-about-75-billion-in-capex-in-2025.html\",\n            \"name\": \"CNBC - Alphabet will invest about $75 billion in capital expenditures in 2025\"\n        },\n        {\n            \"url\": \"https://finance.yahoo.com/news/meta-platforms-inc-meta-q4-072528195.html\",\n            \"name\": \"Yahoo Finance - Meta Platforms Inc (META) Q4 2024 Earnings Call Highlights\"\n        },\n        {\n            \"url\": \"https://sherwood.news/business/amazon-plans-100-billion-spend-on-ai-in-2025\",\n            \"name\": \"Sherwood News - Amazon plans on spending more than $100 billion on capex in 2025\"\n        },\n        {\n            \"url\": \"https://markets.businessinsider.com/news/stocks/amazon-bets-big-on-ai-with-100b-planned-capex-in-2025-1034325820\",\n            \"name\": \"Markets Insider - Amazon Bets Big on AI With $100B Planned Capex in 2025\"\n        },\n        {\n            \"url\": \"https://www.businessinsider.com/amazon-earnings-call-report-amzn-stock-live-updates-2025-2\",\n            \"name\": \"Business Insider - Amazon Earnings Recap: CFO indicates ~$105 billion in capex\"\n        },\n        {\n            \"url\": \"https://finance.yahoo.com/news/hyperscaler-capex-reach-300-billion-200930863.html\",\n            \"name\": \"Yahoo Finance - Hyperscaler Capex to Reach $300 Billion in 2025: Morgan Stanley\"\n        }\n    ]\n}",
+  "final_error": null,
+  "turns": [
+    {
+      "output_text_length": 0,
+      "reasoning_length": 259,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0000264,
+          "output": 0.00030879000000000003,
+          "reasoning": 0.0001314,
+          "cache_read": 0.00032256000000000006,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.0007891500000000001,
+          "total_input": 0.00034896000000000005,
+          "total_output": 0.00044019
+        },
+        "duration_seconds": 1.9907710829866119,
+        "in_tokens": 48,
+        "out_tokens": 141,
+        "reasoning_tokens": 60,
+        "cache_read_tokens": 2304,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 2352,
+        "total_output_tokens": 201
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_WRIF1GHdXHXYKQQn7bHt3773",
+          "args_lengths": {
+            "search_query": 60
+          },
+          "output_length": 7131,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.654,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_HJUKVE27H7KGLL3lWTia8165",
+          "args_lengths": {
+            "search_query": 58
+          },
+          "output_length": 7148,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.999,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_02_eMaihJL8bnJoyFNd29hS2965",
+          "args_lengths": {
+            "search_query": 62
+          },
+          "output_length": 6987,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.926,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 5.577,
+      "retry_overhead_seconds": 0.001,
+      "effective_duration_seconds": 5.576
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 768,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0034144,
+          "output": 0.00061977,
+          "reasoning": 0.0004161,
+          "cache_read": 0.00034048,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00479075,
+          "total_input": 0.0037548800000000004,
+          "total_output": 0.00103587
+        },
+        "duration_seconds": 3.7898094580159523,
+        "in_tokens": 6208,
+        "out_tokens": 283,
+        "reasoning_tokens": 190,
+        "cache_read_tokens": 2432,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 8640,
+        "total_output_tokens": 473
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_2rahcBC1UbmRcQBiWQ1t0108",
+          "args_lengths": {
+            "search_query": 45,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6973,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.736,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_gcYC8Kau56mDKfNr55KU0413",
+          "args_lengths": {
+            "search_query": 63,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 47,
+          "success": false,
+          "done": false,
+          "error": {
+            "type": "ToolFailed",
+            "message": "Server disconnected without sending a response.",
+            "traceback": null,
+            "context": {
+              "tool_name": "web_search"
+            }
+          },
+          "duration_seconds": 15.07,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_02_l585GbggEAjWLm62naWM6576",
+          "args_lengths": {
+            "search_query": 66,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6889,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.235,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 21.842,
+      "retry_overhead_seconds": 0.006,
+      "effective_duration_seconds": 21.836
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 837,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0020113500000000003,
+          "output": 0.00043581,
+          "reasoning": 0.0005256,
+          "cache_read": 0.0012723200000000002,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00424508,
+          "total_input": 0.0032836700000000007,
+          "total_output": 0.00096141
+        },
+        "duration_seconds": 3.8742161249974743,
+        "in_tokens": 3657,
+        "out_tokens": 199,
+        "reasoning_tokens": 240,
+        "cache_read_tokens": 9088,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 12745,
+        "total_output_tokens": 439
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_Vjd3fVYIAVe3Q7HsTziR9408",
+          "args_lengths": {
+            "search_query": 64,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 5935,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.282,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_BFq1LH7o8ZASyqt9HPop2309",
+          "args_lengths": {
+            "search_query": 74,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6876,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.284,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 6.449,
+      "retry_overhead_seconds": 0.005,
+      "effective_duration_seconds": 6.444
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 651,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00203775,
+          "output": 0.00051903,
+          "reasoning": 0.00032412,
+          "cache_read": 0.0018457600000000003,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.004726660000000001,
+          "total_input": 0.0038835100000000006,
+          "total_output": 0.00084315
+        },
+        "duration_seconds": 3.8849437909957487,
+        "in_tokens": 3705,
+        "out_tokens": 237,
+        "reasoning_tokens": 148,
+        "cache_read_tokens": 13184,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 16889,
+        "total_output_tokens": 385
+      },
+      "tool_calls": [
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_00_2rFpRgfHaGZPGrpPek9v6638",
+          "args_lengths": {
+            "url": 75,
+            "key": 14
+          },
+          "output_length": 165,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.9,
+          "metadata": null
+        },
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_01_275B8cfpP06idwQmU2DX9703",
+          "args_lengths": {
+            "url": 81,
+            "key": 26
+          },
+          "output_length": 204,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.613,
+          "metadata": null
+        },
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_02_gUhTgezLsXZGeTw9f6CV9970",
+          "args_lengths": {
+            "url": 53,
+            "key": 11
+          },
+          "output_length": 201,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.725,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 10.139,
+      "retry_overhead_seconds": 0.013,
+      "effective_duration_seconds": 10.126
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 51,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.000165,
+          "output": 0.00053436,
+          "reasoning": 0.00001971,
+          "cache_read": 0.00240128,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00312035,
+          "total_input": 0.0025662799999999998,
+          "total_output": 0.00055407
+        },
+        "duration_seconds": 2.5048274159780703,
+        "in_tokens": 300,
+        "out_tokens": 244,
+        "reasoning_tokens": 9,
+        "cache_read_tokens": 17152,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 17452,
+        "total_output_tokens": 253
+      },
+      "tool_calls": [
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_00_hV6Wh6AgJqXLwJSKI5TT9766",
+          "args_lengths": {
+            "prompt": 203
+          },
+          "output_length": 487,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.787,
+          "metadata": {
+            "cost": {
+              "input": 0.0011902,
+              "output": 0.00029565,
+              "reasoning": 0.00028251,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.00176836,
+              "total_input": 0.0011902,
+              "total_output": 0.00057816
+            },
+            "duration_seconds": 2.7774507910071407,
+            "in_tokens": 2164,
+            "out_tokens": 135,
+            "reasoning_tokens": 129,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 2164,
+            "total_output_tokens": 264
+          }
+        },
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_01_ivDfD7mfnFI99HN7gx2F8289",
+          "args_lengths": {
+            "prompt": 190
+          },
+          "output_length": 354,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.658,
+          "metadata": {
+            "cost": {
+              "input": 0.0010648,
+              "output": 0.000219,
+              "reasoning": 0.00042924,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.00171304,
+              "total_input": 0.0010648,
+              "total_output": 0.00064824
+            },
+            "duration_seconds": 2.649156832980225,
+            "in_tokens": 1936,
+            "out_tokens": 100,
+            "reasoning_tokens": 196,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 1936,
+            "total_output_tokens": 296
+          }
+        },
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_02_aaSE1mXWO5CkHWFdwkIG3823",
+          "args_lengths": {
+            "prompt": 173
+          },
+          "output_length": 701,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 4.867,
+          "metadata": {
+            "cost": {
+              "input": 0.00395615,
+              "output": 0.00035915999999999997,
+              "reasoning": 0.0008979,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.00521321,
+              "total_input": 0.00395615,
+              "total_output": 0.00125706
+            },
+            "duration_seconds": 4.847044082998764,
+            "in_tokens": 7193,
+            "out_tokens": 164,
+            "reasoning_tokens": 410,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 7193,
+            "total_output_tokens": 574
+          }
+        }
+      ],
+      "duration_seconds": 12.826,
+      "retry_overhead_seconds": 0.006,
+      "effective_duration_seconds": 12.82
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 1052,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.000044550000000000005,
+          "output": 0.00042267,
+          "reasoning": 0.0006351,
+          "cache_read": 0.00252672,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00362904,
+          "total_input": 0.00257127,
+          "total_output": 0.00105777
+        },
+        "duration_seconds": 4.703368499991484,
+        "in_tokens": 81,
+        "out_tokens": 193,
+        "reasoning_tokens": 290,
+        "cache_read_tokens": 18048,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 18129,
+        "total_output_tokens": 483
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_RwQ4tGwAlGyJWry90Ql06856",
+          "args_lengths": {
+            "search_query": 52,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6447,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.603,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_OFZMKplSgcvSgAAIfbSz2409",
+          "args_lengths": {
+            "search_query": 52,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6384,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.736,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 21.242,
+      "retry_overhead_seconds": 14.196,
+      "effective_duration_seconds": 7.046
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 275,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00209,
+          "output": 0.00058692,
+          "reasoning": 0.00012702,
+          "cache_read": 0.0025984000000000003,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00540234,
+          "total_input": 0.0046884000000000006,
+          "total_output": 0.0007139399999999999
+        },
+        "duration_seconds": 2.8914410000143107,
+        "in_tokens": 3800,
+        "out_tokens": 268,
+        "reasoning_tokens": 58,
+        "cache_read_tokens": 18560,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 22360,
+        "total_output_tokens": 326
+      },
+      "tool_calls": [
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_00_kpAzbhp6JnthHgp7cE7X2721",
+          "args_lengths": {
+            "url": 97,
+            "key": 19
+          },
+          "output_length": 229,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.691,
+          "metadata": null
+        },
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_01_GTIjwzEysliXbXONMlmT1526",
+          "args_lengths": {
+            "url": 112,
+            "key": 28
+          },
+          "output_length": 267,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.508,
+          "metadata": null
+        },
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_02_1Wf7mh7hno1h32Hu1I3D3278",
+          "args_lengths": {
+            "url": 72,
+            "key": 13
+          },
+          "output_length": 266,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.004,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 9.212,
+      "retry_overhead_seconds": 0.116,
+      "effective_duration_seconds": 9.096
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 88,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00015785000000000002,
+          "output": 0.00051027,
+          "reasoning": 0.000037229999999999994,
+          "cache_read": 0.00317184,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00387719,
+          "total_input": 0.00332969,
+          "total_output": 0.0005474999999999999
+        },
+        "duration_seconds": 2.6427989579970017,
+        "in_tokens": 287,
+        "out_tokens": 233,
+        "reasoning_tokens": 17,
+        "cache_read_tokens": 22656,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 22943,
+        "total_output_tokens": 250
+      },
+      "tool_calls": [
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_00_MaLhMKFMlFc1ZcZ5mZfg7246",
+          "args_lengths": {
+            "prompt": 178
+          },
+          "output_length": 213,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.767,
+          "metadata": {
+            "cost": {
+              "input": 0.0007337,
+              "output": 0.0001095,
+              "reasoning": 0.00042267,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.00126587,
+              "total_input": 0.0007337,
+              "total_output": 0.00053217
+            },
+            "duration_seconds": 2.7586979169864208,
+            "in_tokens": 1334,
+            "out_tokens": 50,
+            "reasoning_tokens": 193,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 1334,
+            "total_output_tokens": 243
+          }
+        },
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_01_9Qu9p221Im0RnzfKIasf1101",
+          "args_lengths": {
+            "prompt": 161
+          },
+          "output_length": 300,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 4.156,
+          "metadata": {
+            "cost": {
+              "input": 0.00087285,
+              "output": 0.00015768,
+              "reasoning": 0.0007183199999999999,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.00174885,
+              "total_input": 0.00087285,
+              "total_output": 0.0008759999999999999
+            },
+            "duration_seconds": 4.147542207996594,
+            "in_tokens": 1587,
+            "out_tokens": 72,
+            "reasoning_tokens": 328,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 1587,
+            "total_output_tokens": 400
+          }
+        },
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_02_n0n7ZNzcpvGOdURSXAQh6658",
+          "args_lengths": {
+            "prompt": 203
+          },
+          "output_length": 181,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.357,
+          "metadata": {
+            "cost": {
+              "input": 0.0014668500000000002,
+              "output": 0.00009417,
+              "reasoning": 0.0003285,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.0018895200000000002,
+              "total_input": 0.0014668500000000002,
+              "total_output": 0.00042267
+            },
+            "duration_seconds": 2.3476645420014393,
+            "in_tokens": 2667,
+            "out_tokens": 43,
+            "reasoning_tokens": 150,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 2667,
+            "total_output_tokens": 193
+          }
+        }
+      ],
+      "duration_seconds": 11.936,
+      "retry_overhead_seconds": 0.009,
+      "effective_duration_seconds": 11.927
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 233,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0001177,
+          "output": 0.00044238,
+          "reasoning": 0.00011826,
+          "cache_read": 0.0032435200000000006,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.003921860000000001,
+          "total_input": 0.0033612200000000007,
+          "total_output": 0.0005606399999999999
+        },
+        "duration_seconds": 2.7184290000004694,
+        "in_tokens": 214,
+        "out_tokens": 202,
+        "reasoning_tokens": 54,
+        "cache_read_tokens": 23168,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 23382,
+        "total_output_tokens": 256
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_583dZdknCE4uXPglEjIu6801",
+          "args_lengths": {
+            "search_query": 60,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 5958,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.504,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_jwFkRIrila1Pk8NNHvJ14164",
+          "args_lengths": {
+            "search_query": 79,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 4651,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.788,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 5.025,
+      "retry_overhead_seconds": 0.01,
+      "effective_duration_seconds": 5.015
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 2281,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0000561,
+          "output": 0.00045552,
+          "reasoning": 0.00125925,
+          "cache_read": 0.0037273600000000007,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.005498230000000001,
+          "total_input": 0.0037834600000000006,
+          "total_output": 0.00171477
+        },
+        "duration_seconds": 6.948028249986237,
+        "in_tokens": 102,
+        "out_tokens": 208,
+        "reasoning_tokens": 575,
+        "cache_read_tokens": 26624,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 26726,
+        "total_output_tokens": 783
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_AOHVSyfDLZrMbsGHU2Wr4004",
+          "args_lengths": {
+            "search_query": 88,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 5767,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.401,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_EgUkIyunZK2J0NyPtbif3217",
+          "args_lengths": {
+            "search_query": 56,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6420,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.899,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 22.807,
+      "retry_overhead_seconds": 13.555,
+      "effective_duration_seconds": 9.252
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 311,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0020317000000000004,
+          "output": 0.00038763,
+          "reasoning": 0.00015329999999999999,
+          "cache_read": 0.0038348800000000006,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.006407510000000001,
+          "total_input": 0.0058665800000000014,
+          "total_output": 0.00054093
+        },
+        "duration_seconds": 2.777547666017199,
+        "in_tokens": 3694,
+        "out_tokens": 177,
+        "reasoning_tokens": 70,
+        "cache_read_tokens": 27392,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 31086,
+        "total_output_tokens": 247
+      },
+      "tool_calls": [
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_00_0tzbPhehpxiSdjwo4Tw35105",
+          "args_lengths": {
+            "url": 99,
+            "key": 14
+          },
+          "output_length": 282,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.961,
+          "metadata": null
+        },
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_01_drakgUVwo9R4PpO3kv4C2229",
+          "args_lengths": {
+            "url": 89,
+            "key": 11
+          },
+          "output_length": 121,
+          "success": false,
+          "done": false,
+          "error": {
+            "type": "ToolFailed",
+            "message": "404, message='Not Found', url='https://monexa.ai/blog/meta-platforms-meta-ai-market-dynamics-and-outlook-META-2025-03-10'",
+            "traceback": null,
+            "context": {
+              "tool_name": "parse_html_page"
+            }
+          },
+          "duration_seconds": 1.001,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 5.756,
+      "retry_overhead_seconds": 0.013,
+      "effective_duration_seconds": 5.743
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 40,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00013805000000000002,
+          "output": 0.00019929,
+          "reasoning": 0.00002847,
+          "cache_read": 0.004372480000000001,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.004738290000000001,
+          "total_input": 0.0045105300000000004,
+          "total_output": 0.00022776
+        },
+        "duration_seconds": 1.5053195410000626,
+        "in_tokens": 251,
+        "out_tokens": 91,
+        "reasoning_tokens": 13,
+        "cache_read_tokens": 31232,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 31483,
+        "total_output_tokens": 104
+      },
+      "tool_calls": [
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_00_6B0WZPuUNS7lav8DPP7I8495",
+          "args_lengths": {
+            "prompt": 177
+          },
+          "output_length": 503,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 4.311,
+          "metadata": {
+            "cost": {
+              "input": 0.0034292500000000004,
+              "output": 0.00027813,
+              "reasoning": 0.00083877,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.0045461500000000005,
+              "total_input": 0.0034292500000000004,
+              "total_output": 0.0011169
+            },
+            "duration_seconds": 4.299273917014943,
+            "in_tokens": 6235,
+            "out_tokens": 127,
+            "reasoning_tokens": 383,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 6235,
+            "total_output_tokens": 510
+          }
+        }
+      ],
+      "duration_seconds": 5.832,
+      "retry_overhead_seconds": 0.013,
+      "effective_duration_seconds": 5.819
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 1358,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00013035000000000002,
+          "output": 0.00043362,
+          "reasoning": 0.0007686899999999999,
+          "cache_read": 0.00440832,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.0057409800000000006,
+          "total_input": 0.004538670000000001,
+          "total_output": 0.0012023099999999998
+        },
+        "duration_seconds": 4.704474249971099,
+        "in_tokens": 237,
+        "out_tokens": 198,
+        "reasoning_tokens": 351,
+        "cache_read_tokens": 31488,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 31725,
+        "total_output_tokens": 549
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_A4L2v9G99e6VfUts082O7812",
+          "args_lengths": {
+            "search_query": 77,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 6783,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 1.611,
+          "metadata": null
+        },
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_01_bbxbzurEcWJ6x00b1x2W9031",
+          "args_lengths": {
+            "search_query": 56,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 5947,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.762,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 7.095,
+      "retry_overhead_seconds": 0.014,
+      "effective_duration_seconds": 7.081
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 1326,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00198715,
+          "output": 0.00023652,
+          "reasoning": 0.00078402,
+          "cache_read": 0.00451584,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.0075235300000000005,
+          "total_input": 0.00650299,
+          "total_output": 0.00102054
+        },
+        "duration_seconds": 4.311209624982439,
+        "in_tokens": 3613,
+        "out_tokens": 108,
+        "reasoning_tokens": 358,
+        "cache_read_tokens": 32256,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 35869,
+        "total_output_tokens": 466
+      },
+      "tool_calls": [
+        {
+          "tool_name": "web_search",
+          "tool_call_id": "call_00_5myJvhDnSa36Ch1FwmVi8409",
+          "args_lengths": {
+            "search_query": 69,
+            "start_date": 10,
+            "end_date": 10
+          },
+          "output_length": 7138,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 0.842,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 5.172,
+      "retry_overhead_seconds": 0.016,
+      "effective_duration_seconds": 5.156
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 1798,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.000011,
+          "output": 0.00022776,
+          "reasoning": 0.0010249200000000001,
+          "cache_read": 0.005358080000000001,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.006621760000000002,
+          "total_input": 0.005369080000000001,
+          "total_output": 0.0012526800000000002
+        },
+        "duration_seconds": 5.662291833024938,
+        "in_tokens": 20,
+        "out_tokens": 104,
+        "reasoning_tokens": 468,
+        "cache_read_tokens": 38272,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 38292,
+        "total_output_tokens": 572
+      },
+      "tool_calls": [
+        {
+          "tool_name": "parse_html_page",
+          "tool_call_id": "call_00_sftkEGMZTLcrrwkqf92y1138",
+          "args_lengths": {
+            "url": 104,
+            "key": 17
+          },
+          "output_length": 303,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 2.188,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 22.644,
+      "retry_overhead_seconds": 14.792,
+      "effective_duration_seconds": 7.852
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 0,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.00010615,
+          "output": 0.00017957999999999998,
+          "reasoning": 0.0,
+          "cache_read": 0.0054297600000000005,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00571549,
+          "total_input": 0.005535910000000001,
+          "total_output": 0.00017957999999999998
+        },
+        "duration_seconds": 1.560657458001515,
+        "in_tokens": 193,
+        "out_tokens": 82,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 38784,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 38977,
+        "total_output_tokens": 82
+      },
+      "tool_calls": [
+        {
+          "tool_name": "retrieve_information",
+          "tool_call_id": "call_00_ET_npmrcDydwdV4bOe5RfNI9365",
+          "args_lengths": {
+            "prompt": 152
+          },
+          "output_length": 143,
+          "success": true,
+          "done": false,
+          "error": null,
+          "duration_seconds": 3.373,
+          "metadata": {
+            "cost": {
+              "input": 0.00069795,
+              "output": 0.00007445999999999999,
+              "reasoning": 0.00026499,
+              "cache_read": null,
+              "cache_write": null,
+              "total_override": null,
+              "total": 0.0010374,
+              "total_input": 0.00069795,
+              "total_output": 0.00033945
+            },
+            "duration_seconds": 3.363739166990854,
+            "in_tokens": 1269,
+            "out_tokens": 34,
+            "reasoning_tokens": 121,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": null,
+            "extra": {},
+            "total_input_tokens": 1269,
+            "total_output_tokens": 155
+          }
+        }
+      ],
+      "duration_seconds": 4.946,
+      "retry_overhead_seconds": 0.01,
+      "effective_duration_seconds": 4.936
+    },
+    {
+      "output_text_length": 0,
+      "reasoning_length": 755,
+      "finish_reason": {
+        "reason": "tool_calls",
+        "raw": "tool_calls"
+      },
+      "metadata": {
+        "cost": {
+          "input": 0.0000352,
+          "output": 0.00234987,
+          "reasoning": 0.00053217,
+          "cache_read": 0.0054656,
+          "cache_write": null,
+          "total_override": null,
+          "total": 0.00838284,
+          "total_input": 0.0055008,
+          "total_output": 0.0028820399999999998
+        },
+        "duration_seconds": 9.591606458008755,
+        "in_tokens": 64,
+        "out_tokens": 1073,
+        "reasoning_tokens": 243,
+        "cache_read_tokens": 39040,
+        "cache_write_tokens": null,
+        "extra": {},
+        "total_input_tokens": 39104,
+        "total_output_tokens": 1316
+      },
+      "tool_calls": [
+        {
+          "tool_name": "submit_final_result",
+          "tool_call_id": "call_00_qm7IWwC2XYuMCRaFG8oW8002",
+          "args_lengths": {
+            "final_result": 3744
+          },
+          "output_length": 3744,
+          "success": true,
+          "done": true,
+          "error": null,
+          "duration_seconds": 0.0,
+          "metadata": null
+        }
+      ],
+      "duration_seconds": 9.612,
+      "retry_overhead_seconds": 0.018,
+      "effective_duration_seconds": 9.594
+    }
+  ],
+  "final_duration_seconds": 188.154,
+  "stop_reason": "done_tool",
+  "success": true,
+  "total_turns": 17,
+  "error_count": 2,
+  "tool_calls_count": 35,
+  "tool_usage": {
+    "web_search": 17,
+    "parse_html_page": 9,
+    "retrieve_information": 8,
+    "submit_final_result": 1
+  },
+  "final_retry_overhead_seconds": 42.793,
+  "final_effective_duration_seconds": 145.361,
+  "final_aggregated_metadata": {
+    "cost": {
+      "input": 0.014560700000000003,
+      "output": 0.00884979,
+      "reasoning": 0.00688536,
+      "cache_read": 0.0548352,
+      "cache_write": null,
+      "total_override": null,
+      "total": 0.08513105,
+      "total_input": 0.06939590000000001,
+      "total_output": 0.01573515
+    },
+    "duration_seconds": 66.061,
+    "in_tokens": 26474,
+    "out_tokens": 4041,
+    "reasoning_tokens": 3144,
+    "cache_read_tokens": 391680,
+    "cache_write_tokens": null,
+    "extra": {},
+    "total_input_tokens": 418154,
+    "total_output_tokens": 7185
+  }
+}

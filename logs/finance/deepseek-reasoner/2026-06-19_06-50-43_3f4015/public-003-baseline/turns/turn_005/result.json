@@ -1,0 +1,103 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Let me now look up the official AMD press release for Q4 2024 / Q1 2025 guidance to get the exact numbers.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 0.0024579500000000004,
+        "output": 0.00025623000000000003,
+        "reasoning": 6.351e-05,
+        "cache_read": 0.00293888,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.005716570000000001,
+        "total_input": 0.00539683,
+        "total_output": 0.00031974
+      },
+      "duration_seconds": 2.1682519169989973,
+      "in_tokens": 4469,
+      "out_tokens": 117,
+      "reasoning_tokens": 29,
+      "cache_read_tokens": 20992,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 25461,
+      "total_output_tokens": 146
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_kbxw2nx0onGV2BwIm3uE1406",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD Q4 2024 earnings press release \\\"approximately $7.1 billion\\\" revenue guidance Q1 2025\"}",
+        "parsed_args": {
+          "search_query": "AMD Q4 2024 earnings press release \"approximately $7.1 billion\" revenue guidance Q1 2025"
+        }
+      },
+      {
+        "id": "call_01_p9ox3JyW08NYstk0WaU59482",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD Q1 2025 revenue guidance $7.1 billion plus or minus $300 million\"}",
+        "parsed_args": {
+          "search_query": "AMD Q1 2025 revenue guidance $7.1 billion plus or minus $300 million"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_kbxw2nx0onGV2BwIm3uE1406",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD Q4 2024 earnings press release \\\"approximately $7.1 billion\\\" revenue guidance Q1 2025\"}",
+        "parsed_args": {
+          "search_query": "AMD Q4 2024 earnings press release \"approximately $7.1 billion\" revenue guidance Q1 2025"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://247wallst.com/companies/amd/earnings/2024/Q4\", \"title\": \"AMD (AMD) Earnings Report Q4 2024 | Beat, EPS & Revenue | 24/7 Wall St.\", \"content\": \"even as the Gaming segment retreated 59% to $563.00 million on softer semi-custom volumes. Non-GAAP gross margin held at 54%, reflecting the favorable mix shift toward higher-value segments. Some investors tempered their enthusiasm over AMD's AI GPU growth trajectory relative to peers, a sentiment reflected in analyst fair value reductions following the print. Looking ahead, AMD guided Q1 2025 revenue of approximately $7.10 billion, implying roughly 30% year-over-year growth, with non-GAAP\", \"score\": 0.9589434, \"raw_content\": null}, {\"url\": \"https://ca.investing.com/news/stock-market-news/amd-nasdaqamd-exceeds-q4-expectations-quarterly-revenue-guidance-slightly-exceeds-expectations-3824371\", \"title\": \"AMD (NASDAQ:AMD) Exceeds Q4 Expectations, Quarterly Revenue Guidance Slightly Exceeds Expectations By Stock Story\", \"content\": \"revenue was better than expected at $7.1 billion at the midpoint, 1.3% above analysts\\u2019 estimates.  Revenue: $7.66 billion vs analyst estimates of $7.54 billion (24.2% year-on-year growth, 1.5% beat).  Revenue Guidance for Q1 CY2025 is $7.1 billion at the midpoint, above analyst estimates of $7.01 billion. \\u201c2024 was a transformative year for AMD as we delivered record annual revenue and strong earnings growth,\\u201d said AMD Chair and CEO Dr. Lisa Su. Company OverviewFounded in 1969 by a group of\", \"score\": 0.95143646, \"raw_content\": null}, {\"url\": \"https://www.communicationstoday.co.in/amd-q4-2024-revenue-soars-12-qoq\", \"title\": \"AMD Q4 2024 revenue soars 12% QoQ | Communications Today\", \"content\": \"On guidance for the first quarter of 2025, AMD EVP and CFO Jean Hu commented that AMD expects its revenue to be approximately $7.1 billion plus or minus $300 million, up 30% YoY driven by strong growth in the data center and client segments, more than offsetting a significant decline in the gaming business and a modest decline in the embedded business. AMD expects its revenue to be down sequentially by approximately 7%, driven primarily by seasonality across its businesses. In addition, AMD\", \"score\": 0.949786, \"raw_content\": null}, {\"url\": \"https://www.linkedin.com/pulse/amd-reports-record-q4-full-year-2024-financial-results-earningstime-l53kf\", \"title\": \"AMD Reports Record Q4 and Full-Year 2024 Financial Results\", \"content\": \"billion. For 2025, AMD expects Q1 revenue of approximately $7.1 billion, reflecting a 30% YoY increase but a 7% sequential decline. While the company faces headwinds in gaming and embedded segments, its focus on AI, data centers, and next-generation processing solutions provides a strong foundation for continued growth. \\ud83d\\udcc4 Read the full report: AMD Q4 & Full-Year 2024 Report. ### \\ud83d\\udcbb Arm Holdings (NASDAQ: ARM) Delivers Record Q4 FY25 as AI Demand Surges. (NYSE: UBER) Q1 FY25 Earnings Report. ### \\ud83c\\udfac\", \"score\": 0.94339466, \"raw_content\": null}, {\"url\": \"https://forums.anandtech.com/threads/amd-2024-q4-earnings.2624841\", \"title\": \"Discussion - AMD 2024-Q4 Earnings | AnandTech Forums: Technology, Hardware, Software, and Deals\", \"content\": \"#17\\n\\nQuote for Q1 forecast:  \\n   \\n> For the first quarter of 2025, AMD expects revenue to be approximately $7.1 billion vs. $6.99B consensus, plus or minus $300 million. At the mid-point of the revenue range, this represents year-over-year growth of approximately 30% and a sequential decline of approximately 7%. Non-GAAP gross margin is expected to be approximately 54%.\\n>\\n> Click to expand...\\n\\n  \\n And full year results:  \\n   \\n 1738704221139.png\\n\\ndesrever\\n\\n#### desrever\\n\\n##### Senior member\", \"score\": 0.9328032, \"raw_content\": null}, {\"url\": \"https://medium.com/@thedatabytenewsletter/key-tech-earnings-results-from-q1-2025-a4ab7117d895\", \"title\": \"Key Tech Earnings Results from Q1 2025 | by The DataByte | Medium\", \"content\": \"For the upcoming quarter, AMD estimates total revenue of $7.1 billion plus or minus $300 million, the mid-point representing a positive (+30%) growth rate year-over-year but negative (-12%) growth compared to their latest quarter. In their earnings call, AMD attributed the negative sequential growth rate to seasonality.\\n\\nIn their earnings call, AMD delivers strong guidance for the year ahead:\", \"score\": 0.91813606, \"raw_content\": null}, {\"url\": \"https://247wallst.com/companies/amd/earnings/2024/Q1\", \"title\": \"AMD (AMD) Earnings Report Q1 2024 | Beat, EPS & Revenue | 24/7 Wall St.\", \"content\": \"| Quarter | EPS Est. | EPS Act. | Surprise | Revenue | Rev. Surprise |\\n ---  ---  --- |\\n| Q1 26 BEAT | $1.29 | $1.37 | +5.88% | $10.25B | +3.41% |\\n| Q4 25 BEAT FY | $1.32 | $1.53 | +15.98% | $10.27B | +6.20% |\\n| FY Full Year | \\u2014 | $4.17 | \\u2014 | $34.64B | \\u2014 |\\n| Q3 25 BEAT | $1.17 | $1.20 | +2.37% | $9.25B | +5.66% |\\n| Q2 25 MISS | $0.48 | $0.48 | -0.54% | $7.69B | +3.43% |\\n| Q1 25 BEAT | $0.93 | $0.96 | +2.83% | $7.44B | +4.47% |\\n| Q4 24 BEAT FY | $1.09 | $1.09 | +0.36% | $7.66B | +1.76% |\", \"score\": 0.8025714, \"raw_content\": null}, {\"url\": \"https://247wallst.com/companies/amd/earnings/2024/Q2\", \"title\": \"AMD (AMD) Earnings Report Q2 2024 | Beat, EPS & Revenue | 24/7 Wall St.\", \"content\": \"| Quarter | EPS Est. | EPS Act. | Surprise | Revenue | Rev. Surprise |\\n ---  ---  --- |\\n| Q1 26 BEAT | $1.29 | $1.37 | +5.88% | $10.25B | +3.41% |\\n| Q4 25 BEAT FY | $1.32 | $1.53 | +15.98% | $10.27B | +6.20% |\\n| FY Full Year | \\u2014 | $4.17 | \\u2014 | $34.64B | \\u2014 |\\n| Q3 25 BEAT | $1.17 | $1.20 | +2.37% | $9.25B | +5.66% |\\n| Q2 25 MISS | $0.48 | $0.48 | -0.54% | $7.69B | +3.43% |\\n| Q1 25 BEAT | $0.93 | $0.96 | +2.83% | $7.44B | +4.47% |\\n| Q4 24 BEAT FY | $1.09 | $1.09 | +0.36% | $7.66B | +1.76% |\", \"score\": 0.780947, \"raw_content\": null}, {\"url\": \"https://ca.investing.com/news/company-news/arista-networks-inc-anet-q4-2024-earnings-call-highlights-record-revenue-and-strategic--3851722\", \"title\": \"Arista Networks Inc (ANET) Q4 2024 Earnings Call Highlights: Record Revenue and Strategic ... By GuruFocus\", \"content\": \"International Revenue Contribution: 16% for Q4 2024.  Cloud and AI Titans Revenue Contribution: Approximately 48% for fiscal 2024.  Cash, Cash Equivalents, and Marketable Securities: Approximately $8.3 billion at the end of Q4 2024.  Cash from Operations: Approximately $1 billion for Q4 2024.  Deferred Revenue Balance: $2.79 billion at the end of Q4 2024.  Q1 2025 Revenue Guidance: $1.93 billion to $1.97 billion.  Q1 2025 Gross Margin Guidance: Approximately 63%.  Q1 2025 Operating Margin\", \"score\": 0.302474, \"raw_content\": null}, {\"url\": \"https://www.shacknews.com/article/137609/amd-q4-2023-revenue-guidance\", \"title\": \"AMD issues Q4 2023 revenue guidance below analyst estimates | Shacknews\", \"content\": \"2026 Video Game Release Dates CalendarLetter from the editor: Standing up to generative AIShacknews Hall of Fame: Class of 2025\\n\\nAMD issues Q4 2023 revenue guidance below analyst estimates\\n\\n News\\n\\n# AMD issues Q4 2023 revenue guidance below analyst estimates\\n\\nAMD is projecting lower earnings next financial quarter, partly due to lower sales from the gaming sector.\\n\\nOzzie Mejia \\n\\nOzzie Mejia\\n\\nAMD\\n\\n1\", \"score\": 0.2967108, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.776,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_01_p9ox3JyW08NYstk0WaU59482",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD Q1 2025 revenue guidance $7.1 billion plus or minus $300 million\"}",
+        "parsed_args": {
+          "search_query": "AMD Q1 2025 revenue guidance $7.1 billion plus or minus $300 million"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://medium.com/@thedatabytenewsletter/key-tech-earnings-results-from-q1-2025-a4ab7117d895\", \"title\": \"Key Tech Earnings Results from Q1 2025 | by The DataByte | Medium\", \"content\": \"For the upcoming quarter, AMD estimates total revenue of $7.1 billion plus or minus $300 million, the mid-point representing a positive (+30%) growth rate year-over-year but negative (-12%) growth compared to their latest quarter. In their earnings call, AMD attributed the negative sequential growth rate to seasonality.\\n\\nIn their earnings call, AMD delivers strong guidance for the year ahead:\", \"score\": 0.97704244, \"raw_content\": null}, {\"url\": \"https://www.theglobeandmail.com/investing/markets/stocks/AMD/pressreleases/31504092/should-you-buy-the-dip-in-amd-stock\", \"title\": \"Should You Buy the Dip in AMD Stock? - The Globe and Mail\", \"content\": \"With continued momentum in AI, cloud computing, and high-performance computing, the company is poised for another year of rapid growth in 2025. Looking ahead, AMD anticipates Q1 2025 revenue to be around $7.1 billion, plus or minus $300 million, representing a 30% year-over-year increase at the midpoint. Growth in the data center and client segments is expected to compensate for any decline in gaming and embedded segment revenues. In the Q4 earnings call, management stated that AMD will\", \"score\": 0.97193134, \"raw_content\": null}, {\"url\": \"https://www.communicationstoday.co.in/amd-q4-2024-revenue-soars-12-qoq\", \"title\": \"AMD Q4 2024 revenue soars 12% QoQ | Communications Today\", \"content\": \"On guidance for the first quarter of 2025, AMD EVP and CFO Jean Hu commented that AMD expects its revenue to be approximately $7.1 billion plus or minus $300 million, up 30% YoY driven by strong growth in the data center and client segments, more than offsetting a significant decline in the gaming business and a modest decline in the embedded business. AMD expects its revenue to be down sequentially by approximately 7%, driven primarily by seasonality across its businesses. In addition, AMD\", \"score\": 0.96724063, \"raw_content\": null}, {\"url\": \"https://www.techspot.com/news/106651-amd-sees-massive-24-revenue-surge-q4-but.html\", \"title\": \"AMD sees massive 24% revenue surge in Q4 but 28% lower profit dipped shares | TechSpot\", \"content\": \"Revenue declined on the PC graphics front as the company cleared inventory ahead of the RDNA 4 Radeon 9000-series GPU launch in early March. Su touted the improved ray tracing and AI upscaling capabilities of RDNA 4, positioning it to drive mainstream 4K gaming adoption.\\n\\nAMD closed 2024 with $25.8 billion in annual revenue, up 14 percent over 2023, as data center and client gains offset gaming headwinds. For Q1 2025, AMD expects $7.1 billion in revenue, plus or minus $300 million.\", \"score\": 0.96331704, \"raw_content\": null}, {\"url\": \"https://www.tradingview.com/news/reuters.com,2025:newsml_L4N3OV1ZV:0-amd-forecasts-first-quarter-revenue-above-estimates\", \"title\": \"AMD forecasts first-quarter revenue above estimates - TradingView\", \"content\": \"technology. The company expects revenue of about $7.1 billion, plus or minus $300 million in the first quarter, compared with analysts' average estimate of $6.99 billion according to data compiled by LSEG. Login or create a forever free account to read this news  Reuters Half of China's heavy truck sales could be EVs by 2028, CATL saysReuters ECB's Wunsch says central bank may need to cut rates below 2%, FT reportsReuters Sadara Chemical Company Qtrly Net Loss 1.27 Billion RiyalsReuters Moody's\", \"score\": 0.92794675, \"raw_content\": null}, {\"url\": \"https://www.benzinga.com/news/earnings/24/04/38534910/amd-investors-pull-back-after-modest-q1-beat-ceo-touts-ai-chip-ramp-up\", \"title\": \"AMD Investors Pull Back After Modest Q1 Beat, Lukewarm Guidance; CEO Touts AI Chip Ramp-Up (UPDATED) - Ad - Benzinga\", \"content\": \"AMD guided to second-quarter revenue of $5.7 billion plus or minus $300 million and a non-GAAP gross margin of about 53% against Street estimates of $5.7 billion in second-quarter revenue.\\n\\nStreet expectations for fiscal year 2024 are for earnings of $3.40 per share and revenue of $24.13 billion, respectively.\\n\\nAnalysts are optimistic the company will rise over the next year. The average AMD analyst price target, according to TipRanks, is $203.96, suggesting over 27% upside.\", \"score\": 0.7845341, \"raw_content\": null}, {\"url\": \"https://gamesbeat.com/amd-reports-strong-q1-data-center-revenue-offset-by-weak-gaming\", \"title\": \"AMD reports strong Q1 data center revenue offset by weak gaming - GamesBeat\", \"content\": \"Looking forward, AMD expects its Q2 revenue to reach $5.7 billion, plus or minus $300 million. At the mid-point of the revenue range, this represents year-over-year growth of approximately 6% and sequential growth of approximately 4%.\\n\\nAMD makes the central processing units (CPUs) and graphics processing units (GPUs) used in AI machines as well as graphics cards and PCs.\", \"score\": 0.72907686, \"raw_content\": null}, {\"url\": \"https://finance.yahoo.com/news/amd-beats-on-q1-revenue-and-eps-stock-edges-lower-on-light-guidance-202840712.html\", \"title\": \"AMD beats on Q1 revenue and EPS, stock edges lower on light guidance\", \"content\": \"AMD reported adjusted earnings per share (EPS) of $0.62 on revenue of $5.5 billion.Wall Street was looking for adjusted EPS of $0.61 on revenue of $5.45 billion. The company reported EPS of $0.60 on revenue of $5.35 billion in the same quarter last year.\\n\\nImportantly, AMD saw better-than-anticipated Data Center revenue in the quarter, with the company reporting sales of $2.34 billion. Wall Street was looking for $2.31 billion.\", \"score\": 0.5843666, \"raw_content\": null}, {\"url\": \"https://gfxspeak.com/featured/amd-q1-2023-revenue-down-yoy\", \"title\": \"AMD Q1 2023 revenue down YoY \\u2013 GfxSpeak\", \"content\": \"AMD expects the PC TAM to be down approximately 10% for 2023 to approximately 260 million units. It expects client CPU sales to grow in the second quarter and then in the seasonally stronger second half of the year.\\n\\nAMD\\u2019s Embedded segment results. (Source: AMD)\\n\\n##### Current outlook\\n\\nFor the second quarter of 2023, AMD expects revenue to be approximately $5.3 billion, plus or minus $300 million. AMD expects non-GAAP gross margin to be approximately 50%.\", \"score\": 0.4189114, \"raw_content\": null}, {\"url\": \"https://thenextweb.com/news/amd-posts-strong-q1-2013-revenue-of-1-09-billion-but-struggles-at-profit-with-0-19-loss-per-share\", \"title\": \"AMD's Q1 2013 Revenue Better than Expected at $1.1 Billion\", \"content\": \"AMD expects revenue to \\u201cincrease 2 percent, plus or minus 3 percent, sequentially\\u201d in the second quarter of 2013.\\n\\nIn regular trading, AMD was up 4.58 percent. In after-hours trading, AMD is down 4.78 percent.\\n\\nTop Image Credit: Matthew Rutledge\\n\\n## Get the TNW newsletter\\n\\nGet the most important tech news in your inbox each week.\\n\\n## Popular articles\\n\\n1. 1\\n\\n   ### OpenAI co-founder Andrej Karpathy joins Anthropic to supercharge Claude\\u2019s pre-training with AI\\n2. 2\", \"score\": 0.21561526, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.76,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 3.715,
+  "retry_overhead_seconds": 0.007,
+  "effective_duration_seconds": 3.708
+}

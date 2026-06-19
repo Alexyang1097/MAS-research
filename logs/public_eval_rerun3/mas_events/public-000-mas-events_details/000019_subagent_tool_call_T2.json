@@ -1,0 +1,20 @@
+{
+  "seq": 19,
+  "timestamp": "2026-06-19T02:46:51.029889+00:00",
+  "event_type": "tool_call",
+  "component": "subagent",
+  "iteration": null,
+  "assignment_id": "T2",
+  "payload": {
+    "agent_name": "RegulatoryNewsAgent",
+    "round": 0,
+    "call": {
+      "tool_name": "web_search",
+      "args": {
+        "search_query": "US Steel Nippon Steel merger official press release announcement",
+        "number_of_results": 10
+      },
+      "purpose": "Find official press releases and company announcements regarding the proposed merger between US Steel and Nippon Steel."
+    }
+  }
+}

@@ -1,0 +1,1040 @@
+2026-06-19 08:03:31,363 DEBUG Agent(
+    name='finance',
+    llm=DeepSeekModel(
+        provider='deepseek',
+        model_name='deepseek-reasoner',
+        _registry_key='deepseek/deepseek-reasoner',
+        max_tokens=32000,
+        temperature=0.0,
+        top_p=None,
+        top_k=None,
+        reasoning=True,
+        reasoning_effort=None,
+        compute_effort=None,
+        supports_files=False,
+        supports_videos=False,
+        supports_images=False,
+        supports_batch=False,
+        supports_temperature=True,
+        supports_tools=True,
+        supports_output_schema=False,
+        native=False,
+        delegate=OpenAIModel(
+            use_completions=True,
+            delegate_config=DelegateConfig(
+                base_url='https://api.deepseek.com/v1',
+                api_key=SecretStr('**********')
+            ),
+            provider='deepseek',
+            model_name='deepseek-reasoner',
+            _registry_key='deepseek/deepseek-reasoner',
+            max_tokens=32000,
+            temperature=0.0,
+            top_p=None,
+            top_k=None,
+            reasoning=True,
+            reasoning_effort=None,
+            compute_effort=None,
+            supports_files=False,
+            supports_videos=False,
+            supports_images=False,
+            supports_batch=False,
+            supports_temperature=True,
+            supports_tools=True,
+            supports_output_schema=False,
+            native=True,
+            delegate=None,
+            batch=None,
+            token_retry_params=None,
+            _client_registry_key=(
+                'deepseek',
+                'f4a3a1d839142edf27f27970d0d9bff10b184034485aa26539bb2c8b61d35a64'
+            ),
+            _client_registry_key_model_specific=(
+                'deepseek.deepseek-reasoner',
+                'f4a3a1d839142edf27f27970d0d9bff10b184034485aa26539bb2c8b61d35a64'
+            ),
+            deep_research=False,
+            verbosity=None
+        ),
+        batch=None,
+        token_retry_params=None,
+        _client_registry_key_model_specific=(
+            'deepseek.deepseek-reasoner',
+            'f4a3a1d839142edf27f27970d0d9bff10b184034485aa26539bb2c8b61d35a64'
+        )
+    ),
+    tools=[
+        'web_search',
+        'retrieve_information',
+        'parse_html_page',
+        'edgar_search',
+        'submit_final_result'
+    ],
+    config=AgentConfig(
+        turn_limit=TurnLimit(max_turns=50, turn_message=None),
+        time_limit=None,
+        max_tool_calls_per_turn=None
+    ),
+    hooks=AgentHooks(
+        before_query=<function get_agent.<locals>._before_query at 0x11104dc70>,
+        should_stop=<function get_agent.<locals>._should_stop at 0x10f7a1bc0>,
+        on_tool_result=<function default_on_tool_result at 0x10b545170>,
+        determine_answer=<function default_determine_answer at 0x10b5454e0>
+    )
+)
+2026-06-19 08:03:33,552 INFO Turn 1: 2 tool calls, response=no, tokens=2353in/198out
+2026-06-19 08:03:33,554 DEBUG Tool call: web_search({'search_query': 'BBSI Barrett Business Services nominated board of directors 2024'})
+2026-06-19 08:03:35,152 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_00_ii0XQZfeqHOy13EMUZUr7907',
+        call_id=None,
+        name='web_search',
+        args='{"search_query": "BBSI Barrett Business Services nominated board of directors 2024"}',
+        parsed_args={
+            'search_query': 'BBSI Barrett Business Services nominated board of directors 2024'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='[{"url": "https://www.marketscreener.com/quote/stock/BARRETT-BUSINESS-SERVICES-8528/news/Barrett-Business-Services-BBSI-Appoints-Tom-Cusick-to-Its-Board-of-Directors-23204103", "title": "Barrett Business Services : BBSI Appoints Tom Cusick to Its Board of Directors | MarketScreener", "content": "- Fundamental Composite\\n    - Sales Growth\\n    - Earnings Growth\\n    - Profitability\\n    - Finances\\n    - Visibility Rankings\\n  + Rankings Valuation\\n\\n    - Valuation Composite\\n    - Market Cap\\n    - P/E\\n    - Enterprise Value\\n    - Yield\\n    - Price to Book (PBR)\\n    - Free Cash Flow (FCF)\\n  + Top Consensus\\n\\n    - Consensus Composite\\n    - Analyst Opinion\\n    - Target Price\\n    - Opinion Divergences\\n    - Estimates Revisions\\n    - Analyst Coverage\\n  + Technical Analysis Rankings", "score": 0.8763069, "raw_content": null}, {"url": "https://ir.bbsi.com/news-events/press-releases/detail/334/bbsi-appoints-carla-a-moradi-to-its-board-of-directors", "title": "BBSI Appoints Carla A. Moradi to its Board of Directors :: Barrett Business Services, Inc. (BBSI)", "content": "\\u201cWe are very pleased that Carla has accepted our invitation to join the BBSI Board,\\u201d said Anthony Meeker, Chairman of the BBSI Board of Directors. \\u201cCarla\\u2019s deep experience in technology infrastructure, information systems, and cybersecurity and privacy tied with her business expansion experience will be a great add to the board\\u2019s current composition of skills. She will provide valuable perspectives on our technology initiatives.\\u201d", "score": 0.84918517, "raw_content": null}, {"url": "https://ir.bbsi.com/news-events/press-releases/detail/352/bbsi-appoints-joseph-s-clabby-to-its-board-of-directors", "title": "BBSI Appoints Joseph S. Clabby to its Board of Directors :: Barrett Business Services, Inc. (BBSI)", "content": "BBSI (NASDAQ: BBSI) is a leading provider of business management solutions, combining human resource outsourcing and professional management consulting to create a unique operational platform that differentiates it from competitors. The Company\\u2019s integrated platform is built upon expertise in payroll processing, employee benefits, workers\\u2019 compensation coverage, risk management and workplace safety programs, and human resource administration. BBSI\\u2019s partnerships help businesses of all sizes", "score": 0.8446273, "raw_content": null}, {"url": "https://www.globenewswire.com/news-release/2021/04/09/2207428/0/en/BBSI-Appoints-Carla-A-Moradi-to-its-Board-of-Directors.html", "title": "BBSI Appoints Carla A. Moradi to its Board of Directors", "content": "\\u201cWe are very pleased that Carla has accepted our invitation to join the BBSI Board,\\u201d said Anthony Meeker, Chairman of the BBSI Board of Directors. \\u201cCarla\\u2019s deep experience in technology infrastructure, information systems, and cybersecurity and privacy tied with her business expansion experience will be a great add to the board\\u2019s current composition of skills. She will provide valuable perspectives on our technology initiatives.\\u201d", "score": 0.8440111, "raw_content": null}, {"url": "https://ir.bbsi.com/news-events/press-releases/detail/160/bbsi-appoints-vince-price-to-its-board-of-directors", "title": "BBSI Appoints Vince Price to its Board of Directors :: Barrett Business Services, Inc. (BBSI)", "content": "BBSI (NASDAQ: BBSI) is a leading provider of business management solutions, combining human resource outsourcing and professional management consulting to create a unique operational platform that differentiates it from competitors. The Company\'s integrated platform is built upon expertise in payroll processing, employee benefits, workers\' compensation coverage, risk management and workplace safety programs, and human resource administration. BBSI\'s partnerships help businesses of all sizes", "score": 0.8430832, "raw_content": null}, {"url": "https://www.globenewswire.com/news-release/2022/09/19/2518276/0/en/BBSI-Appoints-Joseph-S-Clabby-to-its-Board-of-Directors.html", "title": "BBSI Appoints Joseph S. Clabby to its Board of Directors", "content": "BBSI (NASDAQ: BBSI) is a leading provider of business management solutions, combining human resource outsourcing and professional management consulting to create a unique operational platform that differentiates it from competitors. The Company\\u2019s integrated platform is built upon expertise in payroll processing, employee benefits, workers\\u2019 compensation coverage, risk management and workplace safety programs, and human resource administration. BBSI\\u2019s partnerships help businesses of all sizes", "score": 0.838376, "raw_content": null}, {"url": "https://www.globenewswire.com/en/news-release/2022/09/19/2518276/0/en/BBSI-Appoints-Joseph-S-Clabby-to-its-Board-of-Directors.html", "title": "BBSI Appoints Joseph S. Clabby to its Board of Directors", "content": "BBSI (NASDAQ: BBSI) is a leading provider of business management solutions, combining human resource outsourcing and professional management consulting to create a unique operational platform that differentiates it from competitors. The Company\\u2019s integrated platform is built upon expertise in payroll processing, employee benefits, workers\\u2019 compensation coverage, risk management and workplace safety programs, and human resource administration. BBSI\\u2019s partnerships help businesses of all sizes", "score": 0.838376, "raw_content": null}, {"url": "https://www.globenewswire.com/news-release/2019/10/23/1934084/0/en/BBSI-Appoints-Diane-L-Dewbrey-to-its-Board-of-Directors.html", "title": "BBSI Appoints Diane L. Dewbrey to its Board of Directors", "content": "of all sizes improve the efficiency of their operations. The Company works with more than 6,400 clients across all lines of business in 23 states. For more information, please visit www.barrettbusiness.com.", "score": 0.8358192, "raw_content": null}, {"url": "https://www.marketscreener.com/quote/stock/BARRETT-BUSINESS-SERVICES-8528/news/BBSI-Appoints-Carla-A-Moradi-to-its-Board-of-Directors-32924352", "title": "BBSI Appoints Carla A. Moradi to its Board of Directors | MarketScreener", "content": "- Fundamental Composite\\n    - Sales Growth\\n    - Earnings Growth\\n    - Profitability\\n    - Finances\\n    - Visibility Rankings\\n  + Rankings Valuation\\n\\n    - Valuation Composite\\n    - Market Cap\\n    - P/E Ratio\\n    - Enterprise Value\\n    - Yield\\n    - Price to Book (PBR)\\n    - Free Cash Flow (FCF)\\n  + Top Consensus\\n\\n    - Consensus Composite\\n    - Analyst Opinion\\n    - Target Price\\n    - Opinion Divergences\\n    - Estimates Revisions\\n    - Analyst Coverage\\n  + Technical Analysis Rankings", "score": 0.8358192, "raw_content": null}, {"url": "https://ir.bbsi.com/news-events/press-releases/detail/155/bbsi-appoints-tom-cusick-to-its-board-of-directors", "title": "BBSI Appoints Tom Cusick to Its Board of Directors :: Barrett Business Services, Inc. (BBSI)", "content": "Michael Elich, BBSI\'s president and CEO, commented: \\"We focus tremendous energy on developing the organization for future growth. As we do, we view the expansion of the board as an essential component of that development. Throughout Tom\'s career, and most recently in his role leading the finance organization at Columbia Sportswear, he has proven his leadership qualities and expertise in finance and accounting, which we believe will substantially contribute to our board and the future of BBSI.\\"", "score": 0.834852, "raw_content": null}]',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=1.597,
+    error=None,
+    success=True
+)
+2026-06-19 08:03:35,153 DEBUG Tool call: edgar_search({'search_query': 'BBSI board of directors nomination', 'form_types': ['DEF 14A', '8-K'], 'start_date': '2024-01-01', 'end_date': '2024-12-31'})
+2026-06-19 08:03:38,878 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_01_G7C3O4AQLlsZ4ibsaS5r7295',
+        call_id=None,
+        name='edgar_search',
+        args='{"search_query": "BBSI board of directors nomination", "form_types": ["DEF 14A", "8-K"], "start_date": "2024-01-01", "end_date": "2024-12-31"}',
+        parsed_args={
+            'search_query': 'BBSI board of directors nomination',
+            'form_types': ['DEF 14A', '8-K'],
+            'start_date': '2024-01-01',
+            'end_date': '2024-12-31'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='[{"accessionNo": "0000950170-24-046428", "cik": "902791", "companyNameLong": "BARRETT BUSINESS SERVICES INC (BBSI) (CIK 0000902791)", "ticker": "BBSI", "description": "DEF 14A", "formType": "DEF 14A", "type": "DEF 14A", "filingUrl": "https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm", "filedAt": "2024-04-22"}]',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=3.724,
+    error=None,
+    success=True
+)
+2026-06-19 08:03:42,540 INFO Turn 2: 4 tool calls, response=no, tokens=4588in/420out
+2026-06-19 08:03:42,541 DEBUG Tool call: parse_html_page({'url': 'https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm', 'key': 'bbsi_proxy_2024'})
+2026-06-19 08:03:43,179 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_00_MloGSUHxsFZs36Z6BtMj3601',
+        call_id=None,
+        name='parse_html_page',
+        args='{"url": "https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm", "key": "bbsi_proxy_2024"}',
+        parsed_args={
+            'url': 'https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm',
+            'key': 'bbsi_proxy_2024'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='SUCCESS: The result has been saved to the data storage under the key: bbsi_proxy_2024.\nThe data_storage currently contains the following keys:\n        bbsi_proxy_2024\n',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=0.638,
+    error=None,
+    success=True
+)
+2026-06-19 08:03:43,179 DEBUG Tool call: parse_html_page({'url': 'https://ir.bbsi.com/news-events/press-releases/detail/334/bbsi-appoints-carla-a-moradi-to-its-board-of-directors', 'key': 'bbsi_moradi'})
+2026-06-19 08:03:44,001 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_01_Ub9MmhU4Bih51skS1qxf3912',
+        call_id=None,
+        name='parse_html_page',
+        args='{"url": "https://ir.bbsi.com/news-events/press-releases/detail/334/bbsi-appoints-carla-a-moradi-to-its-board-of-directors", "key": "bbsi_moradi"}',
+        parsed_args={
+            'url': 'https://ir.bbsi.com/news-events/press-releases/detail/334/bbsi-appoints-carla-a-moradi-to-its-board-of-directors',
+            'key': 'bbsi_moradi'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='SUCCESS: The result has been saved to the data storage under the key: bbsi_moradi.\nThe data_storage currently contains the following keys:\n        bbsi_proxy_2024\nbbsi_moradi\n',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=0.822,
+    error=None,
+    success=True
+)
+2026-06-19 08:03:44,001 DEBUG Tool call: parse_html_page({'url': 'https://ir.bbsi.com/news-events/press-releases/detail/352/bbsi-appoints-joseph-s-clabby-to-its-board-of-directors', 'key': 'bbsi_clabby'})
+2026-06-19 08:03:44,470 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_02_dHgQc9cI3Xv81LAza9wp4187',
+        call_id=None,
+        name='parse_html_page',
+        args='{"url": "https://ir.bbsi.com/news-events/press-releases/detail/352/bbsi-appoints-joseph-s-clabby-to-its-board-of-directors", "key": "bbsi_clabby"}',
+        parsed_args={
+            'url': 'https://ir.bbsi.com/news-events/press-releases/detail/352/bbsi-appoints-joseph-s-clabby-to-its-board-of-directors',
+            'key': 'bbsi_clabby'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='SUCCESS: The result has been saved to the data storage under the key: bbsi_clabby.\nThe data_storage currently contains the following keys:\n        bbsi_proxy_2024\nbbsi_moradi\nbbsi_clabby\n',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=0.468,
+    error=None,
+    success=True
+)
+2026-06-19 08:03:44,470 DEBUG Tool call: parse_html_page({'url': 'https://ir.bbsi.com/news-events/press-releases/detail/155/bbsi-appoints-tom-cusick-to-its-board-of-directors', 'key': 'bbsi_cusick'})
+2026-06-19 08:03:45,014 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_03_qal85Bal4HDoaRWAxAfP7131',
+        call_id=None,
+        name='parse_html_page',
+        args='{"url": "https://ir.bbsi.com/news-events/press-releases/detail/155/bbsi-appoints-tom-cusick-to-its-board-of-directors", "key": "bbsi_cusick"}',
+        parsed_args={
+            'url': 'https://ir.bbsi.com/news-events/press-releases/detail/155/bbsi-appoints-tom-cusick-to-its-board-of-directors',
+            'key': 'bbsi_cusick'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='SUCCESS: The result has been saved to the data storage under the key: bbsi_cusick.\nThe data_storage currently contains the following keys:\n        bbsi_proxy_2024\nbbsi_moradi\nbbsi_clabby\nbbsi_cusick\n',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=0.544,
+    error=None,
+    success=True
+)
+2026-06-19 08:14:02,271 WARNING [Retry] | backoff | Attempt: 1 | Elapsed: 617.3s | Next wait: 13.3s | Exception: RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read) 
+2026-06-19 08:14:18,234 INFO Turn 3: 4 tool calls, response=no, tokens=5257in/322out
+2026-06-19 08:14:18,235 DEBUG Tool call: retrieve_information({'prompt': "Based on the proxy statement {{bbsi_proxy_2024}}, who were the nominees to serve on BBSI's Board of Directors? List each nominee's name and provide details about the election/nomination. Also look for any director nominees that were up for election at the 2024 annual meeting of stockholders."})
+2026-06-19 08:14:25,082 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_00_uTXp0P3Izi4lketT0eu08605',
+        call_id=None,
+        name='retrieve_information',
+        args='{"prompt": "Based on the proxy statement {{bbsi_proxy_2024}}, who were the nominees to serve on BBSI\'s Board of Directors? List each nominee\'s name and provide details about the election/nomination. Also look for any director nominees that were up for election at the 2024 annual meeting of stockholders."}',
+        parsed_args={
+            'prompt': "Based on the proxy statement {{bbsi_proxy_2024}}, who were the nominees to serve on BBSI's Board of Directors? List each nominee's name and provide details about the election/nomination. Also look for any director nominees that were up for election at the 2024 annual meeting of stockholders."
+        }
+    ),
+    tool_output=ToolOutput(
+        output='Based solely on the proxy statement you provided, here are the eight nominees for election to the Board of Directors at the 2024 Annual Meeting and the details regarding the election:\n\n**Nominees for Election to the Board of Directors**\n\nThe Board of Directors recommends that stockholders vote **FOR** each of the following eight nominees to serve until the 2025 annual meeting of stockholders.\n\n| Name | Principal Occupation | Age | Director Since |\n| :--- | :--- | :--- | :--- |\n| **Thomas J. Carley** | Retired Chief Operating Officer of Urth Organic Corporation | 65 | 2000 |\n| **Joseph S. Clabby** | Retired Vice President at Chubb Limited | 70 | 2022 |\n| **Thomas B. Cusick** | Retired Executive Advisor of Columbia Sportswear Company | 56 | 2016 |\n| **Gary E. Kramer** | President and Chief Executive Officer of the Company | 44 | 2020 |\n| **Anthony Meeker** | Retired Managing Director of Victory Capital Management, Inc. | 85 | 1993 |\n| **Carla A. Moradi** | Board member of the Company and Patriot Growth Insurance Services, LLC | 59 | 2021 |\n| **Alexandra Morehouse** | Board member of the Company and Evalueserv, Inc. | 65 | 2022 |\n| **Vincent P. Price** | Advisor to the Chief Executive Officer of Cambia Health Solutions, Inc. | 60 | 2017 |\n\n**Details about the Election/Nomination**\n\n- All of the director nominees are currently serving on the Board.\n- A nominee will be elected if they receive the **affirmative vote of a majority of the total votes cast** (meaning the number of shares voted "for" a nominee must exceed the number of votes cast "against" that nominee).\n- If an incumbent director is not re-elected, the director is required to submit their resignation to the Board. The Nominating and Governance Committee would then recommend whether to accept or reject the resignation.\n- Shares voted to "abstain" and broker non-votes will have no effect on the outcome of the election.\n- **The Board of Directors recommends that stockholders vote FOR each of the nominees.**',
+        error=None,
+        metadata=QueryResultMetadata(
+            cost=QueryResultCost(
+                input=0.017542800000000004,
+                output=0.00102711,
+                reasoning=0.00078402,
+                cache_read=None,
+                cache_write=None,
+                total_override=None,
+                total=0.019353930000000005,
+                total_input=0.017542800000000004,
+                total_output=0.0018111299999999998
+            ),
+            duration_seconds=6.827941208000993,
+            in_tokens=31896,
+            out_tokens=469,
+            reasoning_tokens=358,
+            cache_read_tokens=0,
+            cache_write_tokens=None,
+            extra={},
+            total_input_tokens=31896,
+            total_output_tokens=827
+        ),
+        done=False,
+        success=True
+    ),
+    duration_seconds=6.847,
+    error=None,
+    success=True
+)
+2026-06-19 08:14:25,082 DEBUG Tool call: retrieve_information({'prompt': 'Based on the press release {{bbsi_moradi}}, what is the date of this press release and who was appointed to the board? Is this for 2024?'})
+2026-06-19 08:14:27,152 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_01_8N61dLjMVjfST7jyZCfB5175',
+        call_id=None,
+        name='retrieve_information',
+        args='{"prompt": "Based on the press release {{bbsi_moradi}}, what is the date of this press release and who was appointed to the board? Is this for 2024?"}',
+        parsed_args={
+            'prompt': 'Based on the press release {{bbsi_moradi}}, what is the date of this press release and who was appointed to the board? Is this for 2024?'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='Based on the press release, the date is **April 9, 2021**, and the person appointed to the board of directors is **Carla A. Moradi**. No, this is not for 2024; it is from 2021.',
+        error=None,
+        metadata=QueryResultMetadata(
+            cost=QueryResultCost(
+                input=0.0004488,
+                output=0.00011826,
+                reasoning=0.00017738999999999998,
+                cache_read=None,
+                cache_write=None,
+                total_override=None,
+                total=0.00074445,
+                total_input=0.0004488,
+                total_output=0.00029564999999999995
+            ),
+            duration_seconds=2.0615985420008656,
+            in_tokens=816,
+            out_tokens=54,
+            reasoning_tokens=81,
+            cache_read_tokens=0,
+            cache_write_tokens=None,
+            extra={},
+            total_input_tokens=816,
+            total_output_tokens=135
+        ),
+        done=False,
+        success=True
+    ),
+    duration_seconds=2.069,
+    error=None,
+    success=True
+)
+2026-06-19 08:14:27,152 DEBUG Tool call: retrieve_information({'prompt': 'Based on the press release {{bbsi_clabby}}, what is the date of this press release and who was appointed to the board?'})
+2026-06-19 08:14:28,216 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_02_8uKOQcapSS8qVWrPWqzB7383',
+        call_id=None,
+        name='retrieve_information',
+        args='{"prompt": "Based on the press release {{bbsi_clabby}}, what is the date of this press release and who was appointed to the board?"}',
+        parsed_args={
+            'prompt': 'Based on the press release {{bbsi_clabby}}, what is the date of this press release and who was appointed to the board?'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='Based on the press release, the date is **September 19, 2022**, and the person appointed to the board is **Joseph S. Clabby**.',
+        error=None,
+        metadata=QueryResultMetadata(
+            cost=QueryResultCost(
+                input=0.00045100000000000007,
+                output=7.445999999999999e-05,
+                reasoning=0.00010292999999999999,
+                cache_read=None,
+                cache_write=None,
+                total_override=None,
+                total=0.00062839,
+                total_input=0.00045100000000000007,
+                total_output=0.00017738999999999998
+            ),
+            duration_seconds=1.0560487499751616,
+            in_tokens=820,
+            out_tokens=34,
+            reasoning_tokens=47,
+            cache_read_tokens=0,
+            cache_write_tokens=None,
+            extra={},
+            total_input_tokens=820,
+            total_output_tokens=81
+        ),
+        done=False,
+        success=True
+    ),
+    duration_seconds=1.064,
+    error=None,
+    success=True
+)
+2026-06-19 08:14:28,216 DEBUG Tool call: retrieve_information({'prompt': 'Based on the press release {{bbsi_cusick}}, what is the date of this press release and who was appointed to the board?'})
+2026-06-19 08:14:29,930 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_03_64rNkHVftiOd18xVIGui2765',
+        call_id=None,
+        name='retrieve_information',
+        args='{"prompt": "Based on the press release {{bbsi_cusick}}, what is the date of this press release and who was appointed to the board?"}',
+        parsed_args={
+            'prompt': 'Based on the press release {{bbsi_cusick}}, what is the date of this press release and who was appointed to the board?'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='Based on the press release, the date is **October 12, 2016**, and the person appointed to the board of directors is **Tom Cusick**.',
+        error=None,
+        metadata=QueryResultMetadata(
+            cost=QueryResultCost(
+                input=0.0005219500000000001,
+                output=7.664999999999999e-05,
+                reasoning=0.00019491,
+                cache_read=None,
+                cache_write=None,
+                total_override=None,
+                total=0.0007935100000000001,
+                total_input=0.0005219500000000001,
+                total_output=0.00027156
+            ),
+            duration_seconds=1.7064014169736765,
+            in_tokens=949,
+            out_tokens=35,
+            reasoning_tokens=89,
+            cache_read_tokens=0,
+            cache_write_tokens=None,
+            extra={},
+            total_input_tokens=949,
+            total_output_tokens=124
+        ),
+        done=False,
+        success=True
+    ),
+    duration_seconds=1.714,
+    error=None,
+    success=True
+)
+2026-06-19 08:14:32,250 INFO Turn 4: 1 tool calls, response=no, tokens=6202in/294out
+2026-06-19 08:14:32,253 DEBUG Tool call: web_search({'search_query': 'BBSI board of directors 2024 nomination appointment', 'start_date': '2024-01-01', 'end_date': '2024-12-31'})
+2026-06-19 08:14:33,934 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_00_LuBe5qrzN01fpwmhqUgX0175',
+        call_id=None,
+        name='web_search',
+        args='{"search_query": "BBSI board of directors 2024 nomination appointment", "start_date": "2024-01-01", "end_date": "2024-12-31"}',
+        parsed_args={
+            'search_query': 'BBSI board of directors 2024 nomination appointment',
+            'start_date': '2024-01-01',
+            'end_date': '2024-12-31'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='[{"url": "https://seekingalpha.com/pr/19949207-bbsi-establishes-vice-chairman-role-appoints-current-board-member-joseph-clabby", "title": "BBSI Establishes Vice Chairman Role, Appoints Current Board Member Joseph Clabby (2024-12-17) | Seeking Alpha", "content": "BBSI (NASDAQ: BBSI) is a leading provider of business management solutions, combining human resource outsourcing and professional management consulting to create a unique operational platform that differentiates it from competitors. The Company\\u2019s integrated platform is built upon expertise in payroll processing, employee benefits, workers\\u2019 compensation coverage, risk management and workplace safety programs, and human resource administration. BBSI\\u2019s partnerships help businesses of all sizes", "score": 0.93497354, "raw_content": null}, {"url": "https://www.globenewswire.com/fr/news-release/2024/12/17/2998198/0/en/BBSI-Establishes-Vice-Chairman-Role-Appoints-Current-Board-Member-Joseph-Clabby.html", "title": "BBSI Establishes Vice Chairman Role, Appoints Current Board", "content": "VANCOUVER, Wash., Dec. 17, 2024 (GLOBE NEWSWIRE) -- Barrett Business Services, Inc. (BBSI) (NASDAQ: BBSI), a leading provider of business management solutions and one of the largest professional employer organizations (PEO) in the U.S., is announcing the establishment of a vice chairman role on its board of directors and appointing current board member Joseph S. Clabby to the new role.", "score": 0.91936076, "raw_content": null}, {"url": "https://markets.financialcontent.com/stocks/article/gnwcq-2024-12-17-bbsi-establishes-vice-chairman-role-appoints-current-board-member-joseph-clabby", "title": "FinancialContent - BBSI Establishes Vice Chairman Role, Appoints Current Board Member Joseph Clabby", "content": "VANCOUVER, Wash., Dec. 17, 2024 (GLOBE NEWSWIRE) -- Barrett Business Services, Inc. (BBSI) (NASDAQ: BBSI), a leading provider of business management solutions and one of the largest professional employer organizations (PEO) in the U.S., is announcing the establishment of a vice chairman role on its board of directors and appointing current board member Joseph S. Clabby to the new role.", "score": 0.917251, "raw_content": null}, {"url": "https://www.stocktitan.net/news/BBSI/bbsi-establishes-vice-chairman-role-appoints-current-board-member-5w72owtgoapi.html", "title": "Barrett Business Services Strengthens Leadership: Industry Veteran Joe Clabby Named Vice Chairman | BBSI Stock News", "content": "VANCOUVER, Wash., Dec. 17, 2024 (GLOBE NEWSWIRE) -- Barrett Business Services, Inc. (BBSI) (NASDAQ: BBSI), a leading provider of business management solutions and one of the largest professional employer organizations (PEO) in the U.S., is announcing the establishment of a vice chairman role on its board of directors and appointing current board member Joseph S. Clabby to the new role.", "score": 0.90452427, "raw_content": null}, {"url": "https://markets.ft.com/data/announce/detail?dockey=1330-9320188en-3FDJHBO8B1U8RMS95C4NFNH6OU", "title": "BBSI Establishes Vice Chairman Role, Appoints Current Board Member Joseph Clabby \\u2013 Company Announcement - FT.com", "content": "# Company Announcements\\n\\n### BBSI Establishes Vice Chairman Role, Appoints Current Board Member Joseph Clabby\\n\\nVANCOUVER, Wash., Dec. 17, 2024 (GLOBE NEWSWIRE) -- Barrett Business Services, Inc. (BBSI) (NASDAQ: BBSI), a leading provider of business management solutions and one of the largest professional employer organizations (PEO) in the U.S., is announcing the establishment of a vice chairman role on its board of directors and appointing current board member Joseph S. Clabby to the new role.", "score": 0.90039873, "raw_content": null}, {"url": "https://www.barchart.com/story/news/30087146/bbsi-establishes-vice-chairman-role-appoints-current-board-member-joseph-clabby", "title": "BBSI Establishes Vice Chairman Role, Appoints Current Board Member Joseph Clabby", "content": "All Press Releases\\n       ACCESS Newswire\\n       Business Wire\\n       GlobeNewswire\\n       TMX Newsfile\\n       PR Newswire\\n\\n# BBSI Establishes Vice Chairman Role, Appoints Current Board Member Joseph Clabby\\n\\n Barrett Business Services Inc - GlobeNewswire - Tue Dec 17, 2024Press Release", "score": 0.8727061, "raw_content": null}, {"url": "https://www.federalregister.gov/documents/2024/10/15/2024-23771/board-of-directors-request-for-nomination", "title": "Federal Register\\n       :: \\n      Board of Directors; Request for Nomination", "content": "All nominations of or expressions of interest for the director position described above must be submitted on or before November 14, 2024. Nominations or expressions of interest should indicate that the individual nominated or interested meets the statutory requirements specified in 49 U.S.C. 14504a(d)(1)(B). All applications must include a current resume.", "score": 0.644248, "raw_content": null}, {"url": "https://money.tmx.com/quote/ZIP:US/news/8244857859928913/ZipRecruiter_Announces_Board_of_Directors_Nomination", "title": "ZipRecruiter Announces Board of Directors Nomination", "content": ", a leading online employment marketplace, today announced the appointment of Mike Gupta to the company\\u2019s Board of Directors (the \\u201c _Board_ \\u201d) and the resignation of Eric Liaw from his position as a member of the Board, both effective July 31, 2024. Mike Gupta will also serve as a member of ZipRecruiter\\u2019s Audit Committee.", "score": 0.3485348, "raw_content": null}, {"url": "https://view.news.eu.nasdaq.com/view?id=b82f43df980f95b00fe304b8d68fd421b&lang=en&src=listed", "title": "F-Secure Corporation: Appointment of a new member to the Personnel and Nomination Committee of the Board of Directors", "content": "F-Secure Corporation: Appointment of a new member to the Personnel and Nomination Committee of the Board of Directors\\n\\nF-Secure Corporation\\u2019s Board of Directors has appointed a new member to the Board of Directors\\u2019 Personnel and Nomination Committee, established on 13 March 2024. Thomas Jul, F-Secure Board member since 2022 has been appointed member of the Personnel and Nomination Committee.\\n\\nAs of 3 April 2024, the composition of the Personnel and Nomination Committee is as follows:", "score": 0.3025667, "raw_content": null}, {"url": "https://www.finanzwire.com/article/edf-epa-edf-edf-appointment-to-the-edf-board-of-directors-B1pw1Stfvoq", "title": "EDF (EPA:EDF) |", "content": "EDF\'s Annual Combined General Meeting of June 11, 2024 appointed Mr. Bruno Even as director, replacing Ms. Colette Lewiner. The appointment was proposed by the Board of Directors meeting on June 10, 2024. Mr. Bruno Even will serve for a period of three years, until the Ordinary General Meeting of 2027.", "score": 0.23564485, "raw_content": null}]',
+        error=None,
+        metadata=None,
+        done=False,
+        success=True
+    ),
+    duration_seconds=1.68,
+    error=None,
+    success=True
+)
+2026-06-19 08:14:36,650 INFO Turn 5: 1 tool calls, response=no, tokens=8303in/316out
+2026-06-19 08:14:36,651 DEBUG Tool call: retrieve_information({'prompt': 'From the proxy statement {{bbsi_proxy_2024}}, can you provide more context about what this document is and its date? What is the exact title of the filing and what meeting does it relate to?'})
+2026-06-19 08:14:42,415 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_00_LZXGEvFXFr2AkVNxGuV14601',
+        call_id=None,
+        name='retrieve_information',
+        args='{"prompt": "From the proxy statement {{bbsi_proxy_2024}}, can you provide more context about what this document is and its date? What is the exact title of the filing and what meeting does it relate to?"}',
+        parsed_args={
+            'prompt': 'From the proxy statement {{bbsi_proxy_2024}}, can you provide more context about what this document is and its date? What is the exact title of the filing and what meeting does it relate to?'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='Based on the document provided, here is the context, exact title, and meeting details:\n\n**Date of the Document:** April 22, 2024\n\n**Exact Title of the Filing:**\n**BARRETT BUSINESS SERVICES, INC. PROXY STATEMENT**\n**2024 ANNUAL MEETING OF STOCKHOLDERS**\n\n**What Meeting Does It Relate To?**\nThis filing relates to the **2024 Annual Meeting of Stockholders**, which will be held virtually on **Monday, June 3, 2024, at 1:00 p.m., Pacific Time**.\n\n**Additional Context:**\n- **Filing Type:** Definitive Proxy Statement (DEF 14A).\n- **Meeting Format:** A virtual meeting conducted solely by remote communication via live webcast.\n- **Key Proposals:** The document covers the election of eight directors, a proposal to increase authorized shares to facilitate a 4-for-1 stock split, an advisory vote on executive compensation, and ratification of the independent auditor (Deloitte & Touche LLP).',
+        error=None,
+        metadata=QueryResultMetadata(
+            cost=QueryResultCost(
+                input=0.01753125,
+                output=0.00047523,
+                reasoning=0.00070737,
+                cache_read=None,
+                cache_write=None,
+                total_override=None,
+                total=0.01871385,
+                total_input=0.01753125,
+                total_output=0.0011826
+            ),
+            duration_seconds=5.742134000000078,
+            in_tokens=31875,
+            out_tokens=217,
+            reasoning_tokens=323,
+            cache_read_tokens=0,
+            cache_write_tokens=None,
+            extra={},
+            total_input_tokens=31875,
+            total_output_tokens=540
+        ),
+        done=False,
+        success=True
+    ),
+    duration_seconds=5.764,
+    error=None,
+    success=True
+)
+2026-06-19 08:16:01,761 WARNING [Retry] | backoff | Attempt: 1 | Elapsed: 79.3s | Next wait: 14.1s | Exception: RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read) 
+2026-06-19 08:16:19,706 INFO Turn 6: 0 tool calls, response=yes, tokens=8847in/506out
+2026-06-19 08:16:24,599 INFO Turn 7: 1 tool calls, response=no, tokens=9359in/602out
+2026-06-19 08:16:24,600 DEBUG Tool call: submit_final_result({'final_result': '## Question: In 2024, who was Nominated to Serve on BBSI\'s (NASDAQ: BBSI) Board of Directors?\n\n### Answer\n\nIn 2024, the following **eight individuals** were nominated to serve on BBSI\'s Board of Directors. All were nominated for re-election at the 2024 Annual Meeting of Stockholders (held on June 3, 2024), as detailed in BBSI\'s Definitive Proxy Statement (DEF 14A) filed with the SEC on April 22, 2024:\n\n| # | Name | Principal Occupation | Director Since |\n|---|------|---------------------|---------------|\n| 1 | **Thomas J. Carley** | Retired Chief Operating Officer of Urth Organic Corporation | 2000 |\n| 2 | **Joseph S. Clabby** | Retired Vice President at Chubb Limited | 2022 |\n| 3 | **Thomas B. Cusick** | Retired Executive Advisor of Columbia Sportswear Company | 2016 |\n| 4 | **Gary E. Kramer** | President and Chief Executive Officer of BBSI | 2020 |\n| 5 | **Anthony Meeker** | Retired Managing Director of Victory Capital Management, Inc. | 1993 |\n| 6 | **Carla A. Moradi** | Board member of BBSI and Patriot Growth Insurance Services, LLC | 2021 |\n| 7 | **Alexandra Morehouse** | Board member of BBSI and Evalueserv, Inc. | 2022 |\n| 8 | **Vincent P. Price** | Advisor to the CEO of Cambia Health Solutions, Inc. | 2017 |\n\nAll eight nominees were already serving as directors and were nominated for election to serve until the 2025 annual meeting of stockholders. The Board of Directors unanimously recommended that stockholders vote **FOR** each nominee.\n\nThe proxy statement noted that a nominee would be elected if they received the affirmative vote of a majority of the total votes cast (i.e., shares voted "for" a nominee must exceed votes cast "against" that nominee).\n\n---\n\n**Sources:**\n\n{\n    "sources": [\n        {\n            "url": "https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm",\n            "name": "Barrett Business Services, Inc. - Definitive Proxy Statement (DEF 14A), Filed April 22, 2024"\n        }\n    ]\n}'})
+2026-06-19 08:16:24,600 DEBUG Tool result: ToolCallRecord(
+    tool_call=ToolCall(
+        id='call_00_mVuEE8eTHsPVuTLVpXpi0016',
+        call_id=None,
+        name='submit_final_result',
+        args='{"final_result": "## Question: In 2024, who was Nominated to Serve on BBSI\'s (NASDAQ: BBSI) Board of Directors?\\n\\n### Answer\\n\\nIn 2024, the following **eight individuals** were nominated to serve on BBSI\'s Board of Directors. All were nominated for re-election at the 2024 Annual Meeting of Stockholders (held on June 3, 2024), as detailed in BBSI\'s Definitive Proxy Statement (DEF 14A) filed with the SEC on April 22, 2024:\\n\\n| # | Name | Principal Occupation | Director Since |\\n|---|------|---------------------|---------------|\\n| 1 | **Thomas J. Carley** | Retired Chief Operating Officer of Urth Organic Corporation | 2000 |\\n| 2 | **Joseph S. Clabby** | Retired Vice President at Chubb Limited | 2022 |\\n| 3 | **Thomas B. Cusick** | Retired Executive Advisor of Columbia Sportswear Company | 2016 |\\n| 4 | **Gary E. Kramer** | President and Chief Executive Officer of BBSI | 2020 |\\n| 5 | **Anthony Meeker** | Retired Managing Director of Victory Capital Management, Inc. | 1993 |\\n| 6 | **Carla A. Moradi** | Board member of BBSI and Patriot Growth Insurance Services, LLC | 2021 |\\n| 7 | **Alexandra Morehouse** | Board member of BBSI and Evalueserv, Inc. | 2022 |\\n| 8 | **Vincent P. Price** | Advisor to the CEO of Cambia Health Solutions, Inc. | 2017 |\\n\\nAll eight nominees were already serving as directors and were nominated for election to serve until the 2025 annual meeting of stockholders. The Board of Directors unanimously recommended that stockholders vote **FOR** each nominee.\\n\\nThe proxy statement noted that a nominee would be elected if they received the affirmative vote of a majority of the total votes cast (i.e., shares voted \\"for\\" a nominee must exceed votes cast \\"against\\" that nominee).\\n\\n---\\n\\n**Sources:**\\n\\n{\\n    \\"sources\\": [\\n        {\\n            \\"url\\": \\"https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm\\",\\n            \\"name\\": \\"Barrett Business Services, Inc. - Definitive Proxy Statement (DEF 14A), Filed April 22, 2024\\"\\n        }\\n    ]\\n}"}',
+        parsed_args={
+            'final_result': '## Question: In 2024, who was Nominated to Serve on BBSI\'s (NASDAQ: BBSI) Board of Directors?\n\n### Answer\n\nIn 2024, the following **eight individuals** were nominated to serve on BBSI\'s Board of Directors. All were nominated for re-election at the 2024 Annual Meeting of Stockholders (held on June 3, 2024), as detailed in BBSI\'s Definitive Proxy Statement (DEF 14A) filed with the SEC on April 22, 2024:\n\n| # | Name | Principal Occupation | Director Since |\n|---|------|---------------------|---------------|\n| 1 | **Thomas J. Carley** | Retired Chief Operating Officer of Urth Organic Corporation | 2000 |\n| 2 | **Joseph S. Clabby** | Retired Vice President at Chubb Limited | 2022 |\n| 3 | **Thomas B. Cusick** | Retired Executive Advisor of Columbia Sportswear Company | 2016 |\n| 4 | **Gary E. Kramer** | President and Chief Executive Officer of BBSI | 2020 |\n| 5 | **Anthony Meeker** | Retired Managing Director of Victory Capital Management, Inc. | 1993 |\n| 6 | **Carla A. Moradi** | Board member of BBSI and Patriot Growth Insurance Services, LLC | 2021 |\n| 7 | **Alexandra Morehouse** | Board member of BBSI and Evalueserv, Inc. | 2022 |\n| 8 | **Vincent P. Price** | Advisor to the CEO of Cambia Health Solutions, Inc. | 2017 |\n\nAll eight nominees were already serving as directors and were nominated for election to serve until the 2025 annual meeting of stockholders. The Board of Directors unanimously recommended that stockholders vote **FOR** each nominee.\n\nThe proxy statement noted that a nominee would be elected if they received the affirmative vote of a majority of the total votes cast (i.e., shares voted "for" a nominee must exceed votes cast "against" that nominee).\n\n---\n\n**Sources:**\n\n{\n    "sources": [\n        {\n            "url": "https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm",\n            "name": "Barrett Business Services, Inc. - Definitive Proxy Statement (DEF 14A), Filed April 22, 2024"\n        }\n    ]\n}'
+        }
+    ),
+    tool_output=ToolOutput(
+        output='## Question: In 2024, who was Nominated to Serve on BBSI\'s (NASDAQ: BBSI) Board of Directors?\n\n### Answer\n\nIn 2024, the following **eight individuals** were nominated to serve on BBSI\'s Board of Directors. All were nominated for re-election at the 2024 Annual Meeting of Stockholders (held on June 3, 2024), as detailed in BBSI\'s Definitive Proxy Statement (DEF 14A) filed with the SEC on April 22, 2024:\n\n| # | Name | Principal Occupation | Director Since |\n|---|------|---------------------|---------------|\n| 1 | **Thomas J. Carley** | Retired Chief Operating Officer of Urth Organic Corporation | 2000 |\n| 2 | **Joseph S. Clabby** | Retired Vice President at Chubb Limited | 2022 |\n| 3 | **Thomas B. Cusick** | Retired Executive Advisor of Columbia Sportswear Company | 2016 |\n| 4 | **Gary E. Kramer** | President and Chief Executive Officer of BBSI | 2020 |\n| 5 | **Anthony Meeker** | Retired Managing Director of Victory Capital Management, Inc. | 1993 |\n| 6 | **Carla A. Moradi** | Board member of BBSI and Patriot Growth Insurance Services, LLC | 2021 |\n| 7 | **Alexandra Morehouse** | Board member of BBSI and Evalueserv, Inc. | 2022 |\n| 8 | **Vincent P. Price** | Advisor to the CEO of Cambia Health Solutions, Inc. | 2017 |\n\nAll eight nominees were already serving as directors and were nominated for election to serve until the 2025 annual meeting of stockholders. The Board of Directors unanimously recommended that stockholders vote **FOR** each nominee.\n\nThe proxy statement noted that a nominee would be elected if they received the affirmative vote of a majority of the total votes cast (i.e., shares voted "for" a nominee must exceed votes cast "against" that nominee).\n\n---\n\n**Sources:**\n\n{\n    "sources": [\n        {\n            "url": "https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm",\n            "name": "Barrett Business Services, Inc. - Definitive Proxy Statement (DEF 14A), Filed April 22, 2024"\n        }\n    ]\n}',
+        error=None,
+        metadata=None,
+        done=True,
+        success=True
+    ),
+    duration_seconds=0.0,
+    error=None,
+    success=True
+)
+2026-06-19 08:16:24,602 INFO Stop: tool signaled done
+2026-06-19 08:16:24,607 DEBUG Run complete: AgentResult(
+    final_answer='## Question: In 2024, who was Nominated to Serve on BBSI\'s (NASDAQ: BBSI) Board of Directors?\n\n### Answer\n\nIn 2024, the following **eight individuals** were nominated to serve on BBSI\'s Board of Directors. All were nominated for re-election at the 2024 Annual Meeting of Stockholders (held on June 3, 2024), as detailed in BBSI\'s Definitive Proxy Statement (DEF 14A) filed with the SEC on April 22, 2024:\n\n| # | Name | Principal Occupation | Director Since |\n|---|------|---------------------|---------------|\n| 1 | **Thomas J. Carley** | Retired Chief Operating Officer of Urth Organic Corporation | 2000 |\n| 2 | **Joseph S. Clabby** | Retired Vice President at Chubb Limited | 2022 |\n| 3 | **Thomas B. Cusick** | Retired Executive Advisor of Columbia Sportswear Company | 2016 |\n| 4 | **Gary E. Kramer** | President and Chief Executive Officer of BBSI | 2020 |\n| 5 | **Anthony Meeker** | Retired Managing Director of Victory Capital Management, Inc. | 1993 |\n| 6 | **Carla A. Moradi** | Board member of BBSI and Patriot Growth Insurance Services, LLC | 2021 |\n| 7 | **Alexandra Morehouse** | Board member of BBSI and Evalueserv, Inc. | 2022 |\n| 8 | **Vincent P. Price** | Advisor to the CEO of Cambia Health Solutions, Inc. | 2017 |\n\nAll eight nominees were already serving as directors and were nominated for election to serve until the 2025 annual meeting of stockholders. The Board of Directors unanimously recommended that stockholders vote **FOR** each nominee.\n\nThe proxy statement noted that a nominee would be elected if they received the affirmative vote of a majority of the total votes cast (i.e., shares voted "for" a nominee must exceed votes cast "against" that nominee).\n\n---\n\n**Sources:**\n\n{\n    "sources": [\n        {\n            "url": "https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm",\n            "name": "Barrett Business Services, Inc. - Definitive Proxy Statement (DEF 14A), Filed April 22, 2024"\n        }\n    ]\n}',
+    final_error=None,
+    turns=[
+        TurnSummary(
+            output_text_length=0,
+            reasoning_length=142,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.TOOL_CALLS: 'tool_calls'>,
+                raw='tool_calls'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=2.695e-05,
+                    output=0.00036135,
+                    reasoning=7.227e-05,
+                    cache_read=0.00032256000000000006,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.00078313,
+                    total_input=0.00034951000000000003,
+                    total_output=0.00043361999999999996
+                ),
+                duration_seconds=2.1856812079786323,
+                in_tokens=49,
+                out_tokens=165,
+                reasoning_tokens=33,
+                cache_read_tokens=2304,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=2353,
+                total_output_tokens=198
+            ),
+            tool_calls=[
+                ToolCallSummary(
+                    tool_name='web_search',
+                    tool_call_id='call_00_ii0XQZfeqHOy13EMUZUr7907',
+                    args_lengths={'search_query': 64},
+                    output_length=7521,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=1.597,
+                    metadata=None
+                ),
+                ToolCallSummary(
+                    tool_name='edgar_search',
+                    tool_call_id='call_01_G7C3O4AQLlsZ4ibsaS5r7295',
+                    args_lengths={
+                        'search_query': 34,
+                        'form_types': 18,
+                        'start_date': 10,
+                        'end_date': 10
+                    },
+                    output_length=345,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=3.724,
+                    metadata=None
+                )
+            ],
+            duration_seconds=7.514,
+            retry_overhead_seconds=0.002,
+            effective_duration_seconds=7.512
+        ),
+        TurnSummary(
+            output_text_length=0,
+            reasoning_length=262,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.TOOL_CALLS: 'tool_calls'>,
+                raw='tool_calls'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=0.0011858,
+                    output=0.00078183,
+                    reasoning=0.00013797,
+                    cache_read=0.00034048,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.00244608,
+                    total_input=0.00152628,
+                    total_output=0.0009197999999999999
+                ),
+                duration_seconds=3.654438083001878,
+                in_tokens=2156,
+                out_tokens=357,
+                reasoning_tokens=63,
+                cache_read_tokens=2432,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=4588,
+                total_output_tokens=420
+            ),
+            tool_calls=[
+                ToolCallSummary(
+                    tool_name='parse_html_page',
+                    tool_call_id='call_00_MloGSUHxsFZs36Z6BtMj3601',
+                    args_lengths={'url': 83, 'key': 15},
+                    output_length=167,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=0.638,
+                    metadata=None
+                ),
+                ToolCallSummary(
+                    tool_name='parse_html_page',
+                    tool_call_id='call_01_Ub9MmhU4Bih51skS1qxf3912',
+                    args_lengths={'url': 112, 'key': 11},
+                    output_length=175,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=0.822,
+                    metadata=None
+                ),
+                ToolCallSummary(
+                    tool_name='parse_html_page',
+                    tool_call_id='call_02_dHgQc9cI3Xv81LAza9wp4187',
+                    args_lengths={'url': 113, 'key': 11},
+                    output_length=187,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=0.468,
+                    metadata=None
+                ),
+                ToolCallSummary(
+                    tool_name='parse_html_page',
+                    tool_call_id='call_03_qal85Bal4HDoaRWAxAfP7131',
+                    args_lengths={'url': 108, 'key': 11},
+                    output_length=199,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=0.544,
+                    metadata=None
+                )
+            ],
+            duration_seconds=6.134,
+            retry_overhead_seconds=0.004,
+            effective_duration_seconds=6.13
+        ),
+        TurnSummary(
+            output_text_length=0,
+            reasoning_length=112,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.TOOL_CALLS: 'tool_calls'>,
+                raw='tool_calls'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=4.95e-06,
+                    output=0.00064824,
+                    reasoning=5.694e-05,
+                    cache_read=0.00073472,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.0014448500000000001,
+                    total_input=0.00073967,
+                    total_output=0.00070518
+                ),
+                duration_seconds=2.652363958011847,
+                in_tokens=9,
+                out_tokens=296,
+                reasoning_tokens=26,
+                cache_read_tokens=5248,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=5257,
+                total_output_tokens=322
+            ),
+            tool_calls=[
+                ToolCallSummary(
+                    tool_name='retrieve_information',
+                    tool_call_id='call_00_uTXp0P3Izi4lketT0eu08605',
+                    args_lengths={'prompt': 292},
+                    output_length=1996,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=6.847,
+                    metadata=QueryResultMetadata(
+                        cost=QueryResultCost(
+                            input=0.017542800000000004,
+                            output=0.00102711,
+                            reasoning=0.00078402,
+                            cache_read=None,
+                            cache_write=None,
+                            total_override=None,
+                            total=0.019353930000000005,
+                            total_input=0.017542800000000004,
+                            total_output=0.0018111299999999998
+                        ),
+                        duration_seconds=6.827941208000993,
+                        in_tokens=31896,
+                        out_tokens=469,
+                        reasoning_tokens=358,
+                        cache_read_tokens=0,
+                        cache_write_tokens=None,
+                        extra={},
+                        total_input_tokens=31896,
+                        total_output_tokens=827
+                    )
+                ),
+                ToolCallSummary(
+                    tool_name='retrieve_information',
+                    tool_call_id='call_01_8N61dLjMVjfST7jyZCfB5175',
+                    args_lengths={'prompt': 136},
+                    output_length=176,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=2.069,
+                    metadata=QueryResultMetadata(
+                        cost=QueryResultCost(
+                            input=0.0004488,
+                            output=0.00011826,
+                            reasoning=0.00017738999999999998,
+                            cache_read=None,
+                            cache_write=None,
+                            total_override=None,
+                            total=0.00074445,
+                            total_input=0.0004488,
+                            total_output=0.00029564999999999995
+                        ),
+                        duration_seconds=2.0615985420008656,
+                        in_tokens=816,
+                        out_tokens=54,
+                        reasoning_tokens=81,
+                        cache_read_tokens=0,
+                        cache_write_tokens=None,
+                        extra={},
+                        total_input_tokens=816,
+                        total_output_tokens=135
+                    )
+                ),
+                ToolCallSummary(
+                    tool_name='retrieve_information',
+                    tool_call_id='call_02_8uKOQcapSS8qVWrPWqzB7383',
+                    args_lengths={'prompt': 118},
+                    output_length=126,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=1.064,
+                    metadata=QueryResultMetadata(
+                        cost=QueryResultCost(
+                            input=0.00045100000000000007,
+                            output=7.445999999999999e-05,
+                            reasoning=0.00010292999999999999,
+                            cache_read=None,
+                            cache_write=None,
+                            total_override=None,
+                            total=0.00062839,
+                            total_input=0.00045100000000000007,
+                            total_output=0.00017738999999999998
+                        ),
+                        duration_seconds=1.0560487499751616,
+                        in_tokens=820,
+                        out_tokens=34,
+                        reasoning_tokens=47,
+                        cache_read_tokens=0,
+                        cache_write_tokens=None,
+                        extra={},
+                        total_input_tokens=820,
+                        total_output_tokens=81
+                    )
+                ),
+                ToolCallSummary(
+                    tool_name='retrieve_information',
+                    tool_call_id='call_03_64rNkHVftiOd18xVIGui2765',
+                    args_lengths={'prompt': 118},
+                    output_length=131,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=1.714,
+                    metadata=QueryResultMetadata(
+                        cost=QueryResultCost(
+                            input=0.0005219500000000001,
+                            output=7.664999999999999e-05,
+                            reasoning=0.00019491,
+                            cache_read=None,
+                            cache_write=None,
+                            total_override=None,
+                            total=0.0007935100000000001,
+                            total_input=0.0005219500000000001,
+                            total_output=0.00027156
+                        ),
+                        duration_seconds=1.7064014169736765,
+                        in_tokens=949,
+                        out_tokens=35,
+                        reasoning_tokens=89,
+                        cache_read_tokens=0,
+                        cache_write_tokens=None,
+                        extra={},
+                        total_input_tokens=949,
+                        total_output_tokens=124
+                    )
+                )
+            ],
+            duration_seconds=32.266,
+            retry_overhead_seconds=17.916,
+            effective_duration_seconds=14.35
+        ),
+        TurnSummary(
+            output_text_length=0,
+            reasoning_length=783,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.TOOL_CALLS: 'tool_calls'>,
+                raw='tool_calls'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=0.0003839,
+                    output=0.00021681,
+                    reasoning=0.00042705,
+                    cache_read=0.0007705600000000001,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.0017983200000000002,
+                    total_input=0.0011544600000000002,
+                    total_output=0.00064386
+                ),
+                duration_seconds=2.3126902079966385,
+                in_tokens=698,
+                out_tokens=99,
+                reasoning_tokens=195,
+                cache_read_tokens=5504,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=6202,
+                total_output_tokens=294
+            ),
+            tool_calls=[
+                ToolCallSummary(
+                    tool_name='web_search',
+                    tool_call_id='call_00_LuBe5qrzN01fpwmhqUgX0175',
+                    args_lengths={
+                        'search_query': 51,
+                        'start_date': 10,
+                        'end_date': 10
+                    },
+                    output_length=6805,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=1.68,
+                    metadata=None
+                )
+            ],
+            duration_seconds=4.002,
+            retry_overhead_seconds=0.006,
+            effective_duration_seconds=3.996
+        ),
+        TurnSummary(
+            output_text_length=0,
+            reasoning_length=847,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.TOOL_CALLS: 'tool_calls'>,
+                raw='tool_calls'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=0.00104665,
+                    output=0.00019491,
+                    reasoning=0.00049713,
+                    cache_read=0.0008960000000000001,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.0026346900000000003,
+                    total_input=0.0019426500000000002,
+                    total_output=0.00069204
+                ),
+                duration_seconds=2.706362500000978,
+                in_tokens=1903,
+                out_tokens=89,
+                reasoning_tokens=227,
+                cache_read_tokens=6400,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=8303,
+                total_output_tokens=316
+            ),
+            tool_calls=[
+                ToolCallSummary(
+                    tool_name='retrieve_information',
+                    tool_call_id='call_00_LZXGEvFXFr2AkVNxGuV14601',
+                    args_lengths={'prompt': 190},
+                    output_length=889,
+                    success=True,
+                    done=False,
+                    error=None,
+                    duration_seconds=5.764,
+                    metadata=QueryResultMetadata(
+                        cost=QueryResultCost(
+                            input=0.01753125,
+                            output=0.00047523,
+                            reasoning=0.00070737,
+                            cache_read=None,
+                            cache_write=None,
+                            total_override=None,
+                            total=0.01871385,
+                            total_input=0.01753125,
+                            total_output=0.0011826
+                        ),
+                        duration_seconds=5.742134000000078,
+                        in_tokens=31875,
+                        out_tokens=217,
+                        reasoning_tokens=323,
+                        cache_read_tokens=0,
+                        cache_write_tokens=None,
+                        extra={},
+                        total_input_tokens=31875,
+                        total_output_tokens=540
+                    )
+                )
+            ],
+            duration_seconds=8.479,
+            retry_overhead_seconds=0.007,
+            effective_duration_seconds=8.472
+        ),
+        TurnSummary(
+            output_text_length=1749,
+            reasoning_length=220,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.STOP: 'stop'>,
+                raw='stop'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=8.25e-06,
+                    output=0.00099864,
+                    reasoning=0.0001095,
+                    cache_read=0.00123648,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.00235287,
+                    total_input=0.00124473,
+                    total_output=0.00110814
+                ),
+                duration_seconds=3.8237459999800194,
+                in_tokens=15,
+                out_tokens=456,
+                reasoning_tokens=50,
+                cache_read_tokens=8832,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=8847,
+                total_output_tokens=506
+            ),
+            tool_calls=[],
+            duration_seconds=24.779,
+            retry_overhead_seconds=20.951,
+            effective_duration_seconds=3.828
+        ),
+        TurnSummary(
+            output_text_length=0,
+            reasoning_length=145,
+            finish_reason=FinishReasonInfo(
+                reason=<FinishReason.TOOL_CALLS: 'tool_calls'>,
+                raw='tool_calls'
+            ),
+            metadata=QueryResultMetadata(
+                cost=QueryResultCost(
+                    input=0.00028985,
+                    output=0.0012483,
+                    reasoning=7.007999999999999e-05,
+                    cache_read=0.00123648,
+                    cache_write=None,
+                    total_override=None,
+                    total=0.00284471,
+                    total_input=0.0015263300000000002,
+                    total_output=0.0013183799999999999
+                ),
+                duration_seconds=4.87646716699237,
+                in_tokens=527,
+                out_tokens=570,
+                reasoning_tokens=32,
+                cache_read_tokens=8832,
+                cache_write_tokens=None,
+                extra={},
+                total_input_tokens=9359,
+                total_output_tokens=602
+            ),
+            tool_calls=[
+                ToolCallSummary(
+                    tool_name='submit_final_result',
+                    tool_call_id='call_00_mVuEE8eTHsPVuTLVpXpi0016',
+                    args_lengths={'final_result': 1975},
+                    output_length=1975,
+                    success=True,
+                    done=True,
+                    error=None,
+                    duration_seconds=0.0,
+                    metadata=None
+                )
+            ],
+            duration_seconds=4.888,
+            retry_overhead_seconds=0.01,
+            effective_duration_seconds=4.878
+        )
+    ],
+    final_duration_seconds=88.077,
+    output_dir=PosixPath('logs/finance/deepseek-reasoner/2026-06-19_08-03-31_0b685a/public-004-baseline'),
+    stop_reason=<AgentStopReason.DONE_TOOL: 'done_tool'>,
+    success=True,
+    total_turns=7,
+    error_count=0,
+    tool_calls_count=13,
+    tool_usage={
+        'web_search': 2,
+        'edgar_search': 1,
+        'parse_html_page': 4,
+        'retrieve_information': 5,
+        'submit_final_result': 1
+    },
+    final_retry_overhead_seconds=38.896,
+    final_effective_duration_seconds=49.181,
+    final_aggregated_metadata=QueryResultMetadata(
+        cost=QueryResultCost(
+            input=0.0029463500000000004,
+            output=0.0044500799999999995,
+            reasoning=0.00137094,
+            cache_read=0.00553728,
+            cache_write=None,
+            total_override=None,
+            total=0.01430465,
+            total_input=0.00848363,
+            total_output=0.00582102
+        ),
+        duration_seconds=22.211,
+        in_tokens=5357,
+        out_tokens=2032,
+        reasoning_tokens=626,
+        cache_read_tokens=39552,
+        cache_write_tokens=None,
+        extra={},
+        total_input_tokens=44909,
+        total_output_tokens=2658
+    )
+)

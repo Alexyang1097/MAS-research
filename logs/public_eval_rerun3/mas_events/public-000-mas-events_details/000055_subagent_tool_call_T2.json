@@ -1,0 +1,20 @@
+{
+  "seq": 55,
+  "timestamp": "2026-06-19T02:47:21.946562+00:00",
+  "event_type": "tool_call",
+  "component": "subagent",
+  "iteration": null,
+  "assignment_id": "T2",
+  "payload": {
+    "agent_name": "RegulatoryNewsAgent",
+    "round": 3,
+    "call": {
+      "tool_name": "web_search",
+      "args": {
+        "search_query": "US Steel Nippon Steel merger press release \"Board of Directors\" \"Corrects the Record\" May 21 2024",
+        "number_of_results": 10
+      },
+      "purpose": "Find the May 21, 2024 US Steel board press release correcting the record on the transaction."
+    }
+  }
+}

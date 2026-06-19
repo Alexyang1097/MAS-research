@@ -1,0 +1,145 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "The EDGAR search returned a 403 error. Let me try to search the web more specifically for US Steel filings related to the merger, and also look for their official statements and SEC filings.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 0.00114345,
+        "output": 0.0006044399999999999,
+        "reasoning": 8.759999999999999e-05,
+        "cache_read": 0.00032256000000000006,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.00215805,
+        "total_input": 0.0014660100000000002,
+        "total_output": 0.0006920399999999999
+      },
+      "duration_seconds": 3.1895317079906818,
+      "in_tokens": 2079,
+      "out_tokens": 276,
+      "reasoning_tokens": 40,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 4383,
+      "total_output_tokens": 316
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_iAmPxifNuw0gD8Jko1NX9079",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"US Steel 8-K Nippon Steel merger 2024 2025\", \"start_date\": \"2024-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "US Steel 8-K Nippon Steel merger 2024 2025",
+          "start_date": "2024-01-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      {
+        "id": "call_01_PVdeFPc3DYWAtTpRfpbH4009",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"US Steel earnings call Nippon Steel merger business operations impact\", \"start_date\": \"2024-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "US Steel earnings call Nippon Steel merger business operations impact",
+          "start_date": "2024-01-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      {
+        "id": "call_02_rYoOcZTxR7S4AF4XMin28081",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"US Steel annual report 2024 Nippon Steel merger\", \"start_date\": \"2024-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "US Steel annual report 2024 Nippon Steel merger",
+          "start_date": "2024-01-01",
+          "end_date": "2025-04-07"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_iAmPxifNuw0gD8Jko1NX9079",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"US Steel 8-K Nippon Steel merger 2024 2025\", \"start_date\": \"2024-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "US Steel 8-K Nippon Steel merger 2024 2025",
+          "start_date": "2024-01-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.stocktitan.net/news/X/united-states-steel-corporation-to-release-fourth-quarter-and-full-tyzvcbsu466h.html\", \"title\": \"U.S. Steel Sets Q4 2024 Earnings Release Date Following Nippon Steel Merger Agreement | X Stock News\", \"content\": \"PITTSBURGH--(BUSINESS WIRE)-- United States Steel Corporation (NYSE: X) (\\u201cU. S. Steel\\u201d) today announced that it will release financial results for the fourth quarter and full year 2024 on Thursday, January 30, 2025, following the close of trading on the New York Stock Exchange.\", \"score\": 0.8232293, \"raw_content\": null}, {\"url\": \"https://www.entrepreneur.com/finance/us-steel-and-nippon-merger-should-investors-bet-on-it/489330\", \"title\": \"U.S. Steel and Nippon Merger: Should Investors Bet on It?\", \"content\": \"## Latest Status of the Merger Attempt\\n\\nAfter Donald Trump won the election, NSC and U.S. Steel focused on negotiating with the Trump administration. On Feb 17, 2025, Trump suggested that NSC would drop its full acquisition and instead \\u201cinvest heavily\\u201d in U.S. Steel. The move indicated Trump\\u2019s openness to flexibility and injected more optimism into the potential deal.\", \"score\": 0.7823471, \"raw_content\": null}, {\"url\": \"https://stainless-steel-world.net/nippon-steel-and-nippon-steel-stainless-steel-corporation-merger\", \"title\": \"Nippon Steel and Nippon Steel Stainless Steel Corporation merger - Stainless Steel World\", \"content\": \"and Nippon Steel Stainless Steel Corporation (NSSC), a wholly-owned subsidiary of NSC, have announced that their respective Boards of Directors, at meetings held earlier in October, resolved to conduct a merger with NSC as the surviving company and NSSC as the dissolving company, effective as of April 1, 2025.\", \"score\": 0.77179235, \"raw_content\": null}, {\"url\": \"https://journal-neo.su/2024/10/10/on-the-political-issues-and-problems-related-to-the-planned-merger-between-nippon-steel-and-us-steel\", \"title\": \"Merger of Nippon Steel and US Steel: an important event for the industry\", \"content\": \"About\\n Contact Us\\n\\nNew Eastern Outlook\\n\\nENFRRU\\n\\nNew Eastern Outlook\\n\\nEN|FR|RU\\n\\nFollow us on:\\n\\nNew Eastern Outlook\\n\\n## Economy\\n\\n# On the political issues and problems related to the planned merger between Nippon Steel and US Steel\\n\\nVladimir Terehov,   October 10, 2024\\n\\nThe proposed merger of the two countries\\u2019 leading steel companies has recently become a prominent issue in the complex system of US-Japanese relations.\", \"score\": 0.7140107, \"raw_content\": null}, {\"url\": \"https://investorshangout.com/analysis-of-cfius-review-on-us-steelnippon-steel-merger-172498-\", \"title\": \"Analysis of CFIUS Review on US Steel-Nippon Steel Merger\", \"content\": \"Published Time: 2025-01-08T12:51:23-05:00 Analysis of CFIUS Review on US Steel-Nippon Steel Merger - Investors Hangout 4. Analysis of CFIUS Review on US Steel-Nippon Steel Merger Analysis of CFIUS Review on US Steel-Nippon Steel Merger Author: Thomas CooperUpdated: 01-08-2025 12:51 PM CFIUS Review of the US Steel-Nippon Steel Merger Recently, U.S. Treasury Secretary Janet Yellen addressed the blocked acquisition of U.S. Steel by Nippon Steel, emphasizing the significance of the Committee on\", \"score\": 0.7106489, \"raw_content\": null}, {\"url\": \"https://gmk.center/en/news/biden-plans-to-block-the-merger-of-nippon-steel-and-us-steel-bloomberg\", \"title\": \"Biden plans to block the merger of Nippon Steel and US Steel - Bloomberg\", \"content\": \"In early December, Nippon Steel reaffirmed its confidence that the acquisition of US Steel could be completed by the end of 2024 if the deal goes through the proper procedures and is approved by the Biden administration.\\n\\nAs GMK Center reported earlier, Japanese Prime Minister Shigeru Ishiba, according to Reuters, sent a letter to the US President asking him to approve the deal so as not to harm recent efforts to strengthen ties between the two countries.\\n\\nTags:\", \"score\": 0.6796259, \"raw_content\": null}, {\"url\": \"https://www.mining-technology.com/news/us-steel-nippon-steel-merger\", \"title\": \"US Steel, Nippon Steel merger gains nod of non-US regulators\", \"content\": \"United States Steel Corporation (US Steel) and Nippon Steel have secured all regulatory clearances from jurisdictions outside of the US for their proposed merger.\\n\\nThese approvals from the regulatory bodies mark a crucial step towards the completion of the deal, which is anticipated in the second half of 2024.\\n\\n### Go deeper with GlobalData\\n\\nReportsLogo\\n\\n#### Mining Industry Mergers and Acquisitions Deals by Top Themes in Q1 ...\\n\\nReportsLogo\", \"score\": 0.6506676, \"raw_content\": null}, {\"url\": \"https://finimize.com/content/us-steel-and-nippon-steel-eye-14-billion-merger-and-investment\", \"title\": \"US Steel And Nippon Steel Eye $14 Billion Merger And Investment - Finimize\", \"content\": \"The proposed merger marks a strategic pivot in the global steel scene, signaling potential growth and tech advancements in the US. Investors might see this as a vote of confidence in the market, with potential ripple effects in related sectors. The deal aims to rejuvenate Rust Belt areas, promising more efficiency and competitiveness, possibly reshaping domestic and global steel markets.\\n\\n_The bigger picture:_ _A bold collaboration amidst global shifts._\", \"score\": 0.6304352, \"raw_content\": null}, {\"url\": \"https://finance.yahoo.com/news/us-steel-nippon-steel-merger-102356390.html\", \"title\": \"US Steel and Nippon Steel merger gains non-US regulator approval\", \"content\": \"These approvals from the regulatory bodies mark a crucial step towards the completion of the deal, which is anticipated in the second half of 2024.\\n\\nThe bodies approving the transaction include the Directorate-General for Competition of the European Commission, the Mexican Federal Economic Competition Commission, the Serbian Competition Commission, the Ministry of Economy of Slovakia, and the Turkish Competition Authority.\", \"score\": 0.6147415, \"raw_content\": null}, {\"url\": \"https://www.pymnts.com/cpi-posts/us-steel-and-nippon-steel-secure-international-approvals-for-14-9b-merger\", \"title\": \"US Steel and Nippon Steel Secure International Approvals for $14.9B Merger\", \"content\": \"The U.S. Department of Justice is rigorously examining the proposed transaction. In response to the mounting concerns, Nippon Steel has pledged to honor all existing agreements between U.S. Steel and the union. Additionally, Nippon Steel has committed to relocating its U.S. headquarters to Pittsburgh, where U.S. Steel is currently based, in a bid to alleviate some of the apprehensions surrounding the merger.\", \"score\": 0.57437146, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.732,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_01_PVdeFPc3DYWAtTpRfpbH4009",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"US Steel earnings call Nippon Steel merger business operations impact\", \"start_date\": \"2024-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "US Steel earnings call Nippon Steel merger business operations impact",
+          "start_date": "2024-01-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.mesabitribune.com/news/business/u-s-steel-airs-potential-impact-of-merger-failure/article_751fec4a-6ae7-11ef-88a3-fbd763eda377.html\", \"title\": \"U.S. Steel airs potential impact of merger failure | Business | mesabitribune.com\", \"content\": \"United States Steel Corporation says it would pivot away from blast furnace operations and potentially move its headquarters if its proposed merger with Nippon Steel Corporation fails.\\n\\nAfter months of criticism from the United Steelworkers union over the proposed $14.9 billion dollar merger, it\\u2019s the first time that the iconic steelmaker has publicly talked about possible impacts should the merger not be approved by federal regulators.\", \"score\": 0.81875163, \"raw_content\": null}, {\"url\": \"https://nwindianabusiness.com/community/business-news/u-s-steel-stockholders-approve-merger-with-nippon-steel/64321\", \"title\": \"U.S. Steel stockholders approve merger with Nippon Steel \\u2022 Northwest Indiana Business Magazine\", \"content\": \"U.S. Steel has operations across the U.S. and in Central Europe. The steelmaker serves the automotive, construction, appliance, energy, containers and packaging industries. U.S. Steel has an annual raw steelmaking capability of 22.4 million net tons. The company was founded in 1901.\\n\\nBarclays Capital Inc., Goldman Sachs & Co. LLC and Evercore Inc. are serving as financial advisers to U. S. Steel. Milbank LLP and Wachtell, Lipton, Rosen & Katz are acting as legal advisers.\", \"score\": 0.6768127, \"raw_content\": null}, {\"url\": \"https://www.pymnts.com/cpi-posts/us-steel-and-nippon-steel-secure-international-approvals-for-14-9b-merger\", \"title\": \"US Steel and Nippon Steel Secure International Approvals for $14.9B Merger\", \"content\": \"\\u0394\\n\\nNippon Steel secured the deal to acquire U.S. Steel last December, outbidding several rivals including Cleveland-Cliffs, ArcelorMittal and Nucor. This acquisition, valued at nearly $15 billion, represents a major consolidation in the steel sector, promising to reshape the market landscape significantly.\", \"score\": 0.6490677, \"raw_content\": null}, {\"url\": \"https://energy-analytics-institute.org/2025/01/03/nippon-and-us-steel-call-biden-decision-to-block-merger-unlawful\", \"title\": \"Nippon and US Steel Call Biden Decision to Block Merger Unlawful - Energy Analytics Institute (EAI)\", \"content\": \"Nippon Steel and US Steel are confident that our transaction would revitalize communities that rely on American steel, including in Pennsylvania and Indiana, provide job security for American steelworkers, enhance the American steel supply chain, help America\\u2019s domestic steel industry compete more effectively with China and bolster national security. Nippon Steel is the only partner both willing and able to make the necessary investments \\u2013 including at least $1bn to Mon Valley Works and\", \"score\": 0.63615024, \"raw_content\": null}, {\"url\": \"https://www.foxbusiness.com/politics/trump-biden-oppose-nippon-us-steel-merger-what-vp-harris-position\", \"title\": \"Where does VP Harris stand on US Steel-Nippon Steel merger? | Fox Business\", \"content\": \"U.S. Steel has said its deal with Nippon Steel would strengthen the American steel industry and benefit workers as well as supply chains. (Justin Merriman/Bloomberg via Getty Images / Getty Images)\\n\\nNippon Steel, which is based in Japan but is not a state-owned enterprise, has worked with U.S. Steel in an effort to assuage the concerns about the merger raised by politicians and labor groups.\", \"score\": 0.62495816, \"raw_content\": null}, {\"url\": \"https://finance.yahoo.com/news/us-steel-nippon-steel-merger-102356390.html\", \"title\": \"US Steel and Nippon Steel merger gains non-US regulator approval\", \"content\": \"US Steel president and CEO David Burritt said: \\\"We are pleased with the regulatory approvals received, as they are a clear indication that the transaction with Nippon Steel is pro-competitive and supports the strategic merits of foreign investment.\\n\\n\\\"Together with Nippon Steel, US Steel will become a world-leading steelmaker with enhanced technologies and resources to support a stronger steel industry with enhanced competition.\", \"score\": 0.62303346, \"raw_content\": null}, {\"url\": \"https://journal-neo.su/2024/10/10/on-the-political-issues-and-problems-related-to-the-planned-merger-between-nippon-steel-and-us-steel\", \"title\": \"Merger of Nippon Steel and US Steel: an important event for the industry\", \"content\": \"Be that as it may, the US administration has decided to intervene in a process that, on the face of it, and under the relevant \\u201crules\\u201d (in this case the rules governing international trade), are beyond its purview. Two points, however, should be kept in mind. First, there is a view in American business circles that the very fact of such intervention could have a negative impact on the inflow of foreign investment into the US economy.\", \"score\": 0.5874941, \"raw_content\": null}, {\"url\": \"https://thehill.com/opinion/white-house/5061395-us-steel-nippon-steel-merger\", \"title\": \"Why Trump should switch sides on the US Steel-Nippon Steel merger (but probably won\\u2019t)\", \"content\": \"The US Steel-Nippon combination would push the company to third among world steel producers, behind fast-shrinking Arcelor Mittal. With a small manufacturing footprint in the United States, the likelihood of consolidation in the U.S. is much lower than with Cliffs, which operates over 20 steel-producing sites. And, under Cliffs, all the white-collar staff is almost certainly gone.\", \"score\": 0.5518883, \"raw_content\": null}, {\"url\": \"https://gmk.center/en/news/biden-plans-to-block-the-merger-of-nippon-steel-and-us-steel-bloomberg\", \"title\": \"Biden plans to block the merger of Nippon Steel and US Steel - Bloomberg\", \"content\": \"In early December, Nippon Steel reaffirmed its confidence that the acquisition of US Steel could be completed by the end of 2024 if the deal goes through the proper procedures and is approved by the Biden administration.\\n\\nAs GMK Center reported earlier, Japanese Prime Minister Shigeru Ishiba, according to Reuters, sent a letter to the US President asking him to approve the deal so as not to harm recent efforts to strengthen ties between the two countries.\\n\\nTags:\", \"score\": 0.42935818, \"raw_content\": null}, {\"url\": \"https://stainless-steel-world.net/nippon-steel-and-nippon-steel-stainless-steel-corporation-merger\", \"title\": \"Nippon Steel and Nippon Steel Stainless Steel Corporation merger - Stainless Steel World\", \"content\": \"The reason for the merger is to strengthen both companies in an increasingly challenging business environment, with a decline in domestic demand, overcapacity in the Asian market and the requirement for decarbonization, but also to be able to focus on new energy fields such as hydrogen and ammonia, where demand is expected to grow in the future.\\n\\n#### RELATED ARTICLESMORE FROM AUTHOR\\n\\nCompany News\\n\\n### Satyan Kumar takes charge as ONGC Director (Strategy)\\\")\\n\\nCompany News\", \"score\": 0.4031679, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.804,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_02_rYoOcZTxR7S4AF4XMin28081",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"US Steel annual report 2024 Nippon Steel merger\", \"start_date\": \"2024-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "US Steel annual report 2024 Nippon Steel merger",
+          "start_date": "2024-01-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://journal-neo.su/2024/10/10/on-the-political-issues-and-problems-related-to-the-planned-merger-between-nippon-steel-and-us-steel\", \"title\": \"Merger of Nippon Steel and US Steel: an important event for the industry\", \"content\": \"About\\n Contact Us\\n\\nNew Eastern Outlook\\n\\nENFRRU\\n\\nNew Eastern Outlook\\n\\nEN|FR|RU\\n\\nFollow us on:\\n\\nNew Eastern Outlook\\n\\n## Economy\\n\\n# On the political issues and problems related to the planned merger between Nippon Steel and US Steel\\n\\nVladimir Terehov,   October 10, 2024\\n\\nThe proposed merger of the two countries\\u2019 leading steel companies has recently become a prominent issue in the complex system of US-Japanese relations.\", \"score\": 0.82994765, \"raw_content\": null}, {\"url\": \"https://www.mining-technology.com/news/us-steel-nippon-steel-merger\", \"title\": \"US Steel, Nippon Steel merger gains nod of non-US regulators\", \"content\": \"United States Steel Corporation (US Steel) and Nippon Steel have secured all regulatory clearances from jurisdictions outside of the US for their proposed merger.\\n\\nThese approvals from the regulatory bodies mark a crucial step towards the completion of the deal, which is anticipated in the second half of 2024.\\n\\n### Go deeper with GlobalData\\n\\nReportsLogo\\n\\n#### Mining Industry Mergers and Acquisitions Deals by Top Themes in Q1 ...\\n\\nReportsLogo\", \"score\": 0.8124067, \"raw_content\": null}, {\"url\": \"https://finance.yahoo.com/news/us-steel-nippon-steel-merger-102356390.html\", \"title\": \"US Steel and Nippon Steel merger gains non-US regulator approval\", \"content\": \"These approvals from the regulatory bodies mark a crucial step towards the completion of the deal, which is anticipated in the second half of 2024.\\n\\nThe bodies approving the transaction include the Directorate-General for Competition of the European Commission, the Mexican Federal Economic Competition Commission, the Serbian Competition Commission, the Ministry of Economy of Slovakia, and the Turkish Competition Authority.\", \"score\": 0.79580134, \"raw_content\": null}, {\"url\": \"https://gmk.center/en/news/biden-plans-to-block-the-merger-of-nippon-steel-and-us-steel-bloomberg\", \"title\": \"Biden plans to block the merger of Nippon Steel and US Steel - Bloomberg\", \"content\": \"In early December, Nippon Steel reaffirmed its confidence that the acquisition of US Steel could be completed by the end of 2024 if the deal goes through the proper procedures and is approved by the Biden administration.\\n\\nAs GMK Center reported earlier, Japanese Prime Minister Shigeru Ishiba, according to Reuters, sent a letter to the US President asking him to approve the deal so as not to harm recent efforts to strengthen ties between the two countries.\\n\\nTags:\", \"score\": 0.6944897, \"raw_content\": null}, {\"url\": \"https://finimize.com/content/us-steel-and-nippon-steel-eye-14-billion-merger-and-investment\", \"title\": \"US Steel And Nippon Steel Eye $14 Billion Merger And Investment - Finimize\", \"content\": \"# US Steel And Nippon Steel Eye $14 Billion Merger And Investment - Finimize\\n\\n   Image 1: Finimize logo icon Image 2: Finimize brand name\", \"score\": 0.5637388, \"raw_content\": null}, {\"url\": \"https://investorshangout.com/analysis-of-cfius-review-on-us-steelnippon-steel-merger-172498-\", \"title\": \"Analysis of CFIUS Review on US Steel-Nippon Steel Merger\", \"content\": \"Published Time: 2025-01-08T12:51:23-05:00 Analysis of CFIUS Review on US Steel-Nippon Steel Merger - Investors Hangout 4. Analysis of CFIUS Review on US Steel-Nippon Steel Merger Analysis of CFIUS Review on US Steel-Nippon Steel Merger Author: Thomas CooperUpdated: 01-08-2025 12:51 PM CFIUS Review of the US Steel-Nippon Steel Merger Recently, U.S. Treasury Secretary Janet Yellen addressed the blocked acquisition of U.S. Steel by Nippon Steel, emphasizing the significance of the Committee on\", \"score\": 0.53400564, \"raw_content\": null}, {\"url\": \"https://www.benzinga.com/25/01/43230432/ancora-holdings-readies-proxy-fight-at-us-steel-amid-merger-chaos\", \"title\": \"Ancora Holdings Readies Proxy Fight At US Steel Amid Merger Chaos - NIPPON STEEL & SUMITOMO by Nippon Ste - Benzinga\", \"content\": \"With the 2025 annual meeting nearing, U.S. Steel will release its own recommendations for board nominees in its proxy statement, which will be provided to eligible shareholders.\\n\\nPrice Action: X shares are trading lower by 1.34% at $36.91 in premarket at the last check Monday.\\n\\nRead Next: American Airlines\\u2019 2025 Forecast Promising Despite Q1 Challenges, Say Analysts\\n\\nThis content was partially produced with the help of AI tools and was reviewed and published by Benzinga editors.\", \"score\": 0.5321097, \"raw_content\": null}, {\"url\": \"https://www.reuters.com/markets/deals/us-steel-nippon-steel-receive-all-non-us-regulatory-approvals-2024-05-30\", \"title\": \"US Steel, Nippon Steel receive all non-US approvals for merger\", \"content\": \"Schwab close to $600 million deal to buy Forge Global, FT reports. Markets category \\u00b7 November 6, 2025 \\u00b7 7:05 AM UTC \\u00b7 14 mins ago.  About Reuters, opens new tab.  Advertise with Us, opens new tab.  Reuters News Agency, opens new tab.  Brand Attribution Guidelines, opens new tab.  Reuters and AI, opens new tab.  Reuters Leadership, opens new tab.  Reuters Diversity Report, opens new tab.  Commercial Disclosure (Japan), opens new tab.  Download the App (iOS), opens new tab.  Download the App\", \"score\": 0.509887, \"raw_content\": null}, {\"url\": \"https://www.pymnts.com/cpi-posts/us-steel-and-nippon-steel-secure-international-approvals-for-14-9b-merger\", \"title\": \"US Steel and Nippon Steel Secure International Approvals for $14.9B Merger\", \"content\": \"Steel & Aluminium\\n\\nU.S. Steel and Japan\\u2019s Nippon Steel have announced that they have received all necessary regulatory approvals outside the United States for their proposed $14.9 billion merger. The companies revealed this milestone on Thursday, stating that the merger has been cleared by the European Commission and regulatory authorities in Mexico, Serbia, Slovakia, Turkey and the United Kingdom.\\n\\n## Get the Full Story\", \"score\": 0.50007385, \"raw_content\": null}, {\"url\": \"https://www.cnbc.com/video/2025/01/07/us-steel-ceo-on-lawsuit-to-biden-administration-following-dissolved-merger-with-nippon-steel.html\", \"title\": \"US Steel CEO on lawsuit to Biden administration following dissolved merger with Nippon Steel\", \"content\": \"David Burritt, US Steel CEO, joins 'Squawk on the Street' to discuss the company's decision to partner with Nippon Steel to sue the Biden administration following the fallen merger.\\n\\n03:59\\n\\nTue, Jan 7 202511:18 AM EST\\n\\nwatch now\\n\\nwatch now\\n\\nVIDEO04:11\\n\\nCME CEO Terry Duffy on suing CFTC: I'm always up for a good battle, 'I won't shy away from this'\\n\\nwatch now\\n\\nwatch now\\n\\nVIDEO10:55\\n\\nWatch CNBC's full interview with outgoing CME CEO Terry Duffy\\n\\nwatch now\\n\\nwatch now\\n\\nVIDEO00:55\", \"score\": 0.34468657, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.694,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 5.427,
+  "retry_overhead_seconds": 0.003,
+  "effective_duration_seconds": 5.424
+}

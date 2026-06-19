@@ -1,0 +1,111 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Interesting - the Nasdaq link about Alphabet's Q1 2025 earnings call transcript appeared. Let me check what Alphabet said in its Q1 2025 earnings call about capex. But first, let me check the date - the current date is April 7, 2025. The Q1 2025 earnings for Alphabet would typically be released in late April 2025 (after the current date). So I can't use that.\n\nLet me look at what the most reliable sources say as of April 7, 2025:\n\n**Amazon (AMZN):**\n- In the Q4 2024 earnings call (Feb 2025), Amazon indicated ~$100-105 billion in capex for 2025\n- CEO Andy Jassy said \"once-in-a-lifetime type of business opportunity\" \n- CFO Brian Olsavsky said Q4 capex of $26.3 billion is \"reasonably representative\" \u2192 ~$105 billion annualized\n- Markets Insider, Business Insider, and other sources confirm $100B+ \n- The most commonly cited figure is $100 billion\n\n**Meta (META):**\n- Initial Q4 2024 guidance (Jan 29, 2025): $60-65 billion\n- Later raised to $64-72 billion (per RoboForex, though this source may not be authoritative)\n- Most mainstream sources still cite $65 billion as the figure\n- The Yahoo Finance Q4 earnings call summary says $60-65 billion\n- The Sherwood article says up to $65 billion\n- The Markets Insider article says $65 billion\n\n**Alphabet/Google (GOOG):**\n- Q4 2024 earnings (Feb 4, 2025): CEO Sundar Pichai said ~$75 billion\n- CNBC confirms $75 billion\n- The DCF Modeling site suggests it was raised to $91-93 billion, but this is from a PESTEL analysis site, not an official source\n- The IP Carrier blog (April 2025) still shows $75 billion\n- The Globe and Mail/TD Cowen analyst report says $75 billion\n\nLet me look more carefully at the DCF Modeling site - it says \"Management has raised its full-year 2025 CapEx guidance again, now projecting a spend in the range of $91 billion to $93 billion.\" This could refer to a different point in time or be a projection rather than official guidance. Let me check if there's any official source.\n\nActually, the DCF Modeling site might be referring to analyst projections or future estimates rather than actual management guidance. The most authoritative source is what was said in the earnings call. Let me check one more time.\n\nLet me search specifically for whether Alphabet officially raised its 2025 capex guidance.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 5.61e-05,
+        "output": 0.00045552,
+        "reasoning": 0.00125925,
+        "cache_read": 0.0037273600000000007,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.005498230000000001,
+        "total_input": 0.0037834600000000006,
+        "total_output": 0.00171477
+      },
+      "duration_seconds": 6.948028249986237,
+      "in_tokens": 102,
+      "out_tokens": 208,
+      "reasoning_tokens": 575,
+      "cache_read_tokens": 26624,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 26726,
+      "total_output_tokens": 783
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_AOHVSyfDLZrMbsGHU2Wr4004",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"\\\"Alphabet\\\" \\\"2025\\\" \\\"capex\\\" \\\"raised\\\" guidance $91 billion OR $93 billion OR \\\"$91\\\" OR \\\"$93\\\"\", \"start_date\": \"2025-03-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "\"Alphabet\" \"2025\" \"capex\" \"raised\" guidance $91 billion OR $93 billion OR \"$91\" OR \"$93\"",
+          "start_date": "2025-03-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      {
+        "id": "call_01_EgUkIyunZK2J0NyPtbif3217",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"Meta 2025 capex outlook $70 billion raised guidance 2025\", \"start_date\": \"2025-02-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "Meta 2025 capex outlook $70 billion raised guidance 2025",
+          "start_date": "2025-02-01",
+          "end_date": "2025-04-07"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_AOHVSyfDLZrMbsGHU2Wr4004",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"\\\"Alphabet\\\" \\\"2025\\\" \\\"capex\\\" \\\"raised\\\" guidance $91 billion OR $93 billion OR \\\"$91\\\" OR \\\"$93\\\"\", \"start_date\": \"2025-03-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "\"Alphabet\" \"2025\" \"capex\" \"raised\" guidance $91 billion OR $93 billion OR \"$91\" OR \"$93\"",
+          "start_date": "2025-03-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://ipcarrier.blogspot.com/2025/04/amazon-alphabet-meta-microsoft-capex-is.html\", \"title\": \"IP Carrier: Amazon, Alphabet, Meta, Microsoft Capex is 3.5% of Global Total\", \"content\": \"|  |  |  |\\n --- \\n| Sector/Company | 2025 Capex (USD) | Notes |\\n| Amazon | $100 billion | AI, cloud, logistics, data centers |\\n| Microsoft | $80 billion | AI, cloud, U.S. infrastructure |\\n| Alphabet (Google) | $75 billion | AI, data centers, technical infrastructure |\\n| Meta | $65 billion | AI, data centers, computing infrastructure |\\n| Combined Big Tech | $320 billion |\\n| Oil & Gas (Global) | $500\\u2013600 billion | Exploration, production, refining |\", \"score\": 0.62495816, \"raw_content\": null}, {\"url\": \"https://www.theglobeandmail.com/investing/markets/stocks/MSFT/pressreleases/31427928/top-analyst-sees-strong-ai-revenue-at-alphabet-googl-but-trims-price-target-on-capex-concerns\", \"title\": \"Top Analyst Sees Strong AI Revenue at Alphabet (GOOGL) but Trims Price Target on Capex Concerns - The Globe and Mail\", \"content\": \"TD Cowen forecasts Google\\u2019s total capex to reach $75 billion in 2025, marking a 43% year-over-year increase. By 2030, total capex is expected to climb to $90 billion. In addition, Google Cloud\\u2019s share of this investment is projected at approximately $36 billion in 2025, reflecting a 52% increase from the previous year and accounting for nearly half of Google\\u2019s overall capex.\\n\\n## Gemini AI\\u2019s Competitive Edge over AWS and Azure\", \"score\": 0.49143207, \"raw_content\": null}, {\"url\": \"https://www.bworldonline.com/corporate/2025/04/02/663255/fdc-boosts-2025-capex-by-20-to-p24-billion\", \"title\": \"FDC boosts 2025 capex by 20% to P24 Billion - BusinessWorld Online\", \"content\": \"Facebook     Instagram     Linkedin     X     Youtube\", \"score\": 0.26121357, \"raw_content\": null}, {\"url\": \"https://www.sharecafe.com.au/2025/03/04/australian-agricultural-production-projected-to-reach-91-billion-in-2025-26\", \"title\": \"Australian Agricultural Production Projected to Reach $91 Billion in 2025\\u201326 - Sharecafe\", \"content\": \"that Was (112). ### Subscribe. ## get the latest.\", \"score\": 0.18242586, \"raw_content\": null}, {\"url\": \"https://www.voronoiapp.com/technology/-Microsofts-Revenue-Hits-Record-262-Billion-Net-Income-Soars-to-93-Billion-in-2024-2909\", \"title\": \"\\ud83d\\udcc8 Microsoft\\u2019s Revenue Hits Record $262 Billion, Net Income Soars to $93 Billion in 2024 - Voronoi\", \"content\": \"Jan 30, 2025\\n\\n# \\ud83d\\udcc8 Microsoft\\u2019s Revenue Hits Record $262 Billion, Net Income Soars to $93 Billion in 2024\\n\\n\\ud83d\\udcc8 Microsoft\\u2019s Revenue Hits Record $262 Billion, Net Income Soars to $93 Billion in 2024\", \"score\": 0.16579592, \"raw_content\": null}, {\"url\": \"https://www.reuters.com/world/africa/egypt-approves-91-billion-budget-202526-2025-03-26\", \"title\": \"Egypt approves $91 billion budget for 2025/26 | Reuters\", \"content\": \"opens new tab. Rebels claim drone attack on Congo's Kisangani airport.  United KingdomcategoryReeves set for careful UK budget update as Iran conflict alarms investors.  WorldcategoryUS says it wouldn't deliberately target a school after Iran said over 160 killed in strike.\", \"score\": 0.15980688, \"raw_content\": null}, {\"url\": \"https://allstreaminsiders.com/capex-expected-between-2-8-3-2-billion-oneok-financial-guidance-2026-growth-outlook\", \"title\": \"CAPEX Expected Between $2.8-$3.2 Billion : ONEOK Financial Guidance & 2026 Growth Outlook - Allstream Insiders\", \"content\": \"TULSA, Okla., Feb. 24, 2025 /PRNewswire/ \\u2014 ONEOK, Inc. (NYSE: OKE) today announced 2025 financial guidance and provided a 2026 growth outlook.\\n\\n2025 Financial Guidance:\", \"score\": 0.1539179, \"raw_content\": null}, {\"url\": \"https://www.sahmcapital.com/news/content/projects-saudi-maaden-set-capex-guidance-at-up-to-3bln-in-2025-2025-03-07\", \"title\": \"PROJECTS: Saudi Ma\\u2019aden set capex guidance at up to $3bln in 2025\", \"content\": \"Disclaimer: This article is provided for informational purposes only. The content does not provide tax, legal or investment advice or opinion regarding the suitability, value or profitability of any particular security, portfolio or investment strategy. Read our full disclaimer policy here.\\n\\nLike\\n\\nUnlike\\n\\nShare\\n\\nShare\\n\\nFacebook  Twitter  Email  Link\\n\\nCancel\", \"score\": 0.13648199, \"raw_content\": null}, {\"url\": \"https://economictimes.indiatimes.com/markets/stocks/news/adani-eyes-12-5-billion-equity-to-partially-fund-rs-5-lakh-crore-capex/articleshow/118670684.cms\", \"title\": \"Adani Group investment: Adani eyes $12.5 billion equity to partially fund Rs 5 lakh crore capex - The Economic Times\", \"content\": \"(What's moving Sensex and Nifty Track latest market news, stock tips, Budget 2025, Share Market on Budget 2025 and expert advice, on ETMarkets. Also, ETMarkets.com is now on Telegram. For fastest news alerts on financial markets, investment strategies and stocks alerts, subscribe to our Telegram feeds .)\\n\\nSubscribe to ET Prime and read the Economic Times ePaper Online.and Sensex Today.\", \"score\": 0.10844383, \"raw_content\": null}, {\"url\": \"https://www.idnfinancials.com/news/53447/csra-allocates-idr-100-billion-in-capex-for-2025\", \"title\": \"CSRA allocates IDR 100 billion in capex for 2025 | IDNFinancials\", \"content\": \"#### Read Also\\n\\nJTPE is set to pay a dividend of IDR31 per share, with a yield of 4.8%%20Made%20Sudarma%20-%20Komisaris%20Independen%2C%20Lukito%20Budiman%20-%20Direktur%2C%20Hendro%20Susanto%20-%20Direktur%2C%20Michael%20Chirstiaan%20-%20Deputi%20Direktur%20Keuangan%20dan%20Akuntansi.jpg)\\n\\nEasily monitor shareholders with 1%+ ownership in listed companies.\\n\\n## Latest News\\n\\n#### # Hot Topic\\n\\n## Popular News\\n\\nIDN Financials Mobile Apps\", \"score\": 0.06585085, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.401,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_01_EgUkIyunZK2J0NyPtbif3217",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"Meta 2025 capex outlook $70 billion raised guidance 2025\", \"start_date\": \"2025-02-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "Meta 2025 capex outlook $70 billion raised guidance 2025",
+          "start_date": "2025-02-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://roboforex.com/beginners/analytics/forex-forecast/stocks/stocks-forecast-meta-platforms-meta\", \"title\": \"Meta Platforms, Inc. (META) stock analysis and forecast for 2025 - RoboForex\", \"content\": \"The Reality Labs division (AR/VR and AI devices) also increased revenue by 74% to 470 million USD, but remains loss-making. The segment continues to be funded by profits from the advertising business.\\n\\nMeta raised its full-year expense guidance to 116\\u2013118 billion USD and capital expenditure to 70\\u201372 billion USD, which has become the primary source of investor concern. The company is investing aggressively in AI infrastructure and data centres, making the business more capital-intensive.\", \"score\": 0.9051298, \"raw_content\": null}, {\"url\": \"https://monexa.ai/blog/meta-platforms-meta-ai-market-dynamics-and-outlook-META-2025-03-10\", \"title\": \"Meta Platforms (META): AI, Market Dynamics, and Outlook 2025 | Monexa\", \"content\": \"Meta grew revenue +21.95% to \\\\\\\\$164.50B\\\\\\\\ in 2024 while planning \\\\\\\\$66\\u201372B\\\\\\\\ of AI capex in 2025 \\u2014 a test of whether AI margins can underwrite Reality Labs' losses.\\n AI chip with rising arrows beside two chess knights on a soft purple gradient background\\n\\n  ### Meta Platforms, Inc. \\u2014 AI-Driven Ad Revenue & CapEx\", \"score\": 0.8033131, \"raw_content\": null}, {\"url\": \"https://www.monexa.ai/blog/meta-platforms-meta-ai-market-dynamics-and-outlook-META-2025-03-10\", \"title\": \"Meta Platforms (META): AI, Market Dynamics, and Outlook 2025 | Monexa\", \"content\": \"Meta grew revenue +21.95% to \\\\\\\\$164.50B\\\\\\\\ in 2024 while planning \\\\\\\\$66\\u201372B\\\\\\\\ of AI capex in 2025 \\u2014 a test of whether AI margins can underwrite Reality Labs' losses.\\n AI chip with rising arrows beside two chess knights on a soft purple gradient background\\n\\n  ### Meta Platforms, Inc. \\u2014 AI-Driven Ad Revenue & CapEx\", \"score\": 0.8033131, \"raw_content\": null}, {\"url\": \"https://platformonomics.com/2025/02/follow-the-capex-cloud-table-stakes-2024-retrospective\", \"title\": \"Platformonomics - Follow the CAPEX: Cloud Table Stakes 2024 Retrospective\", \"content\": \"The fundamental dilemma for Google is they are chasing (and spending on) the new thing (AI), and the more they do so, the more they undermine their amazingly profitable franchise based on an index of the web. It is strongly reminiscent of Microsoft and the web a generation ago.\\n\\n## Meta\\n\\nMeta\\u2019s CAPEX guidance for 2025 is $60-65 billion which would be a 53-66% increase.\", \"score\": 0.77446437, \"raw_content\": null}, {\"url\": \"https://platformonomics.com/2025/02/follow-the-capex-cloud-table-stakes-2024-retrospective?share=mastodon\", \"title\": \"Platformonomics - Follow the CAPEX: Cloud Table Stakes 2024 Retrospective\", \"content\": \"The fundamental dilemma for Google is they are chasing (and spending on) the new thing (AI), and the more they do so, the more they undermine their amazingly profitable franchise based on an index of the web. It is strongly reminiscent of Microsoft and the web a generation ago.\\n\\n## Meta\\n\\nMeta\\u2019s CAPEX guidance for 2025 is $60-65 billion which would be a 53-66% increase.\", \"score\": 0.77446437, \"raw_content\": null}, {\"url\": \"https://platformonomics.com/2025/02/follow-the-capex-cloud-table-stakes-2024-retrospective/comment-page-1\", \"title\": \"Platformonomics - Follow the CAPEX: Cloud Table Stakes 2024 Retrospective\", \"content\": \"The fundamental dilemma for Google is they are chasing (and spending on) the new thing (AI), and the more they do so, the more they undermine their amazingly profitable franchise based on an index of the web. It is strongly reminiscent of Microsoft and the web a generation ago.\\n\\n## Meta\\n\\nMeta\\u2019s CAPEX guidance for 2025 is $60-65 billion which would be a 53-66% increase.\", \"score\": 0.77446437, \"raw_content\": null}, {\"url\": \"https://sherwood.news/business/amazon-plans-100-billion-spend-on-ai-in-2025\", \"title\": \"Amazon plans on spending more than $100 billion on capex in 2025 - Sherwood News\", \"content\": \"At the start of the year, Microsoft\\u2019s president, Brad Smith, wrote in a blog post that the company was on track to spend $80 billion on AI data centers in 2025.\\n Then, Meta CEO Mark Zuckerberg said his company would spend up to $65 billion on capex, including a city-sized data center.\\n Alphabet CEO Sundar Pichai upped the ante, pledging $75 billion for AI and related infrastructure, including undersea cables.\", \"score\": 0.71948266, \"raw_content\": null}, {\"url\": \"https://deepnewz.com/business/amazon-to-boost-2025-capex-to-105-billion-up-77-billion-2024-48-billion-2023-on-f2d35e6e\", \"title\": \"Amazon to Boost 2025 Capex to $105 Billion, Up from $77 Billion in 2024 and $48 Billion in 2023, Focusing on AWS and AI | DeepNewz Business\", \"content\": \"Published Feb 6, 2025, 10:43 PM\\n\\nMore breaking stories on DeepNewz \\u2014 updated live.\\n\\nWall St Engine\\nTwitter verified badge\\n\\nAmazon $AMZN expects 2025 Capex to remain at a Q4 run rate, pushing full-year CapEx to ~$105B (vs. est. of $81B) \\u2014a sharp rise from $77B in 2024 and $48B in 2023. Majority of spending will go toward AWS infrastructure, including AI services expansion.\\n\\nThe Inner Circle Trading Group DP David Prince\\nTwitter verified badge\", \"score\": 0.47986987, \"raw_content\": null}, {\"url\": \"https://www.sahmcapital.com/news/content/projects-saudi-maaden-set-capex-guidance-at-up-to-3bln-in-2025-2025-03-07\", \"title\": \"PROJECTS: Saudi Ma\\u2019aden set capex guidance at up to $3bln in 2025\", \"content\": \"Saudi Arabian Mining Company (Ma\\u2019aden) plans to spend 8.6 billion to 10.6 billion Saudi riyals ($2.3-$2.8 billion) in capital expenditure in 2025, the miner said in its 2024 financial statement.  \\n   \\n Around 70 percent of the spend will be growth capex, it added.  \\n   \\n Growth capex is launched mainly by a company to expand existing operations or drive growth prospects.\", \"score\": 0.3905461, \"raw_content\": null}, {\"url\": \"https://allstreaminsiders.com/capex-expected-between-2-8-3-2-billion-oneok-financial-guidance-2026-growth-outlook\", \"title\": \"CAPEX Expected Between $2.8-$3.2 Billion : ONEOK Financial Guidance & 2026 Growth Outlook - Allstream Insiders\", \"content\": \"TULSA, Okla., Feb. 24, 2025 /PRNewswire/ \\u2014 ONEOK, Inc. (NYSE: OKE) today announced 2025 financial guidance and provided a 2026 growth outlook.\\n\\n2025 Financial Guidance:\", \"score\": 0.3300829, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.899,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 22.807,
+  "retry_overhead_seconds": 13.555,
+  "effective_duration_seconds": 9.252
+}

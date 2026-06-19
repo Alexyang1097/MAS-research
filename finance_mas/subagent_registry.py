@@ -12,6 +12,7 @@ class SubagentSpec:
     best_for: str
     capability_tags: tuple[str, ...]
     default_tools: tuple[str, ...]
+    operating_principles: tuple[str, ...]
 
 
 SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
@@ -34,6 +35,12 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
             "source_retrieval",
         ),
         default_tools=("web_search", "parse_html_page", "retrieve_information"),
+        operating_principles=(
+            "Start by identifying dated external events only when they can affect interpretation of the finance question.",
+            "Separate reported financial statement facts from market commentary or news interpretation.",
+            "Use web_search for discovery, then parse and ground important sources before making claims.",
+            "Explicitly state when no regulatory/news/M&A context appears necessary.",
+        ),
     ),
     "SECFilingResearchAgent": SubagentSpec(
         name="SECFilingResearchAgent",
@@ -54,6 +61,12 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
             "primary_source_evidence",
         ),
         default_tools=("edgar_search", "parse_html_page", "retrieve_information", "web_search"),
+        operating_principles=(
+            "Prefer edgar_search for filed facts and use web_search only to resolve identifiers or locate source URLs.",
+            "Always preserve filing type, fiscal period, units, table/section location, and source URL.",
+            "Do not infer operational impact beyond what filing evidence supports.",
+            "Flag ambiguity between consolidated, segment, GAAP, non-GAAP, quarterly, annual, and TTM values.",
+        ),
     ),
     "OperationalImpactAgent": SubagentSpec(
         name="OperationalImpactAgent",
@@ -75,6 +88,12 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
             "financial_reasoning",
         ),
         default_tools=("retrieve_information", "web_search", "parse_html_page"),
+        operating_principles=(
+            "Ground operational conclusions in already retrieved evidence before adding outside context.",
+            "Discuss revenue, cost, margin, segment, risk, or market implications only when linked to evidence.",
+            "Do not create new numeric values; if a numeric implication is needed, cite the upstream value and formula.",
+            "Separate direct disclosed impact from plausible but uncertain business interpretation.",
+        ),
     ),
     "NumericalVerificationAgent": SubagentSpec(
         name="NumericalVerificationAgent",
@@ -95,6 +114,12 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
             "arithmetic_verification",
         ),
         default_tools=("retrieve_information", "parse_html_page"),
+        operating_principles=(
+            "Audit the numeric chain rather than broaden the factual search.",
+            "Check source value, formula, denominator, sign, fiscal period, units, scaling, and final rounding.",
+            "Report any mismatch as a concrete issue with the affected value or formula.",
+            "If evidence is insufficient for verification, say exactly which value/source is missing.",
+        ),
     ),
     "SourceGroundingAgent": SubagentSpec(
         name="SourceGroundingAgent",
@@ -115,6 +140,12 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
             "traceability",
         ),
         default_tools=("retrieve_information", "parse_html_page", "edgar_search", "web_search"),
+        operating_principles=(
+            "Rank sources by hierarchy: SEC filing and primary company source first, then reputable news, then secondary summaries.",
+            "For each important claim, check whether the cited source directly supports it.",
+            "Surface source conflicts instead of smoothing them over.",
+            "Prefer precise source locations, such as filing section/table names or parsed document keys.",
+        ),
     ),
     "ContradictionAgent": SubagentSpec(
         name="ContradictionAgent",
@@ -135,6 +166,12 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
             "restatement_check",
         ),
         default_tools=("retrieve_information", "edgar_search", "web_search", "parse_html_page"),
+        operating_principles=(
+            "Try to falsify the emerging answer, not to restate the consensus.",
+            "Search for wrong-period, wrong-entity, unit, restatement, segment/consolidated, and alternative-definition traps.",
+            "Distinguish resolved risks from unresolved contradictions.",
+            "If no contradiction is found, explain what was checked and why the current answer survived.",
+        ),
     ),
 }
 
@@ -142,6 +179,21 @@ SUBAGENT_REGISTRY: dict[str, SubagentSpec] = {
 def default_tools_for(agent_name: str) -> list[str]:
     spec = SUBAGENT_REGISTRY.get(agent_name)
     return list(spec.default_tools) if spec else []
+
+
+def subagent_prompt_profile(agent_name: str) -> str:
+    spec = SUBAGENT_REGISTRY.get(agent_name)
+    if spec is None:
+        return f"Agent-specific profile: unknown agent '{agent_name}'. Use the assigned task and allowed tools."
+    principles = "\n".join(f"- {principle}" for principle in spec.operating_principles)
+    return (
+        f"Agent-specific profile for {spec.name}:\n"
+        f"Description: {spec.description}\n"
+        f"Best for: {spec.best_for}\n"
+        f"Capability tags: {list(spec.capability_tags)}\n"
+        f"Default tools: {list(spec.default_tools)}\n"
+        f"Operating principles:\n{principles}"
+    )
 
 
 def default_capability_profiles() -> dict[str, CapabilityProfile]:

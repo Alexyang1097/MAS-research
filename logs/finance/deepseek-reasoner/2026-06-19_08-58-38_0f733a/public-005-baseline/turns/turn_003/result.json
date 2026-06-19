@@ -1,0 +1,111 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Let me compile what I've found so far:\n\n1. **Amazon (AMZN)**: \n   - Announced ~$100 billion capex plan for 2025 in Q4 earnings call (Feb 2025)\n   - CFO Olsavsky suggested ~$105 billion based on Q4 run rate of $26.3 billion\n   - Multiple sources confirm around $100-105 billion\n\n2. **Meta (META)**:\n   - Raised capex forecast for 2025 to $64-72 billion range\n   - Earlier guidance was $60-65 billion\n\n3. **Alphabet/Google (GOOG)**:\n   - Initially guided $75 billion in capex for 2025 in Q4 2024 earnings (Feb 2025)\n   - But there are more recent sources suggesting it was raised to $91-93 billion\n\nWait, I see some conflicting data on Alphabet. Let me check more carefully. Some sources say $75 billion (from the Q4 2024 earnings call on Feb 4, 2025), while others say it was raised to $91-93 billion. Let me investigate this discrepancy.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 0.0020113500000000003,
+        "output": 0.00043581,
+        "reasoning": 0.0005256,
+        "cache_read": 0.0012723200000000002,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.00424508,
+        "total_input": 0.0032836700000000007,
+        "total_output": 0.00096141
+      },
+      "duration_seconds": 3.8742161249974743,
+      "in_tokens": 3657,
+      "out_tokens": 199,
+      "reasoning_tokens": 240,
+      "cache_read_tokens": 9088,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 12745,
+      "total_output_tokens": 439
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_Vjd3fVYIAVe3Q7HsTziR9408",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"Alphabet raises 2025 capex guidance $91 billion $93 billion 2025\", \"start_date\": \"2025-02-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "Alphabet raises 2025 capex guidance $91 billion $93 billion 2025",
+          "start_date": "2025-02-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      {
+        "id": "call_01_BFq1LH7o8ZASyqt9HPop2309",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"Meta raises 2025 capex guidance $64 billion $72 billion 2025 earnings call\", \"start_date\": \"2025-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "Meta raises 2025 capex guidance $64 billion $72 billion 2025 earnings call",
+          "start_date": "2025-01-01",
+          "end_date": "2025-04-07"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_Vjd3fVYIAVe3Q7HsTziR9408",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"Alphabet raises 2025 capex guidance $91 billion $93 billion 2025\", \"start_date\": \"2025-02-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "Alphabet raises 2025 capex guidance $91 billion $93 billion 2025",
+          "start_date": "2025-02-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.fintechfutures.com/press-releases/intesa-sanpaolo-reports-record-net-income-of-8-7-billion-in-2024-raises-2025-guidance\", \"title\": \"Intesa Sanpaolo reports record Net Income of \\u20ac8.7 billion in 2024, raises 2025 Guidance\", \"content\": \"Intesa Sanpaolo reports record Net Income of \\u20ac8.7 billion in 2024, raises 2025 Guidance\", \"score\": 0.8512408444277602, \"raw_content\": null}, {\"url\": \"https://www.cbs42.com/business/press-releases/globenewswire/1001046681/intesa-sanpaolo-reports-record-net-income-of-e8-7-billion-in-2024-raises-2025-guidance\", \"title\": \"Intesa Sanpaolo reports record Net Income of \\u20ac8.7 billion in 2024, raises 2025 Guidance\", \"content\": \"Intesa Sanpaolo reports record Net Income of \\u20ac8.7 billion in 2024, raises 2025 Guidance\", \"score\": 0.8512408444277602, \"raw_content\": null}, {\"url\": \"https://financialpost.com/globe-newswire/intesa-sanpaolo-reports-record-net-income-of-e8-7-billion-in-2024-raises-2025-guidance\", \"title\": \"Intesa Sanpaolo reports record Net Income of \\u20ac8.7 billion in 2024, raises 2025 Guidance | Financial Post\", \"content\": \"Intesa Sanpaolo reports record Net Income of \\u20ac8.7 billion in 2024, raises 2025 Guidance | Financial Post\", \"score\": 0.8473755075515207, \"raw_content\": null}, {\"url\": \"https://www.benzinga.com/25/02/43479274/alphabet-q4-earnings-highlights-ai-cloud-youtube-momentum-continues-capex-guidance-sends-shares-lower\", \"title\": \"Alphabet Q4 Earnings Highlights: AI, Cloud, YouTube Momentum Continues, $75 Billion CapEx Guidance Spooks - Benzinga\", \"content\": \"# Benzinga\\n\\n# Benzinga\\n\\n## Alphabet Q4 Earnings Highlights: AI, Cloud, YouTube Momentum Continues, $75 Billion CapEx Guidance Spooks Investors\\n\\nTech giant Alphabet Inc (NASDAQ:GOOG)(NASDAQ:GOOGL) reported fourth-quarter financial results after the market close Tuesday.\\n\\nHere are the key highlights.\", \"score\": 0.819948723426176, \"raw_content\": null}, {\"url\": \"https://in.benzinga.com/25/02/43479274/alphabet-q4-earnings-highlights-ai-cloud-youtube-momentum-continues-capex-guidance-sends-shares-lower\", \"title\": \"Alphabet Q4 Earnings Highlights: AI, Cloud, YouTube Momentum Continues, $75 Billion CapEx Guidance Spooks - Benzinga\", \"content\": \"Cash-Secured Put Calculator\\n\\nLong Call Calculator\\n\\nLong Put Calculator\\n\\nScreeners\\n\\nStock Screener\\n\\nTop Momentum Stocks\\n\\nTop Quality Stocks\\n\\nTop Value Stocks\\n\\nTop Growth Stocks\\n\\nCompare Best Stocks\\n\\nBest Momentum Stocks\\n\\nBest Quality Stocks\\n\\nBest Value Stocks\\n\\nBest Growth Stocks\\n\\nFebruary 4, 2025 4:25 PM 2 min read\\n\\n## Alphabet Q4 Earnings Highlights: AI, Cloud, YouTube Momentum Continues, $75 Billion CapEx Guidance Spooks Investors\", \"score\": 0.7964802958515185, \"raw_content\": null}, {\"url\": \"https://www.agbi.com/logistics/2025/03/dp-world-raises-2025-capex-to-develop-global-assets\", \"title\": \"DP World raises 2025 capex to develop global assets\", \"content\": \"AGBI\\nArabian Gulf Business Insight\\n\\n# DP World raises 2025 capex to develop global assets\\n\\nBy\\n\\nPramod Kumar\\n\\nDP World's capex reached $2.2 billion in 2024 compared with $2.1 billion in 2023\\n\\nDubai-headquartered DP World intends to increase its capital expenditure this year to upgrade its global assets despite geopolitical challenges.\\n\\nDP World\\u2019s Capex reached $2.2 billion in 2024 compared with $2.1 billion in 2023, the state-backed ports operator said in a statement published on Nasdaq Dubai.\", \"score\": 0.7891515117252119, \"raw_content\": null}, {\"url\": \"https://sherwood.news/business/amazon-plans-100-billion-spend-on-ai-in-2025\", \"title\": \"Amazon plans on spending more than $100 billion on capex in 2025 - Sherwood News\", \"content\": \"AWS re:Invent 2024\\n\\n(Noah Berger/Getty Images)\\n\\n# Amazon plans on spending more than $100 billion on capex in 2025\\n\\nIn total, Amazon, Meta, Microsoft, and Alphabet intend to spend a whopping $315 billion in capital expenditures this year.\\n\\nJon Keegan, David Crowther\\n\\nWhile Amazon\\u2019s Q4 earnings may have disappointed investors with some gloomy guidance for the current quarter, its plans for 2025 are grand indeed.\", \"score\": 0.7848541314241361, \"raw_content\": null}, {\"url\": \"https://holygrailcapital.com/blog/2025/02/05/alphabet-expects-to-invest-about-75-billion-in-capital-expenditures-in-2025\", \"title\": \"Alphabet expects to invest about $75 billion in capital expenditures in 2025 \\u2013 Holy Grail Capital\", \"content\": \"Alphabet expects to invest about $75 billion in capital expenditures in 2025FinanceAlphabet expects to invest about $75 billion in capital expenditures in 2025\\n\\n# Alphabet expects to invest about $75 billion in capital expenditures in 2025\\n\\nFebruary 5, 2025 1 min read\\n\\nCEO Sundar Pichai said the company is planning another big year of spending as it continues to build out its artificial intelligence offering.\", \"score\": 0.7301330923999558, \"raw_content\": null}, {\"url\": \"https://www.cnbc.com/amp/2025/02/04/alphabet-expects-to-invest-about-75-billion-in-capex-in-2025.html\", \"title\": \"Alphabet will invest about $75 billion in capital expenditures in 2025\", \"content\": \"Business News and Finance\\n\\nMarketsBusinessInvestingTechPoliticsSelectMake It\\n\\nAI Effect\\n\\n# Alphabet expects to invest about $75 billion in capital expenditures in 2025\\n\\nSamantha Subin@samantha\\\\_subin\\n\\nWATCH LIVE\\n\\nKEY POINTS\", \"score\": 0.7271193498537791, \"raw_content\": null}, {\"url\": \"https://www.bworldonline.com/corporate/2025/04/02/663255/fdc-boosts-2025-capex-by-20-to-p24-billion\", \"title\": \"FDC boosts 2025 capex by 20% to P24 Billion - BusinessWorld Online\", \"content\": \"BusinessWorld Online\\n\\n has allocated a P24-billion capital expenditure (capex) budget for 2025 to drive growth.\\n\\nThe conglomerate\\u2019s 2025 capex is 20% higher than the P20 billion set aside for 2024, FDC Chief Finance Officer Ven Christian S. Guce said during a briefing last week.\", \"score\": 0.6156492522240127, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.282,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_01_BFq1LH7o8ZASyqt9HPop2309",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"Meta raises 2025 capex guidance $64 billion $72 billion 2025 earnings call\", \"start_date\": \"2025-01-01\", \"end_date\": \"2025-04-07\"}",
+        "parsed_args": {
+          "search_query": "Meta raises 2025 capex guidance $64 billion $72 billion 2025 earnings call",
+          "start_date": "2025-01-01",
+          "end_date": "2025-04-07"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://finance.yahoo.com/news/meta-platforms-inc-meta-q4-072528195.html\", \"title\": \"Meta Platforms Inc (META) Q4 2024 Earnings Call Highlights: Strong Revenue Growth Amidst Rising ...\", \"content\": \"Reality Labs Revenue: $1.1 billion, up 1% year over year.\\n Reality Labs Operating Loss: $5 billion.\\n Q1 2025 Revenue Guidance: $39.5 billion to $41.8 billion.\\n Full Year 2025 Expense Guidance: $114 billion to $119 billion.\\n Full Year 2025 CapEx Guidance: $60 billion to $65 billion.\\n Full Year 2025 Tax Rate Guidance: 12% to 15%.\", \"score\": 0.9508351235275699, \"raw_content\": null}, {\"url\": \"https://www.benzinga.com/analyst-ratings/price-target/25/01/43244183/meta-future-growth-backed-by-ai-advancements-and-strong-ecommerce-performance-analyst-says\", \"title\": \"Meta Earnings Preview: AI-Driven Ads, eCommerce Gains, And Capex Surprises Ahead? - Meta Platforms (NASDA - Benzinga\", \"content\": \"Post noted the outlook was in line to slightly above expectations but has cleared some call uncertainty. With 2025 capex expected to be up $20 billion+ Y/Y, Post expects Meta to spend time on AI products and capex ROI on the call.\\n\\nGiven recent news of 5% layoffs, ramping depreciation due to capex, and some FX savings, Post expects fiscal 2025 expense guidance at $108 billion-$113 billion (which compares to Street at $111 billion).\", \"score\": 0.9415283777787687, \"raw_content\": null}, {\"url\": \"https://www.fool.com/investing/2025/02/08/is-metas-65-billion-spending-spree-a-good-idea-her\", \"title\": \"Is Meta's $65 Billion Spending Spree a Good Idea? Here's What History Suggests. | The Motley Fool\", \"content\": \"Data by YCharts.\\n\\nAs the chart above shows, the company's capex increased significantly. This wouldn't be an issue on its own, but these investments took a major toll on Meta's profitability. Just look at the inverse relationship between the company's capex and earnings per share in 2022.\\n\\nThe hit to earnings led investors to sour on Meta stock, sending shares down 64% that year.\\n\\n## Why this time could be different\", \"score\": 0.9265307363158137, \"raw_content\": null}, {\"url\": \"https://metals-wire.net/commodities/boliden-reports-strong-q4-earnings-raises-2025-capex-forecast-despite-dividend-cut\", \"title\": \"Boliden Reports Strong Q4 Earnings, Raises 2025 Capex Forecast Despite Dividend Cut - METALS WIRE\", \"content\": \"Boliden increased its capital expenditure forecast for 2025 to 14 billion crowns from a previous estimate of 13.5 billion crowns, citing roll-over from 2024 projects. The company also announced planned maintenance shutdowns at its smelters in 2025, which are expected to reduce operating profit by 500 million crowns.\", \"score\": 0.9225042920612708, \"raw_content\": null}, {\"url\": \"https://roboforex.com/beginners/analytics/forex-forecast/stocks/stocks-analysis-meta-2024\", \"title\": \"Meta Platforms, Inc. (META) stock analysis and forecast for 2025 - RoboForex\", \"content\": \"La empresa tambi\\u00e9n est\\u00e1 dando prioridad a la inteligencia artificial. Meta elev\\u00f3 su previsi\\u00f3n de gasto de capital para 2025 a un rango de 64 a 72 mil millones USD (desde una estimaci\\u00f3n anterior de 60-65 mil millones USD), destinando inversiones al desarrollo de centros de datos y a la adquisici\\u00f3n de infraestructura para respaldar sus iniciativas de IA.\", \"score\": 0.9194895693004665, \"raw_content\": null}, {\"url\": \"https://jamesmballarda.pages.dev/ssyaj-meta-q2-earnings-2025-wggpg\", \"title\": \"Meta Q2 Earnings 2025 - James M Ballard\", \"content\": \"Seeking Alpha, Meta reported earnings per share of $5.16 on revenue of $39.07 billion for the second quarter, exceeding analysts\\u2019 expectations of $4.74 eps on $38.3 billion in revenue,. \\ud83d\\udd34WATCH LIVE META Q2 EARNINGS REPORT & CALL META FULL CALL 5PM EST. \\ud83d\\udd34WATCH LIVE META Q2 EARNINGS REPORT & CALL META FULL CALL 5PM EST, Analysts were expecting eps of $4.74 on revenue of $38.3 billion, according to.\", \"score\": 0.8920471561480049, \"raw_content\": null}, {\"url\": \"https://mariarcampbell.pages.dev/adup-meta-q2-earnings-2025-earnings-call-zdbap\", \"title\": \"Meta Q2 Earnings 2025 Earnings Call - Maria R. Campbell\", \"content\": \"Meta's Q2 earnings call highlights significant advancements in AI\\n\\nMeta's Q2 earnings call highlights significant advancements in AI, Facebook\\u2019s (meta) q2 2025 earnings call will take place today, july 31, at 2 p.m.\\n\\nMeta Earnings Call Q2 2025 Lok Blanca Rebecka\\n\\nMeta Earnings Call Q2 2025 Lok Blanca Rebecka, Operating income rose to $14.8 billion with a 38% margin.\\n\\nMeta Earnings Call Q2 2025 Belle Cathrin\\n\\nMeta Earnings Call Q2 2025 Belle Cathrin, The company is benefiting from improvements.\", \"score\": 0.8917393716379489, \"raw_content\": null}, {\"url\": \"https://www.stockwaveinsights.com/meta-platforms-amplifies-ai-investments-eyes-65-billion-capex-in-2025\", \"title\": \"Meta Platforms Amplifies AI Investments, Eyes $65 Billion Capex in 2025\", \"content\": \"Published Time: 2025-01-29T10:18:21+00:00 Meta Platforms Amplifies AI Investments, Eyes $65 Billion Capex in 2025 \\u2013 Stock Wave Insights Home_/_Markets_/_ Meta Platforms Amplifies AI Investments, Eyes $65 Billion Capex in 2025 Meta Platforms Amplifies AI Investments, Eyes $65 Billion Capex in 2025 (NASDAQ:META) is making waves in the tech world with an ambitious capital expenditure plan for 2025, targeting an investment between $60 billion and $65 billion. READERS ARE ENCOURAGED TO CONDUCT THEIR\", \"score\": 0.8911934028587004, \"raw_content\": null}, {\"url\": \"https://deepnewz.com/ai-modeling/meta-to-invest-up-to-65-billion-2025-capex-building-massive-2gw-data-center-ai-79f00444\", \"title\": \"Meta to Invest Up to $65 Billion in 2025 Capex, Building Massive 2GW+ Data Center for AI Push | DeepNewz AI Modeling\", \"content\": \"## Image Viewer\\n\\n# Meta to Invest Up to $65 Billion in 2025 Capex, Building Massive 2GW+ Data Center for AI Push\\n\\nThe Wall Street Journal\\nForbes\\nTechCrunch\\n\\n97 posts \\u2022 OpenAI (o1)\\n\\nPublished Jan 24, 2025, 09:58 PM\\n\\nMore breaking stories on DeepNewz \\u2014 updated live.\", \"score\": 0.8702003476081068, \"raw_content\": null}, {\"url\": \"https://www.investors.com/news/technology/meta-stock-ai-spending-zuckerberg\", \"title\": \"Meta Stock Gains. Investors Shrug Off Bigger-Than-Expected $65 Billion AI Spending Plan.\", \"content\": \"Meta Platforms (META) Chief Executive Mark Zuckerberg on Friday called 2025 \\\"the defining year of AI,\\\" saying the tech giant plans to invest between $60 billion and $65 billion in capital expenditures. That's more spending that analysts had forecast, but Meta stock still gained in Friday trading. Zuckerberg unveiled Meta's big plans for AI in a Facebook post, predicting that\\u2026\\n\\nCopyright \\u00a92026 Investor's Business Daily, LLC. All rights reserved. 87990cbe856818d5eddac44c7b1cdeb8\\n\\n## Related news\", \"score\": 0.769276010677951, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.284,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 6.449,
+  "retry_overhead_seconds": 0.005,
+  "effective_duration_seconds": 6.444
+}

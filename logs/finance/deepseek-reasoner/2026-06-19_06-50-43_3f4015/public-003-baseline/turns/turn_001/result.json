@@ -1,0 +1,170 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Let me search for AMD's revenue guidance for the specified quarters. I need to find their guidance ranges for Q2 2024, Q3 2024, Q4 2024, and Q1 2025.\n\nLet me start by searching for AMD earnings reports and guidance.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 6.105e-05,
+        "output": 0.00037449,
+        "reasoning": 0.00012702,
+        "cache_read": 0.00032256000000000006,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.0008851200000000001,
+        "total_input": 0.00038361000000000005,
+        "total_output": 0.0005015099999999999
+      },
+      "duration_seconds": 2.076523833005922,
+      "in_tokens": 111,
+      "out_tokens": 171,
+      "reasoning_tokens": 58,
+      "cache_read_tokens": 2304,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 2415,
+      "total_output_tokens": 229
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_fIa5MKb1DAQhEF032wco4207",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q2 2024 outlook range\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q2 2024 outlook range"
+        }
+      },
+      {
+        "id": "call_01_Rh4o8E1hCgFQ7C3Z1mgl4471",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q3 2024 outlook\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q3 2024 outlook"
+        }
+      },
+      {
+        "id": "call_02_WqodWOOL6M6uYsDmiLph9186",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q4 2024 outlook\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q4 2024 outlook"
+        }
+      },
+      {
+        "id": "call_03_0VOfHp3F9Tfivk60yyIj3682",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q1 2025 outlook\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q1 2025 outlook"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_fIa5MKb1DAQhEF032wco4207",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q2 2024 outlook range\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q2 2024 outlook range"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.sahmcapital.com/news/content/amd-q2-earnings-preview-microsoft-impact-data-center-guidance-on-watch-analyst-warns-of-substantial-downside-risk-2024-07-29\", \"title\": \"AMD Q2 Earnings Preview: Microsoft Impact, Data Center Guidance On Watch, Analyst Warns Of 'Substantial Downside Risk'\", \"content\": \"Shares of semiconductor company Advanced Micro Devices Inc (NASDAQ:AMD) have underperformed other chip peers and the broader market in 2024. Could the trend be reversed when the company reports second-quarter financial results Tuesday after market close.\\n\\nEarnings Estimates: Analysts expect AMD to report second-quarter revenue of $5.72 billion according to data from Benzinga Pro.\", \"score\": 0.9195344, \"raw_content\": null}, {\"url\": \"https://www.sahmcapital.com/news/content/amd-falls-on-q1-earnings-q2-guidance-why-1000-growth-from-ai-stock-is-not-enough-for-investors-2024-05-01\", \"title\": \"AMD Falls On Q1 Earnings, Q2 Guidance: Why '1,000% Growth' From AI Stock Is Not Enough For Investors\", \"content\": \"\\\"While the positive revision to AMD's 2024 Data Center GPU revenue outlook to $4.0 billion may have underwhelmed the most bullish of investor expectations, we continue to believe that the company is making the appropriate investments and has the long-term product roadmap in place to benefit from growth in AI infrastructure spending,\\\" the analyst said.\\n\\nThe analyst said CPU market share gains could continue in the second half of 2024 and in 2025.\", \"score\": 0.9125066, \"raw_content\": null}, {\"url\": \"https://seekingalpha.com/article/4718576-amd-stock-ai-accelerators-drive-revenue-and-margin-outlook-upgrade-buy\", \"title\": \"AMD: AI Accelerators Further Drive Revenue And Margin Outlook\", \"content\": \"AMD: AI Accelerators Further Drive Revenue And Margin Outlook (NASDAQ:AMD) | Seeking Alpha. Home page Seeking Alpha - Power to Investors.    Top U.S. Equity ETFs. Entering text into the input field will update the search result below. Home page Seeking Alpha - Power to Investors. AMD: AI Accelerators Further Drive Revenue And Margin Outlook.    AMD's Data Center revenue surged 115% YoY in Q2 2024, driven by Instinct MI300 AI accelerators and EPYC processors, leading to raised revenue guidance\", \"score\": 0.8989177, \"raw_content\": null}, {\"url\": \"https://www.benzinga.com/analyst-ratings/analyst-color/24/07/40018437/amd-q2-earnings-preview-microsoft-impact-data-center-guidance-on-watch-analyst-warn\", \"title\": \"AMD Q2 Earnings Preview: Microsoft Impact, Data Center Guidance On Watch, Analyst Warns Of 'Substantial D - Benzinga\", \"content\": \"Earnings Estimates: Analysts expect AMD to report second-quarter revenue of $5.72 billion, according to data from Benzinga Pro.\\n\\nThe company reported revenue of $5.36 billion in the comparable quarter last year. AMD has beaten analyst revenue estimates in five straight quarters.\\n\\nGuidance from the company calls for second-quarter revenue in a range of $5.4 billion to $6.0 billion.\", \"score\": 0.8364614, \"raw_content\": null}, {\"url\": \"https://ng.investing.com/news/stock-market-news/amd-reports-q1-beat-but-stock-plunges-4-on-weak-q2-revenue-guidance-432SI-873594\", \"title\": \"AMD reports Q1 beat, but stock plunges 4% on weak Q2 revenue guidance By Investing.com\", \"content\": \"declines in our Gaming and Embedded segments,\\u201d said CFO Jean Hu. The company expects Q2/23 revenue in the range of $5-5.6B, compared to the consensus estimate of $5.49B. The AI has no bias\\u2014it simply identifies which stocks offer the best risk-reward based on current data with notable past winners that include Super Micro Computer (+185%) and AppLovin (+157%). AMD reports Q1 beat, but stock plunges 4% on weak Q2 revenue guidance. | Multverse | 18.35 | +9.88% | 185.66K |  |. | Transexpr | 3.12 |\", \"score\": 0.74385756, \"raw_content\": null}, {\"url\": \"https://www.rttnews.com/2796545/amd-issues-revenue-outlook-q2-computing-and-graphics-segment-revenue-up-51.aspx?Arch=1\", \"title\": \"AMD Issues Revenue Outlook; Q2 Computing And Graphics Segment Revenue Up 51%\", \"content\": \"LOGO\\nLOGO\\n\\n## Business\\n\\n## Industry News\\n\\n## Corp. Calendars\\n\\n## Earnings Calendar\\n\\n## FDA Calendars\\n\\n## Ratings Changes\\n\\n## Economy\\n\\n## Cryptocurrency\\n\\n## Markets\\n\\n## Politics\\n\\n## Forex\\n\\n## Health\\n\\n## Slide Shows\\n\\n## Entertainment\\n\\n## Music news\\n\\n## Content Licensing\\n\\n## Premium Services\\n\\n## More\\n\\nLOGO\\n\\n## Quick Facts\\n\\n# AMD Issues Revenue Outlook; Q2 Computing And Graphics Segment Revenue Up 51%\\n\\nGoogle News\\nrttnewslogo20mar2024\\nRTTNews\", \"score\": 0.7274535, \"raw_content\": null}, {\"url\": \"https://www.global-agriculture.com/crop-protection/fmc-corporation-announces-second-quarter-earnings-at-higher-end-of-guidance-range-updates-full-year-outlook\", \"title\": \"FMC Corporation Announces Second Quarter Earnings at Higher End of Guidance Range; Updates Full-year Outlook\", \"content\": \"The company has updated its full-year 2024 revenue outlook to be in the range of $4.30 billion to $4.50 billion, representing a decrease of 2 percent at the midpoint versus 2023. Versus the prior year, mid-single digit volume growth is expected to be more than offset by price and FX.  The revised revenue guidance is 4 percent lower at the midpoint versus prior guidance to reflect lower first half sales and delayed demand recovery.\", \"score\": 0.46657884, \"raw_content\": null}, {\"url\": \"https://next.io/news/results/q2-2024-sportradar-raises-guidance\", \"title\": \"Q2 2024: Sportradar raises guidance after record revenue - NEXT.io\", \"content\": \"\\u201cI am pleased to once again raise our full year guidance as we continue to build long-term shareholder value through strong top-line growth, a focus on delivering additional operating leverage and increasing cash flow generation.\\u201d\\n\\nSportradar opted to increase its revenue outlook to \\u20ac1.07bn, compared to Q1\\u2019s \\u20ac1.06bn projection, which would amount to a 22% year-on-year increase.\", \"score\": 0.26205543, \"raw_content\": null}, {\"url\": \"https://tokenist.com/oracle-tumbles-9-5-as-q2-revenue-and-q3-guidance-miss-the-mark\", \"title\": \"Oracle Tumbles 9.5% as Q2 Revenue and Q3 Guidance Miss the Mark - Tokenist\", \"content\": \"Oracle\\u2019s shares tumbled more than 9.5% in premarket trading Tuesday after the software maker unveiled its financial results for the fiscal Q2 2024, missing revenue estimates. Revenue guidance for the current quarter was also below expectations.\", \"score\": 0.25117946, \"raw_content\": null}, {\"url\": \"https://seekingalpha.com/article/4708971-amd-stock-q2-20-percent-pullback-reset-expectations-strong-revenue-growth-outlook-upgrade-buy\", \"title\": \"Latest Technology Stock Investing Analysis | Seeking Alpha\", \"content\": \"Yesterday, 1:07 AM\\n\\nASAN\\n\\nAlexandru Dragut\\n\\nWorkday: Modest FCF Multiples Amid AI ACV Growth\\n\\nFri, Jun 12\\n\\nWDAY\\n\\nGary Alexander\\n\\nIntel: Optimism Is Getting Expensive\\n\\nFri, Jun 12\\n\\nINTC\\n\\nThe J Thesis4 Comments\\n\\nAppLovin: Conversion Rates Are Rising And So Is The Bull Case\\n\\nFri, Jun 12\\n\\nAPP\\n\\nAnalysis Fundamental5 Comments\\n\\nASML: The Rally May Be Overdone\\n\\nFri, Jun 12\\n\\nASML\\n\\nJonathan Weber9 Comments\\n\\nXanadu Quantum Technologies: An Intriguing Quantum Firm - With A Big Tax Risk\\n\\nFri, Jun 12\\n\\nXNDU\", \"score\": 0.07480398, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.522,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_01_Rh4o8E1hCgFQ7C3Z1mgl4471",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q3 2024 outlook\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q3 2024 outlook"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://intellectia.ai/earnings/amd-reports-strong-q3-2024-financial-results\", \"title\": \"AMD Q3 2024: Growth in Data Center & Client Segments\", \"content\": \"Forward Guidance\\n\\nAMD projects Q4 2024 revenue to be approximately $7.5 billion, plus or minus $300 million, with a non-GAAP gross margin expectation of about 54%. This outlook suggests continued growth driven by the company's leading market segments.\\n\\nStock Price Movement\\n\\nFollowing the earnings release, AMD shares experienced a price increase of approximately 3.96%, reflecting investor confidence in the company's reported performance and future growth potential.\", \"score\": 0.9634823, \"raw_content\": null}, {\"url\": \"https://www.xtb.com/en/market-analysis/amd-beats-expectations-and-raises-q3-outlook\", \"title\": \"AMD beats expectations and raises Q3 outlook \\ud83d\\udcc8 | XTB\", \"content\": \"AMD generated revenue of $5.84 billion in 2Q24, beating consensus expectations by 2% and 9% year-on-year. The company recorded impressive growth in its most important segment, Data Center, where revenues rose by as much as 115% y/y to $2.8 billion. This growth was driven primarily by strong growth in shipments of AMD Instinct GPUs and strong growth in sales of fourth-generation AMD EPYC processors.\", \"score\": 0.96264863, \"raw_content\": null}, {\"url\": \"https://thedeepdive.ca/strong-q3-revenue-fails-to-lift-amd-as-stock-falls-7-on-weak-ai-outlook\", \"title\": \"Strong Q3 Revenue Fails to Lift AMD as Stock Falls 7% on Weak AI Outlook | the deep dive\", \"content\": \"AMD remains optimistic, projecting approximately $5 billion in AI-related revenue for 2024, an increase from an earlier estimate of $4.5 billion, but this guidance reflects tempered confidence in the short-term market conditions .\", \"score\": 0.9489978, \"raw_content\": null}, {\"url\": \"https://www.coinspeaker.com/amd-reports-q3-2023-q4\", \"title\": \"AMD Reports Q3 2023 Financial Results, Gives Soft Q4 Guidance - Coinspeaker\", \"content\": \"\\u00a9 2026 Coinspeaker LTD.\\nALL RIGHTS RESERVED.\\n\\n# AMD Reports Q3 2023 Financial Results, Gives Soft Q4 Guidance\\n\\nAMD hopes to generate about $400 million in sales from its graphics processing units for AI workloads in the fourth quarter2023, which will result in a rise to $2 billion in fiscal 2024.\\n\\nDarya Rudz\\nKseniia Klichova\\nAMD Reports Q3 2023 Financial Results, Gives Soft Q4 Guidance\\nAdvanced Micro Devices, Inc. logo\", \"score\": 0.7325349, \"raw_content\": null}, {\"url\": \"https://www.rttnews.com/1427297/amd-updates-q3-guidance-quick-facts.aspx\", \"title\": \"AMD Updates Q3 Guidance - Quick Facts\", \"content\": \"LOGO\\nLOGO\\n\\n## Business\\n\\n## Industry News\\n\\n## Corp. Calendars\\n\\n## Earnings Calendar\\n\\n## FDA Calendars\\n\\n## Ratings Changes\\n\\n## Economy\\n\\n## Cryptocurrency\\n\\n## Markets\\n\\n## Politics\\n\\n## Forex\\n\\n## Health\\n\\n## Slide Shows\\n\\n## Entertainment\\n\\n## Music news\\n\\n## Content Licensing\\n\\n## Premium Services\\n\\n## More\\n\\nLOGO\\n\\n## \\n\\n# AMD Updates Q3 Guidance - Quick Facts\\n\\nGoogle News\\nrttnewslogo20mar2024\\nRTTNews\", \"score\": 0.55391616, \"raw_content\": null}, {\"url\": \"https://allstreaminsiders.com/sap-raises-2024-guidance-after-strong-q3-performance\", \"title\": \"SAP Raises 2024 Guidance After Strong Q3 Performance - Allstream Insiders\", \"content\": \"### NVIDIA and IREN Announce Strategic Partnership to Accelerate Deployment of up to 5 Gigawatts of AI Infrastructure\\n\\n### AES Announces Landmark Agreements with Google in Texas \\u2013 Power + Data Centers\\n\\n### Meta and AMD Partner for Longterm AI Infrastructure Agreement worth more that $100Billion\\n\\n# SAP Raises 2024 Guidance After Strong Q3 Performance\\n\\nSAP Raises 2024 Guidance After Strong Q3 Performance\", \"score\": 0.5443418, \"raw_content\": null}, {\"url\": \"https://www.shacknews.com/article/137609/amd-q4-2023-revenue-guidance\", \"title\": \"AMD issues Q4 2023 revenue guidance below analyst estimates | Shacknews\", \"content\": \"AMD\\n\\n1\\n\\nAMD issued its Q3 2023 earnings report on Tuesday afternoon. The company's earnings are higher than expected for this quarter, but the outlook is less optimistic for the financial quarter ahead. AMD noted that it expects Q4 2023 revenue to come in at roughly $6.1 billion USD, which is about $300 million below analysts' estimates.\", \"score\": 0.4680374, \"raw_content\": null}, {\"url\": \"https://www.benzinga.com/news/earnings/24/11/41826834/draftkings-q3-highlights-revenue-miss-2024-guidance-trim-first-2025-outlook-ceo-reaffirms-focus-on-\", \"title\": \"DraftKings Q3 Highlights: Revenue Miss, 2024 Guidance Trim, First 2025 Outlook, CEO Reaffirms Focus On 'S - Benzinga\", \"content\": \"What's Next: The company lowered its fiscal year 2024 revenue guidance from a range of $5.05 billion to $5.25 billion to a new range of $4.85 billion to $4.95 billion due to customer-friendly sport outcomes in the fourth quarter, which comes with the NFL season having several weeks of favorable outcomes for bettors.\\n\\nAnalysts expect the company to report revenue of $5.14 billion for the full fiscal year, according to data from Benzinga Pro.\", \"score\": 0.44087905, \"raw_content\": null}, {\"url\": \"https://www.minichart.com.sg/2024/10/31/standard-chartered-q3-2024-results-strong-revenue-growth-and-upgraded-guidance-boost-outlook\", \"title\": \"Standard Chartered Q3 2024 Results: Strong Revenue Growth and Upgraded Guidance Boost Outlook\", \"content\": \"Standard Chartered Q3 2024 Results: Strong Revenue Growth and Upgraded Guidance Boost Outlook \\u2013 Minichart. Standard Chartered Q3 2024 Results: Strong Revenue Growth and Upgraded Guidance Boost Outlook. Standard Chartered Bank (SCB) is a dominant force in the financial world, especially within emerging markets (EM) such as Asia, Africa, and the Middle East. However, SCB\\u2019s ability to implement strategic measures to achieve its return on equity (ROE) targets could support a re-rating, leading to a\", \"score\": 0.38512084, \"raw_content\": null}, {\"url\": \"https://seekingalpha.com/mp/1090-rethink-technology/articles/6076862-asml-2024-q3-revenue-exceeds-guidance-but-2025-outlook-disappoints\", \"title\": \"ASML:  2024 Q3 Revenue Exceeds Guidance, But 2025 Outlook Disappoints (NASDAQ:ASML) | Rethink Technology | Seeking Alpha Investing Groups\", \"content\": \"## Investing Groups\\n\\n## Portfolios\\n\\n## Find & Compare\\n\\n## Subscriptions\\n\\n# ASML: 2024 Q3 Revenue Exceeds Guidance, But 2025 Outlook Disappoints\\n\\nEven though ASML Holding (ASML) will finish the year with basically flat revenue, investors naturally focused on management\\u2019s early preview of 2025. To their credit, management didn\\u2019t hold back or candy coat anything. CEO Roger Dassen offered revenue guidance for 2025 of \\u20ac30-35 billion, in the lower ...\", \"score\": 0.30324718, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 0.636,
+      "error": null,
+      "success": true
+    },
+    {
+      "tool_call": {
+        "id": "call_02_WqodWOOL6M6uYsDmiLph9186",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q4 2024 outlook\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q4 2024 outlook"
+        }
+      },
+      "tool_output": {
+        "output": "Server disconnected without sending a response.",
+        "error": "Server disconnected without sending a response.",
+        "metadata": null,
+        "done": false,
+        "success": false
+      },
+      "duration_seconds": 15.064,
+      "error": {
+        "type": "ToolFailed",
+        "message": "Server disconnected without sending a response.",
+        "traceback": null,
+        "context": {
+          "tool_name": "web_search"
+        }
+      },
+      "success": false
+    },
+    {
+      "tool_call": {
+        "id": "call_03_0VOfHp3F9Tfivk60yyIj3682",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD revenue guidance Q1 2025 outlook\"}",
+        "parsed_args": {
+          "search_query": "AMD revenue guidance Q1 2025 outlook"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.theglobeandmail.com/investing/markets/stocks/AMD/pressreleases/30780892/amd-is-plunging-on-weak-q1-guidance-why-now-is-a-good-time-to-buy-amd-stock\", \"title\": \"AMD Is Plunging on Weak Q1 Guidance. Why Now Is a Good Time to Buy AMD Stock. - The Globe and Mail\", \"content\": \"Management projects robust double-digit revenue and earnings per share (EPS) growth in 2025. As AI adoption expands, AMD\\u2019s strategic investments in this space will yield significant returns.\\n\\nWall Street analysts are bullish about AMD\\u2019s prospects and maintain a \\u201cStrong Buy\\u201d consensus rating.\\n\\nOverall, in the current market environment, AMD appears to be an attractive buy for investors seeking exposure to a stock with growth potential in AI and data center markets.\", \"score\": 0.8980626, \"raw_content\": null}, {\"url\": \"https://www.sahmcapital.com/news/content/amd-falls-on-q1-earnings-q2-guidance-why-1000-growth-from-ai-stock-is-not-enough-for-investors-2024-05-01\", \"title\": \"AMD Falls On Q1 Earnings, Q2 Guidance: Why '1,000% Growth' From AI Stock Is Not Enough For Investors\", \"content\": \"Muse also cautioned on gaming segment weakness that could offset growth in other areas.\\n\\n\\\"Add it all up, and it now appears CY24/25 revenues are tracking to $25.5B/$30.5B \\u2013 for solid growth of 13%/20%, but below consensus coming in at $25.8B/$32.4B.\\\"\\n\\nThe analyst said the \\\"2025 and beyond story remains intact\\\" with artificial intelligence a key opportunity for AMD \\u2014 the No. 2 merchant AI supplier behind NVIDIA Corporation (NASDAQ:NVDA).\", \"score\": 0.8706085, \"raw_content\": null}, {\"url\": \"https://abbonews.com/us-markets/advanced-micro-devices-nasdaq-amd-stock-tumbles-on-lackluster-data-center-revenue-guidance\", \"title\": \"Advanced Micro Devices (NASDAQ: AMD) Stock Tumbles on Lackluster Data Center Revenue Guidance\", \"content\": \"used car retailer reported. By   Maria Reed   |  16 May 2025  | NYSE: CAVA, Reuters. By   Maria Reed   |  16 May 2025  | NASDAQ: TTWO, Reuters. By   Maria Reed   |  15 May 2025  | NASDAQ: JACK, Reuters. By   Maria Reed   |  15 May 2025  | NYSE: FL, Reuters. ### JD.com (NASDAQ: JD) Beats Q1 Estimates on Strong Consumer Demand, Shares Rise. By   Maria Reed   |  14 May 2025  | NASDAQ: JD, Reuters. By   Maria Reed   |  12 May 2025  | NASDAQ: RUM, Reuters.\", \"score\": 0.7999589, \"raw_content\": null}, {\"url\": \"https://ng.investing.com/news/stock-market-news/amd-reports-q1-beat-but-stock-plunges-4-on-weak-q2-revenue-guidance-432SI-873594\", \"title\": \"AMD reports Q1 beat, but stock plunges 4% on weak Q2 revenue guidance By Investing.com\", \"content\": \"# AMD reports Q1 beat, but stock plunges 4% on weak Q2 revenue guidance. AMD reports Q1 beat, but stock plunges 4% on weak Q2 revenue guidance. AMD reports Q1 beat, but stock plunges 4% on weak Q2 revenue guidance. Revenue fell 9% year-over-year to $5.4 billion, beating the consensus estimate of $5.3B, as Embedded segment strength was offset by lower Client segment revenue. For the second quarter we expect sequential growth in our Data Center and Client segments offset by modest declines in our\", \"score\": 0.7568076, \"raw_content\": null}, {\"url\": \"https://finance.yahoo.com/news/amd-beats-on-q1-revenue-and-eps-stock-edges-lower-on-light-guidance-202840712.html\", \"title\": \"AMD beats on Q1 revenue and EPS, stock edges lower on light guidance\", \"content\": \"AMD reported adjusted earnings per share (EPS) of $0.62 on revenue of $5.5 billion.Wall Street was looking for adjusted EPS of $0.61 on revenue of $5.45 billion. The company reported EPS of $0.60 on revenue of $5.35 billion in the same quarter last year.\\n\\nImportantly, AMD saw better-than-anticipated Data Center revenue in the quarter, with the company reporting sales of $2.34 billion. Wall Street was looking for $2.31 billion.\", \"score\": 0.735737, \"raw_content\": null}, {\"url\": \"https://www.techmonitor.ai/hardware/silicon/intel-q4-2024-revenue-q1-2025-outlook\", \"title\": \"Intel Q4 2024 revenue exceeds forecasts, but Q1 2025 outlook disappoints investors\", \"content\": \"Following the earnings report, Intel\\u2019s stock rose nearly 4% in after-hours trading. However, concerns remain over the company\\u2019s ability to regain market share in key segments. Over the past year, Intel\\u2019s stock has declined by approximately 60%, as it struggles to compete with rivals such as Nvidia and AMD. The Santa Clara, California-based company has been losing ground in both the PC and server processor markets, with AMD continuing to gain market share. The global PC market, which accounts\", \"score\": 0.64585793, \"raw_content\": null}, {\"url\": \"https://www.techmonitor.ai/silicon/intel-q4-2024-revenue-q1-2025-outlook\", \"title\": \"Intel Q4 2024 revenue exceeds forecasts, but Q1 2025 outlook disappoints investors\", \"content\": \"Following the earnings report, Intel\\u2019s stock rose nearly 4% in after-hours trading. However, concerns remain over the company\\u2019s ability to regain market share in key segments. Over the past year, Intel\\u2019s stock has declined by approximately 60%, as it struggles to compete with rivals such as Nvidia and AMD. The Santa Clara, California-based company has been losing ground in both the PC and server processor markets, with AMD continuing to gain market share. The global PC market, which accounts\", \"score\": 0.64585793, \"raw_content\": null}, {\"url\": \"https://www.vstar.com/article/amd-stock-forecast-prediction-2024-q1\", \"title\": \"AMD Stock Forecast 2024: Q1 Performance and Outlook\", \"content\": \"Client Segment: The semiconductor market for client devices, including PCs and mobile devices, is projected to grow at a CAGR of 6.3% from 2024 to 2027 (as per Statista). AMD's Ryzen processors, particularly with their AI capabilities, are expected to benefit from this growth. The client segment saw a revenue increase of 85% year-over-year, driven by strong demand for Ryzen mobile and desktop processors. This trend is expected to continue with the upcoming launch of the Strix mobile processors.\", \"score\": 0.5735118, \"raw_content\": null}, {\"url\": \"https://www.rttnews.com/2796545/amd-issues-revenue-outlook-q2-computing-and-graphics-segment-revenue-up-51.aspx?Arch=1\", \"title\": \"AMD Issues Revenue Outlook; Q2 Computing And Graphics Segment Revenue Up 51%\", \"content\": \"On a non-GAAP basis, second-quarter earnings per share was $0.02 compared to a loss per share of $0.05, a year ago. On a GAAP basis, second-quarter revenue was $1.22 billion, up 19 percent year-over-year, driven by higher revenue in the Computing and Graphics segment. Computing and Graphics segment revenue was $659 million, up 51 percent year-over-year, driven by demand for graphics and Ryzen desktop processors.\\n\\nFor comments and feedback contact: editorial@rttnews.com\\n\\nBusiness News\", \"score\": 0.4920179, \"raw_content\": null}, {\"url\": \"https://www.fool.com/investing/2024/01/31/amd-stock-earnings-guidance-ai-stocks\", \"title\": \"AMD's Stock Drops 2.5% on Light Q1 Guidance, But It Raises 2024 Artificial Intelligence Chip Outlook | The Motley Fool\", \"content\": \"For Q1 2024, management expects revenue of approximately $5.4 billion, which equates to growth of about 1% year over year. Going into the report, Wall Street had been modeling for Q1 revenue of $5.73 billion, or about 7% growth, so AMD's top-line outlook fell somewhat short.\\n\\nThe company also guided for Q1 adjusted-gross margin of 52%. For context, in the year-ago period, this result was 50%, and in the prior quarter (Q4 2023) it was 51%.\", \"score\": 0.4784076, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.415,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 20.721,
+  "retry_overhead_seconds": 0.002,
+  "effective_duration_seconds": 20.719
+}

@@ -1,0 +1,19 @@
+{
+  "seq": 31,
+  "timestamp": "2026-06-19T02:47:00.898104+00:00",
+  "event_type": "tool_call",
+  "component": "subagent",
+  "iteration": null,
+  "assignment_id": "T2",
+  "payload": {
+    "agent_name": "RegulatoryNewsAgent",
+    "round": 1,
+    "call": {
+      "tool_name": "web_search",
+      "args": {
+        "search_query": "Nippon Steel acquisition of US Steel press release December 2023"
+      },
+      "purpose": "Find Nippon Steel's official press release regarding the merger"
+    }
+  }
+}

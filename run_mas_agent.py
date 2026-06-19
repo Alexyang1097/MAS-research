@@ -65,9 +65,20 @@ async def main():
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--questions", type=str, nargs="+")
     parser.add_argument("--question-file", type=str)
-    parser.add_argument("--model", type=str, default="anthropic/claude-sonnet-4-5-20250929")
+    parser.add_argument("--model", type=str, default="deepseek/deepseek-reasoner")
     parser.add_argument("--parallelism", type=int, default=1)
-    parser.add_argument("--max-iterations", type=int, default=6)
+    parser.add_argument(
+        "--max-iterations",
+        type=int,
+        default=30,
+        help="Hard safety cap for total orchestration loops; normal stopping is controlled by final-goal attempts",
+    )
+    parser.add_argument(
+        "--max-final-goal-replans",
+        type=int,
+        default=3,
+        help="Maximum replans allowed after the Decider says the next goal is the final goal",
+    )
     parser.add_argument("--max-rubric-failures", type=int, default=2)
     parser.add_argument("--debate-rounds-cap", type=int, default=2)
     parser.add_argument("--max-plan-refinements", type=int, default=1)
@@ -93,6 +104,7 @@ async def main():
         llm_config=LLMConfig(max_tokens=args.max_tokens, temperature=args.temperature),
         mas_parameters=MASParameters(
             max_iterations=args.max_iterations,
+            max_final_goal_replans=args.max_final_goal_replans,
             max_rubric_failures=args.max_rubric_failures,
             max_tool_rounds_per_subagent=args.max_tool_rounds_per_subagent,
             max_tool_calls_per_round=args.max_tool_calls_per_round,

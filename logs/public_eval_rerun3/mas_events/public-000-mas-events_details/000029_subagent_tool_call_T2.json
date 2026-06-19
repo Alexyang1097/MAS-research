@@ -1,0 +1,19 @@
+{
+  "seq": 29,
+  "timestamp": "2026-06-19T02:46:59.314534+00:00",
+  "event_type": "tool_call",
+  "component": "subagent",
+  "iteration": null,
+  "assignment_id": "T2",
+  "payload": {
+    "agent_name": "RegulatoryNewsAgent",
+    "round": 1,
+    "call": {
+      "tool_name": "web_search",
+      "args": {
+        "search_query": "US Steel announces merger with Nippon Steel December 18 2023 press release site:ussteel.com"
+      },
+      "purpose": "Find official US Steel press release announcing the merger on Dec 18, 2023"
+    }
+  }
+}

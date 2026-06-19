@@ -1,0 +1,73 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Now let me also get the official press release for Q4 2024 earnings (which would have Q1 2025 guidance). Let me find it.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 9.900000000000001e-05,
+        "output": 0.00013359,
+        "reasoning": 7.007999999999999e-05,
+        "cache_read": 0.0045696,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.00487227,
+        "total_input": 0.0046686,
+        "total_output": 0.00020366999999999998
+      },
+      "duration_seconds": 1.5511729159916285,
+      "in_tokens": 180,
+      "out_tokens": 61,
+      "reasoning_tokens": 32,
+      "cache_read_tokens": 32640,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 32820,
+      "total_output_tokens": 93
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_t3LggNCfQfvIqkT0vOEo3595",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD reports fourth quarter 2024 financial results globenewswire February 2025\"}",
+        "parsed_args": {
+          "search_query": "AMD reports fourth quarter 2024 financial results globenewswire February 2025"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_t3LggNCfQfvIqkT0vOEo3595",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"AMD reports fourth quarter 2024 financial results globenewswire February 2025\"}",
+        "parsed_args": {
+          "search_query": "AMD reports fourth quarter 2024 financial results globenewswire February 2025"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.nasdaq.com/articles/amd-report-fourth-quarter-and-full-year-2024-financial-results-february-4-2025\", \"title\": \"AMD to Report Fourth Quarter and Full Year 2024 Financial Results on February 4, 2025 | Nasdaq\", \"content\": \"SANTA CLARA, Calif., Jan. 14, 2025 (GLOBE NEWSWIRE) --  \\n  AMD   \\n (NASDAQ: AMD) announced today that it will report fiscal fourth quarter and full year 2024 financial results on Tuesday, Feb. 4, 2025, after the close of market. Management will conduct a conference call to discuss these results at 5:00 p.m. EST / 2:00 p.m. PST. Interested parties are invited to listen to the webcast of the conference call via the AMD Investor Relations website  \\n  ir.amd.com   \\n .\", \"score\": 0.96364677, \"raw_content\": null}, {\"url\": \"https://www.stocktitan.net/news/AMD/amd-to-report-fiscal-fourth-quarter-and-full-year-2024-financial-c6fk6aaql4a4.html\", \"title\": \"AMD to Report Q4 and Full Year 2024 Earnings on February 4 After Market Close | AMD Stock News\", \"content\": \"SANTA CLARA, Calif., Jan. 14, 2025 (GLOBE NEWSWIRE) -- AMD (NASDAQ: AMD) announced today that it will report fiscal fourth quarter and full year 2024 financial results on Tuesday, Feb. 4, 2025, after the close of market. Management will conduct a conference call to discuss these results at 5:00 p.m. EST / 2:00 p.m. PST. Interested parties are invited to listen to the webcast of the conference call via the AMD Investor Relations website ir.amd.com.\", \"score\": 0.96205425, \"raw_content\": null}, {\"url\": \"https://www.quiverquant.com/news/AMD+to+Report+Fourth+Quarter+and+Full+Year+2024+Financial+Results+on+February+4%2C+2025\", \"title\": \"AMD to Report Fourth Quarter and Full Year 2024 Financial Results on February 4, 2025 | Quiver Quantitative\", \"content\": \"## Full Release\\n\\nSANTA CLARA, Calif., Jan. 14, 2025 (GLOBE NEWSWIRE) --\\nAMD\\n(NASDAQ: AMD) announced today that it will report fiscal fourth quarter and full year 2024 financial results on Tuesday, Feb. 4, 2025, after the close of market. Management will conduct a conference call to discuss these results at 5:00 p.m. EST / 2:00 p.m. PST. Interested parties are invited to listen to the webcast of the conference call via the AMD Investor Relations website\\nir.amd.com\\n.\", \"score\": 0.96196854, \"raw_content\": null}, {\"url\": \"https://kfor.com/business/press-releases/globenewswire/9362482/acme-united-to-release-fourth-quarter-2024-financial-results-on-february-28-2025\", \"title\": \"Acme United to Release Fourth Quarter 2024 Financial Results on February 28, 2025\", \"content\": \"sporting goods and industrial markets. Its leading brands include First Aid Only\\u00ae, First Aid Central\\u00ae, PhysiciansCare\\u00ae, Spill Magic\\u00ae, Westcott\\u00ae, Clauss\\u00ae, DMT\\u00ae, Med-Nap, Safety Made and Elite. NOTE: This content is not written by or endorsed by \\\"KFOR\\\", its advertisers, or Nexstar Media Inc. For inquiries or corrections to Press Releases, please reach out to GlobeNewswire. Provided by Nexstar Media Group, Inc. ## Sign in to create your free My Nexstar account featuring exclusive livestreams.\", \"score\": 0.67758125, \"raw_content\": null}, {\"url\": \"https://www.chartmill.com/news/KRON/globenews-2025-3-18-kronos-bio-reports-fourth-quarter-and-full-year-2024-financial-results\", \"title\": \"Kronos Bio Reports Fourth Quarter and Full Year 2024 Financial Results | ChartMill.com\", \"content\": \"Kronos Bio Reports Fourth Quarter and Full Year 2024 Financial Results. # Kronos Bio Reports Fourth Quarter and Full Year 2024 Financial Results. Provided By GlobeNewswire \\u2013 Last update:. SAN MATEO, Calif., and CAMBRIDGE, Mass., March 18, 2025 (GLOBE NEWSWIRE) -- Kronos Bio, Inc. (Nasdaq: KRON), a biopharmaceutical company, today reported fourth quarter and full year 2024 financial results. Read more at globenewswire.com.\", \"score\": 0.62852204, \"raw_content\": null}, {\"url\": \"https://www.thecanadianpressnews.ca/globenewswire_press_releases/birchtech-reports-fourth-quarter-2024-financial-results/article_c14f8af3-a882-514d-bea6-d0384c1afe74.html\", \"title\": \"Birchtech Reports Fourth Quarter 2024 Financial Results | GlobeNewswire Press Releases | thecanadianpressnews.ca\", \"content\": \"CORSICANA, Texas, March 31, 2025 (GLOBE NEWSWIRE) -- Birchtech Corp. (TSX: BCHT) (OTCQB: BCHT) (\\\"Birchtech\\\" or the \\\"Company\\\"), a leader in specialty activated carbon technologies for sustainable air and water treatment, has reported financial results for the fourth quarter and year ended December 31, 2024.\\n\\nKey Fourth Quarter 2024 & Subsequent Operational Highlights\", \"score\": 0.6018984, \"raw_content\": null}, {\"url\": \"https://www.thecanadianpressnews.ca/globenewswire_press_releases/reminder-boralex-will-release-its-2024-fourth-quarter-financial-results-on-february-28/article_1b0f6611-995f-55b0-a989-5c74c6cb1065.html\", \"title\": \"REMINDER: Boralex will release its 2024 fourth quarter financial results on February 28 | GlobeNewswire Press Releases | thecanadianpressnews.ca\", \"content\": \"# REMINDER: Boralex will release its 2024 fourth quarter financial results on February 28. ## REMINDER: Boralex will release its 2024 fourth quarter financial results on February 28. MONTREAL, Feb. 26, 2025 (GLOBE NEWSWIRE) -- Boralex inc. (\\u201cBoralex\\u201d or the \\u201cCompany\\u201d) (TSX: BLX) announces that the release of the 2024 fourth quarter results will take place on Friday, February 28, 2025, at 11 a.m. Financial analysts and investors are invited to attend a conference call during which the financial\", \"score\": 0.55565286, \"raw_content\": null}, {\"url\": \"https://www.chartmill.com/news/MGIC/globenews-2025-3-11-magic-software-reports-fourth-quarter-and-full-year-2024-financial-results\", \"title\": \"Magic Software Reports Fourth Quarter and Full Year 2024 Financial Results | ChartMill.com\", \"content\": \"# Magic Software Reports Fourth Quarter and Full Year 2024 Financial Results. Provided By GlobeNewswire - Last update: Mar 11, 2025. MGIC (18.90 \\u25bc -1.05%). OR YEHUDA, Israel, March 11, 2025 (GLOBE NEWSWIRE) -- Magic Software Enterprises Ltd. (NASDAQ and TASE: MGIC) (\\u201cthe Company\\u201d), a global provider of IT consulting services and end-to-end integration and application development platforms solutions, announced today its financial results for the fourth quarter and full year ended December 31,\", \"score\": 0.5189612, \"raw_content\": null}, {\"url\": \"https://www.chartmill.com/news/default/globenews-2025-3-19-wesdome-reports-fourth-quarter-and-year-end-2024-financial-results\", \"title\": \"Wesdome Reports Fourth Quarter and Year-End 2024 Financial Results\", \"content\": \"PropertiesScreener Market Data. OverviewGrowth TradersSwing TradersLong Term Investors. Bull FlagsRelative StrengthSupport & ResistanceMACD IndicatorSwing TradingWeinsteinMinerviniCANSLIM. Wesdome Reports Fourth Quarter and Year-End 2024 Financial Results. Provided By GlobeNewswire - Last update: Mar 19, 2025. TORONTO, March 19, 2025 (GLOBE NEWSWIRE) -- Wesdome Gold Mines Ltd. (TSX:WDO, OTCQX:WDOFF) (\\u201cWesdome\\u201d or the \\u201cCompany\\u201d) today announced its results for the three and twelve months ended\", \"score\": 0.48279548, \"raw_content\": null}, {\"url\": \"https://www.chartmill.com/news/RCI/globenews-2025-1-30-rogers-communications-reports-fourth-quarter-2024-results-announces-2025-financial-guidance\", \"title\": \"Rogers Communications Reports Fourth Quarter 2024 Results; Announces 2025 Financial Guidance | ChartMill.com\", \"content\": \"IndicatorsAll PropertiesScreener Market Data. OverviewGrowth TradersSwing TradersLong Term Investors. Bull FlagsRelative StrengthSupport & ResistanceMACD IndicatorSwing TradingWeinsteinMinerviniCANSLIM. 5.   New York Stock Exchange. Image 2: Rogers Communications Reports Fourth Quarter 2024 Results; Announces 2025 Financial Guidance. # Rogers Communications Reports Fourth Quarter 2024 Results; Announces 2025 Financial Guidance. Provided By GlobeNewswire \\u2013 Last update:  Jan 30, 2025. ## Quotes\", \"score\": 0.3808286, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.517,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 3.078,
+  "retry_overhead_seconds": 0.007,
+  "effective_duration_seconds": 3.071
+}

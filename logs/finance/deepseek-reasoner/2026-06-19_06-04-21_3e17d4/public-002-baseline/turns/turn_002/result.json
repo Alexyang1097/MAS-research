@@ -1,0 +1,112 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Based on the search results, I can see some key information:\n\nFrom fintool.com:\n- Q4 pretax margin guidance: 10.8\u201310.9%\n- Q4 pretax margin actual: 11.6%\n\nFrom marketbeat.com:\n- \"Our pre-tax profit margin was 70 basis points above the high end of our plan\"\n\nLet me get more details from the actual earnings release or transcript to confirm the exact guidance and results.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 0.00105545,
+        "output": 0.00030879000000000003,
+        "reasoning": 0.00020585999999999998,
+        "cache_read": 0.00034048,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.00191058,
+        "total_input": 0.00139593,
+        "total_output": 0.00051465
+      },
+      "duration_seconds": 2.615554999996675,
+      "in_tokens": 1919,
+      "out_tokens": 141,
+      "reasoning_tokens": 94,
+      "cache_read_tokens": 2432,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 4351,
+      "total_output_tokens": 235
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_9Bl26KNokqmEVvPkcuC53305",
+        "call_id": null,
+        "name": "parse_html_page",
+        "args": "{\"url\": \"https://fintool.com/app/research/companies/TJX/earnings/Q4%202025\", \"key\": \"tjx_q4_earnings\"}",
+        "parsed_args": {
+          "url": "https://fintool.com/app/research/companies/TJX/earnings/Q4%202025",
+          "key": "tjx_q4_earnings"
+        }
+      },
+      {
+        "id": "call_01_xd1sRIOMt8EQ1a0VCvS36816",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"TJX Q4 fiscal 2025 earnings release pre-tax profit margin guidance 10.8 10.9\"}",
+        "parsed_args": {
+          "search_query": "TJX Q4 fiscal 2025 earnings release pre-tax profit margin guidance 10.8 10.9"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_9Bl26KNokqmEVvPkcuC53305",
+        "call_id": null,
+        "name": "parse_html_page",
+        "args": "{\"url\": \"https://fintool.com/app/research/companies/TJX/earnings/Q4%202025\", \"key\": \"tjx_q4_earnings\"}",
+        "parsed_args": {
+          "url": "https://fintool.com/app/research/companies/TJX/earnings/Q4%202025",
+          "key": "tjx_q4_earnings"
+        }
+      },
+      "tool_output": {
+        "output": "404, message='Not Found', url='https://fintool.com/app/research/companies/TJX/earnings/Q4%202025'",
+        "error": "404, message='Not Found', url='https://fintool.com/app/research/companies/TJX/earnings/Q4%202025'",
+        "metadata": null,
+        "done": false,
+        "success": false
+      },
+      "duration_seconds": 1.269,
+      "error": {
+        "type": "ToolFailed",
+        "message": "404, message='Not Found', url='https://fintool.com/app/research/companies/TJX/earnings/Q4%202025'",
+        "traceback": null,
+        "context": {
+          "tool_name": "parse_html_page"
+        }
+      },
+      "success": false
+    },
+    {
+      "tool_call": {
+        "id": "call_01_xd1sRIOMt8EQ1a0VCvS36816",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"TJX Q4 fiscal 2025 earnings release pre-tax profit margin guidance 10.8 10.9\"}",
+        "parsed_args": {
+          "search_query": "TJX Q4 fiscal 2025 earnings release pre-tax profit margin guidance 10.8 10.9"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://news.futunn.com/en/post/50229181/tjx-companies-tjxus-executives-praised-the-strong-start-to-the\", \"title\": \"tjx companies (TJX.US) executives praised the strong start to the holiday season, but the Q4 performance guidance was below expectations.\", \"content\": \"Looking ahead to the future, for the fourth quarter of the fiscal year 2025, the company continues to expect a 2% to 3% growth in comparable store sales, below market expectations; the current forecasted pre-tax profit margin is between 10.8% and 10.9%, with an upward adjustment to the diluted earnings per share guidance to be between $1.12 and $1.14. For the full fiscal year 2025, the company continues to expect a 3% growth in comparable store sales, below market expectations; the company is\", \"score\": 0.9638924, \"raw_content\": null}, {\"url\": \"https://fintool.com/app/research/companies/TJX/earnings/Q4%202025\", \"title\": \"TJX COMPANIES INC /DE/ (TJX) Q4 2025 Earnings Summary | Fintool\", \"content\": \"from current China tariffs on committed buys. | Diluted EPS ($) | Q4 FY2025 | $1.12\\u2013$1.14 | $1.23 | Raised (beat) | Above plan on lower shrink and expense leverage. | Pretax Margin (%) | Q4 FY2025 | 10.8\\u201310.9% | 11.6% | Raised (beat) | +70 bps vs high end of plan; shrink favorability. | Diluted EPS ($) | FY2025 | $4.15\\u2013$4.17 (raised at Q3) | $4.26 | Raised (beat) | Mark-on strength, lower freight, shrink benefit. | Pretax Margin (%) | FY2025 | ~11.3% (raised at Q3) | 11.5% | Raised (beat) | +60\", \"score\": 0.9604838, \"raw_content\": null}, {\"url\": \"https://finance.yahoo.com/news/tjx-companies-inc-tjx-q4-071704796.html\", \"title\": \"TJX Companies Inc (TJX) Q4 2025 Earnings Call Highlights: Strong Sales Growth and Strategic ...\", \"content\": \"Net Sales (Q4): $16.4 billion, a 5% increase versus last year's adjusted sales.\\n Comp Sales Growth (Q4): 5%, driven by an increase in customer transactions.\\n Pre-tax Profit Margin (Q4): 11.6%, up 70 basis points from last year's adjusted 10.9%.\\n Gross Margin (Q4): Up 100 basis points from last year's adjusted 29.5%.\\n Diluted Earnings Per Share (Q4): $1.23, up 10% from last year's adjusted $1.12.\\n Net Sales (Full Year): $56.4 billion, a 6% increase versus last year's adjusted sales.\", \"score\": 0.93191636, \"raw_content\": null}, {\"url\": \"https://www.marketbeat.com/earnings/reports/2024-11-20-the-tjx-companies-inc-stock\", \"title\": \"TJX Companies Q3 2025 Earnings Call Transcript\", \"content\": \"Thanks again, Ernie. As a reminder, adjusted numbers for last year's Q4 and full year exclude the benefit from the extra week in our fiscal calendar last year. Now I'll start with the Q4 guidance, where we are expecting overall comp store sales growth to be up 2-3%, consolidated sales to be in the range of $15.9-$16.1 billion, pre-tax profit margin to be in the range of 10.8-10.9%, down 10 basis points to flat versus last year's adjusted 10.9%. Gross margin to be in the range of 29.4-29.5%.\", \"score\": 0.9205687, \"raw_content\": null}, {\"url\": \"https://valuentum.com?p=6091\", \"title\": \"TJX Companies Boosts Profit Guidance \\u2013 Valuentum\", \"content\": \"Looking forward, TJX expects consolidated comparable store sales growth to be between 2%-3% in the third quarter. Pre-tax profit margin is expected in the range of 11.8%-11.9% for the quarter, while diluted earnings per share is targeted in the range of $1.06-$1.08. For the full year fiscal 2025, consolidated comparable store sales are expected to be up ~3% (was 2%-3%), and the company raised its pre-tax profit margin to 11.2% and raised its diluted earnings per share outlook to be in the range\", \"score\": 0.86632514, \"raw_content\": null}, {\"url\": \"https://www.gurufocus.com/news/2718280/tjx-companies-inc-tjx-q4-2025-earnings-call-highlights-strong-sales-growth-and-strategic-expansion-plans\", \"title\": \"TJX Companies Inc (TJX) Q4 2025 Earnings Call Highlights: Strong\", \"content\": \"Logo\\n\\n# TJX Companies Inc (TJX) Q4 2025 Earnings Call Highlights: Strong Sales Growth and Strategic Expansion Plans\\n\\n## TJX Companies Inc (TJX) reports robust Q4 performance with increased sales, profitability, and plans for significant store expansion.\\n\\nAuthor's Avatar\\nArticle's Main Image\\n\\nRelease Date: February 26, 2025\\n\\nFor the complete transcript of the earnings call, please refer to the full earnings call transcript.\\n\\n### Positive Points\\n\\n### Negative Points\\n\\n### Q & A Highlights\", \"score\": 0.7961819, \"raw_content\": null}, {\"url\": \"https://www.furnituretoday.com/furniture-retailer/tjx-raises-guidance-based-on-better-than-forecast-q2?related=\", \"title\": \"TJX raises guidance based on better-than-forecast Q2 - Furniture Today\", \"content\": \"Q2 in fiscal 2024. For the third quarter of fiscal 2025, TJX estimates comp store sales will increase between 2% and 3%, while pre-tax profit margin will range between 11.8% and 11.9%. For the full year, comp sales are expected to be up about 3% and pre-tax profit margin around 11.2%.  TJX talks about home, tariffs after Q1 sales beat expectations\\\").  Sales, earnings ahead of plan for TJX second quarter\\\"). February 17, 2026]( February 11, 2026]( February 6, 2026]( February 6, 2026]( February 5,\", \"score\": 0.666736, \"raw_content\": null}, {\"url\": \"https://www.hometextilestoday.com/industry-news/tjx-raises-guidance-based-on-better-than-forecast-q2?related=\", \"title\": \"TJX raises guidance based on better-than-forecast Q2 | Home Textiles Today\", \"content\": \"For the third quarter of fiscal 2025, TJX estimates comp store sales will increase between 2% and 3%, while pre-tax profit margin will range between 11.8% and 11.9%. Diluted earnings per share are expected in the $1.06 to $1.08 range. For the full year, comp sales are expected to be up about 3% and pre-tax profit margin around 11.2%. The diluted earnings per share outlook for the full year is in the $4.09 to $4.13 range.\", \"score\": 0.6504012, \"raw_content\": null}, {\"url\": \"https://www.citybiz.co/article/223210/tjx-earnings-profit-headwinds-ramp-up-in-q4\", \"title\": \"TJX Earnings: Profit Headwinds Ramp Up in Q4 | citybiz\", \"content\": \"Looking further ahead, margins should return to pre-pandemic levels or better within a few years. Management is optimistic about TJX\\u2019s ability to offset higher labor costs with higher pricing while continuing to offer sizable discounts relative to competitors like department stores. Meanwhile, it expects freight costs to subside over the next year or two.\", \"score\": 0.58919704, \"raw_content\": null}, {\"url\": \"https://www.fool.com/investing/2022/02/25/tjx-earnings-profit-headwinds-ramp-up-in-q4\", \"title\": \"TJX Earnings: Profit Headwinds Ramp Up in Q4 | The Motley Fool\", \"content\": \"The strong sales trends continued last quarter, as open-only comp sales rose 10% from two years earlier, including a 13% gain in the U.S. (Shopping restrictions in TJX's international markets led to flattish comp sales there in Q4.) Total sales rose 13.5% over the same period.\", \"score\": 0.5749443, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.5,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 5.392,
+  "retry_overhead_seconds": 0.003,
+  "effective_duration_seconds": 5.389
+}

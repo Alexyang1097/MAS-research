@@ -1,0 +1,20 @@
+{
+  "seq": 13,
+  "timestamp": "2026-06-19T02:46:49.059483+00:00",
+  "event_type": "subtask_batch_started",
+  "component": "runner",
+  "iteration": 1,
+  "assignment_id": null,
+  "payload": {
+    "ready_task_ids": [
+      "T1",
+      "T2"
+    ],
+    "pending_task_ids": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "completed_task_ids": []
+  }
+}

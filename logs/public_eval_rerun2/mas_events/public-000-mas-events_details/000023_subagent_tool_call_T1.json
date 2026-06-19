@@ -1,0 +1,28 @@
+{
+  "seq": 23,
+  "timestamp": "2026-06-19T02:14:40.959646+00:00",
+  "event_type": "tool_call",
+  "component": "subagent",
+  "iteration": null,
+  "assignment_id": "T1",
+  "payload": {
+    "agent_name": "SECFilingResearchAgent",
+    "round": 0,
+    "call": {
+      "tool_name": "edgar_search",
+      "args": {
+        "search_query": "US Steel Nippon Steel merger",
+        "form_types": [
+          "8-K",
+          "10-Q",
+          "10-K",
+          "DEF 14A"
+        ],
+        "start_date": "2023-01-01",
+        "end_date": "2025-04-07",
+        "top_n_results": 20
+      },
+      "purpose": "Find SEC filings from US Steel referencing the merger with Nippon Steel, including announcement, terms, regulatory updates, and shareholder votes."
+    }
+  }
+}

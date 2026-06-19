@@ -1,0 +1,41 @@
+{
+  "query_result": {
+    "output_text": "Based on BBSI's Definitive Proxy Statement (DEF 14A) filed with the SEC on April 22, 2024, for the 2024 Annual Meeting of Stockholders held on June 3, 2024, the following **eight individuals** were nominated to serve on BBSI's Board of Directors:\n\n1. **Thomas J. Carley** \u2014 Retired Chief Operating Officer of Urth Organic Corporation (Director since 2000)\n2. **Joseph S. Clabby** \u2014 Retired Vice President at Chubb Limited (Director since 2022)\n3. **Thomas B. Cusick** \u2014 Retired Executive Advisor of Columbia Sportswear Company (Director since 2016)\n4. **Gary E. Kramer** \u2014 President and Chief Executive Officer of BBSI (Director since 2020)\n5. **Anthony Meeker** \u2014 Retired Managing Director of Victory Capital Management, Inc. (Director since 1993)\n6. **Carla A. Moradi** \u2014 Board member of BBSI and Patriot Growth Insurance Services, LLC (Director since 2021)\n7. **Alexandra Morehouse** \u2014 Board member of BBSI and Evalueserv, Inc. (Director since 2022)\n8. **Vincent P. Price** \u2014 Advisor to the CEO of Cambia Health Solutions, Inc. (Director since 2017)\n\nAll eight were already serving on the board and were nominated for re-election at the 2024 Annual Meeting of Stockholders. The Board of Directors recommended voting **FOR** each nominee.\n\nThe proxy statement notes that a nominee would be elected if they received the affirmative vote of a majority of the total votes cast (meaning shares voted \"for\" a nominee must exceed votes cast \"against\" that nominee).\n\n---\n\n**Sources:**\n\n{\n    \"sources\": [\n        {\n            \"url\": \"https://www.sec.gov/Archives/edgar/data/902791/000095017024046428/bbsi-20240422.htm\",\n            \"name\": \"Barrett Business Services, Inc. - Definitive Proxy Statement (DEF 14A), Filed April 22, 2024\"\n        }\n    ]\n}",
+    "output_parsed": null,
+    "reasoning": "I have all the information I need. The answer is clear: In 2024, the eight individuals nominated to serve on BBSI's Board of Directors were those listed in the proxy statement for the 2024 Annual Meeting of Stockholders.",
+    "finish_reason": {
+      "reason": "stop",
+      "raw": "stop"
+    },
+    "metadata": {
+      "cost": {
+        "input": 8.25e-06,
+        "output": 0.00099864,
+        "reasoning": 0.0001095,
+        "cache_read": 0.00123648,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.00235287,
+        "total_input": 0.00124473,
+        "total_output": 0.00110814
+      },
+      "duration_seconds": 3.8237459999800194,
+      "in_tokens": 15,
+      "out_tokens": 456,
+      "reasoning_tokens": 50,
+      "cache_read_tokens": 8832,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 8847,
+      "total_output_tokens": 506
+    },
+    "tool_calls": [],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [],
+  "duration_seconds": 24.779,
+  "retry_overhead_seconds": 20.951,
+  "effective_duration_seconds": 3.828
+}

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
 import json
-from typing import Any
+from typing import Any, Callable
 
 from model_library.base import LLM
 
-from .llm_utils import query_json, query_model, query_text
+from .llm_utils import query_json, query_text
 from .prompts import (
     AGGREGATION_SYSTEM,
     DECIDER_SYSTEM,
@@ -30,14 +30,30 @@ from .schemas import (
     TaskState,
     ValidationResult,
 )
+from .schema_utils import (
+    parse_aggregation_result,
+    parse_decider_result,
+    parse_inspection_result,
+    parse_plan,
+    parse_rubric_result,
+    parse_validation_result,
+)
+
+EventRecorder = Callable[..., None]
 
 
 class Orchestrator:
-    def __init__(self, llm: LLM):
+    def __init__(self, llm: LLM, event_recorder: EventRecorder | None = None):
         self._llm = llm
+        self._event_recorder = event_recorder
 
     async def decide(self, state: TaskState) -> DeciderResult:
-        decision = await query_model(self._llm, DeciderResult, DECIDER_SYSTEM, state.compact_context())
+        user = state.for_decider()
+        self._record_llm_input("decider", state.iteration, DECIDER_SYSTEM, user)
+        data = await query_json(self._llm, DECIDER_SYSTEM, user)
+        self._record_llm_json("decider", state.iteration, data)
+        decision = parse_decider_result(data)
+        self._record_result("decider", state.iteration, decision.model_dump(mode="json"))
         if not decision.should_answer and decision.next_goal_state is None:
             decision.next_goal_state = GoalState(
                 goal="Collect and verify the missing evidence needed for the answer.",
@@ -48,20 +64,29 @@ class Orchestrator:
 
     async def plan(self, state: TaskState) -> Plan:
         user = (
-            f"{state.compact_context()}\n\n"
+            f"{state.for_planner()}\n\n"
             "Plan for the current stage goal_state, not for the entire final answer unless the current state is ready."
         )
-        plan = await query_model(self._llm, Plan, PLANNER_SYSTEM, user)
-        return self._with_plan_defaults(plan)
+        self._record_llm_input("planner", state.iteration, PLANNER_SYSTEM, user)
+        data = await query_json(self._llm, PLANNER_SYSTEM, user)
+        self._record_llm_json("planner", state.iteration, data)
+        plan = parse_plan(data)
+        plan = self._with_plan_defaults(plan)
+        self._record_result("planner", state.iteration, plan.model_dump(mode="json"))
+        return plan
 
     async def inspect(self, state: TaskState, plan: Plan) -> InspectionResult:
         user = (
-            f"Current state:\n{state.compact_context()}\n\n"
+            f"Current state:\n{state.for_planner()}\n\n"
             f"Proposed plan:\n{plan.model_dump_json(indent=2)}"
         )
-        inspection = await query_model(self._llm, InspectionResult, INSPECTOR_SYSTEM, user)
+        self._record_llm_input("inspector", state.iteration, INSPECTOR_SYSTEM, user)
+        data = await query_json(self._llm, INSPECTOR_SYSTEM, user)
+        self._record_llm_json("inspector", state.iteration, data)
+        inspection = parse_inspection_result(data)
         if inspection.refined_plan is not None:
             inspection.refined_plan = self._with_plan_defaults(inspection.refined_plan)
+        self._record_result("inspector", state.iteration, inspection.model_dump(mode="json"))
         return inspection
 
     def _with_plan_defaults(self, plan: Plan) -> Plan:
@@ -265,34 +290,46 @@ class Orchestrator:
 
     async def aggregate(self, state: TaskState, plan: Plan, outputs: list[SubagentOutput]) -> AggregationResult:
         user = (
-            f"Current state:\n{state.compact_context()}\n\n"
+            f"Current state:\n{state.for_aggregation()}\n\n"
             f"Plan used for this execution:\n{plan.model_dump_json(indent=2)}\n\n"
             "New subagent outputs:\n"
             + json.dumps([output.model_dump(mode="json") for output in outputs], indent=2)
             + "\n\nDebate critiques:\n"
             + json.dumps([critique.model_dump(mode="json") for critique in state.critiques[-12:]], indent=2)
         )
+        self._record_llm_input("aggregation", state.iteration, AGGREGATION_SYSTEM, user)
         data = await query_json(self._llm, AGGREGATION_SYSTEM, user)
-        return AggregationResult.model_validate(data)
+        self._record_llm_json("aggregation", state.iteration, data)
+        result = parse_aggregation_result(data)
+        self._record_result("aggregation", state.iteration, result.model_dump(mode="json"))
+        return result
 
     async def validate(self, state: TaskState, plan: Plan, aggregation: AggregationResult) -> ValidationResult:
         user = (
             f"Current stage goal_state:\n{plan.goal_state.model_dump_json(indent=2)}\n\n"
             f"Aggregation result:\n{aggregation.model_dump_json(indent=2)}\n\n"
-            f"State:\n{state.compact_context()}\n\n"
+            f"State:\n{state.for_validation()}\n\n"
             "Recent subagent outputs:\n"
             + json.dumps([item.model_dump(mode="json") for item in state.subagent_outputs[-8:]], indent=2)
         )
-        return await query_model(self._llm, ValidationResult, VALIDATOR_SYSTEM, user)
+        self._record_llm_input("validation", state.iteration, VALIDATOR_SYSTEM, user)
+        data = await query_json(self._llm, VALIDATOR_SYSTEM, user)
+        self._record_llm_json("validation", state.iteration, data)
+        result = parse_validation_result(data)
+        self._record_result("validation", state.iteration, result.model_dump(mode="json"))
+        return result
 
     async def final_answer(self, state: TaskState) -> str:
         user = (
             f"Question:\n{state.question}\n\n"
-            f"State:\n{state.compact_context()}\n\n"
+            f"State:\n{state.for_final_answer()}\n\n"
             "Accepted facts:\n"
             + json.dumps([item.model_dump(mode="json") for item in state.accepted_facts], indent=2)
         )
-        return await query_text(self._llm, FINAL_ANSWER_SYSTEM, user)
+        self._record_llm_input("final_answer", state.iteration, FINAL_ANSWER_SYSTEM, user)
+        answer = await query_text(self._llm, FINAL_ANSWER_SYSTEM, user)
+        self._record_result("final_answer", state.iteration, {"answer": answer})
+        return answer
 
     async def judge_final(self, state: TaskState, answer: str) -> RubricResult:
         user = (
@@ -301,4 +338,26 @@ class Orchestrator:
             "Evidence state:\n"
             + json.dumps([item.model_dump(mode="json") for item in state.accepted_facts], indent=2)
         )
-        return await query_model(self._llm, RubricResult, RUBRIC_SYSTEM, user)
+        self._record_llm_input("rubric_judge", state.iteration, RUBRIC_SYSTEM, user)
+        data = await query_json(self._llm, RUBRIC_SYSTEM, user)
+        self._record_llm_json("rubric_judge", state.iteration, data)
+        result = parse_rubric_result(data)
+        self._record_result("rubric_judge", state.iteration, result.model_dump(mode="json"))
+        return result
+
+    def _record_llm_input(self, component: str, iteration: int, system: str, user: str) -> None:
+        if self._event_recorder is not None:
+            self._event_recorder(
+                "llm_input",
+                component=component,
+                iteration=iteration,
+                payload={"system": system, "user": user},
+            )
+
+    def _record_llm_json(self, component: str, iteration: int, data: dict[str, Any]) -> None:
+        if self._event_recorder is not None:
+            self._event_recorder("llm_json_output", component=component, iteration=iteration, payload=data)
+
+    def _record_result(self, component: str, iteration: int, result: dict[str, Any]) -> None:
+        if self._event_recorder is not None:
+            self._event_recorder("component_result", component=component, iteration=iteration, payload=result)

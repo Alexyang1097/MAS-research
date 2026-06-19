@@ -20,6 +20,9 @@ class GoalState(BaseModel):
             f"Success criteria: {self.success_criteria}"
         )
 
+    def is_equivalent_to(self, other: "GoalState") -> bool:
+        return _normalize_goal_text(self.goal) == _normalize_goal_text(other.goal)
+
 
 class EvidenceItem(BaseModel):
     claim: str
@@ -192,6 +195,13 @@ class RubricResult(BaseModel):
     required_fixes: list[str] = Field(default_factory=list)
 
 
+class FinalAttempt(BaseModel):
+    iteration: int
+    answer: str
+    rubric: RubricResult
+    trigger: str
+
+
 class TaskState(BaseModel):
     question: str
     final_goal: GoalState = Field(default_factory=lambda: GoalState(
@@ -231,49 +241,30 @@ class TaskState(BaseModel):
     aggregations: list[AggregationResult] = Field(default_factory=list)
     validations: list[ValidationResult] = Field(default_factory=list)
     rubric_results: list[RubricResult] = Field(default_factory=list)
+    final_attempts: list[FinalAttempt] = Field(default_factory=list)
     unresolved_issues: list[str] = Field(default_factory=list)
 
-    def compact_context(self) -> str:
+    def for_decider(self) -> str:
         parts = [
             f"Question: {self.question}",
             f"Final goal:\n{self.final_goal.compact()}",
             f"Current stage goal_state:\n{self.goal_state.compact()}",
             f"Iteration: {self.iteration}",
-            f"Data storage keys: {', '.join(self.tool_state_keys) or '(none)'}",
         ]
-        if self.capability_profiles:
-            profiles = "\n".join(
-                f"- {profile.agent_name}: score={profile.score:.2f}, successes={profile.successes}, failures={profile.failures}, "
-                f"tags={profile.capability_tags}, success_examples={profile.representative_success_tasks[-3:]}, "
-                f"failure_cases={profile.failure_cases[-3:]}"
-                for profile in self.capability_profiles.values()
-            )
-            parts.append(f"Agent capability profiles:\n{profiles}")
-        if self.decisions:
-            decision = self.decisions[-1]
-            parts.append(
-                "Last decider result:\n"
-                f"should_answer={decision.should_answer}, confidence={decision.confidence}, "
-                f"next_goal_state={decision.next_goal_state.model_dump(mode='json') if decision.next_goal_state else None}, "
-                f"reason={decision.reason}"
-            )
+        if self.candidate_answer:
+            parts.append(f"Current candidate answer:\n{self.candidate_answer}")
+        if self.accepted_facts:
+            parts.append(f"Accepted facts summary:\n{self._facts_summary(limit=8)}")
+        if self.unresolved_issues:
+            parts.append("Unresolved issues:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-10:]))
         if self.aggregations:
             aggregation = self.aggregations[-1]
             parts.append(
-                "Last aggregation:\n"
-                f"task_assessments={[item.model_dump(mode='json') for item in aggregation.task_assessments]}, "
-                f"conflicts={aggregation.conflicts}, unresolved={aggregation.unresolved_issues}"
+                "Last aggregation summary:\n"
+                f"task_completion={self._task_assessment_summary(aggregation)}\n"
+                f"conflicts={aggregation.conflicts}\n"
+                f"confidence_fusion={aggregation.confidence_fusion}"
             )
-        if self.accepted_facts:
-            facts = "\n".join(
-                f"- {item.claim} | value={item.value or 'n/a'} | source={item.source_name or item.source_url or 'n/a'}"
-                for item in self.accepted_facts[-12:]
-            )
-            parts.append(f"Accepted facts:\n{facts}")
-        if self.candidate_answer:
-            parts.append(f"Current candidate answer:\n{self.candidate_answer}")
-        if self.unresolved_issues:
-            parts.append("Unresolved issues:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-10:]))
         if self.validations:
             last = self.validations[-1]
             parts.append(
@@ -287,4 +278,142 @@ class TaskState(BaseModel):
                 "Last rubric result:\n"
                 f"passed={last_rubric.passed}, score={last_rubric.score}, required_fixes={last_rubric.required_fixes}"
             )
+        if self.final_attempts:
+            parts.append(f"Final attempt pool: {self._final_attempts_summary()}")
         return "\n\n".join(parts)
+
+    def for_planner(self) -> str:
+        parts = [
+            f"Question: {self.question}",
+            f"Final goal:\n{self.final_goal.compact()}",
+            f"Current stage goal_state:\n{self.goal_state.compact()}",
+            f"Iteration: {self.iteration}",
+            f"Data storage keys: {', '.join(self.tool_state_keys) or '(none)'}",
+            f"Agent capability profiles:\n{self._capability_profiles_summary()}",
+        ]
+        if self.accepted_facts:
+            parts.append(f"Accepted facts summary:\n{self._facts_summary(limit=8)}")
+        if self.unresolved_issues:
+            parts.append("Open issues to plan around:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-8:]))
+        if self.validations:
+            last = self.validations[-1]
+            parts.append(
+                "Last validation feedback:\n"
+                f"missing={last.missing}\nconcerns={last.concerns}\nsuggested_next_goal={last.suggested_next_goal}"
+            )
+        return "\n\n".join(parts)
+
+    def for_subagent(self) -> str:
+        parts = [
+            f"Question: {self.question}",
+            f"Current stage goal_state:\n{self.goal_state.compact()}",
+            f"Data storage keys: {', '.join(self.tool_state_keys) or '(none)'}",
+        ]
+        if self.accepted_facts:
+            parts.append(f"Accepted facts relevant so far:\n{self._facts_summary(limit=6)}")
+        if self.unresolved_issues:
+            parts.append("Unresolved issues:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-6:]))
+        if self.candidate_answer:
+            parts.append(f"Current candidate answer, if relevant:\n{self.candidate_answer}")
+        return "\n\n".join(parts)
+
+    def for_aggregation(self) -> str:
+        parts = [
+            f"Question: {self.question}",
+            f"Current stage goal_state:\n{self.goal_state.compact()}",
+            f"Aggregation rule should update state while preserving conflicts and unsupported claims.",
+        ]
+        if self.accepted_facts:
+            parts.append(f"Previously accepted facts:\n{self._facts_summary(limit=10)}")
+        if self.unresolved_issues:
+            parts.append("Prior unresolved issues:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-8:]))
+        return "\n\n".join(parts)
+
+    def for_validation(self) -> str:
+        parts = [
+            f"Question: {self.question}",
+            f"Final goal:\n{self.final_goal.compact()}",
+            f"Current stage goal_state:\n{self.goal_state.compact()}",
+            f"Accepted facts summary:\n{self._facts_summary(limit=10) if self.accepted_facts else '(none)'}",
+        ]
+        if self.candidate_answer:
+            parts.append(f"Current candidate answer:\n{self.candidate_answer}")
+        if self.unresolved_issues:
+            parts.append("Unresolved issues:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-10:]))
+        return "\n\n".join(parts)
+
+    def for_final_answer(self) -> str:
+        parts = [
+            f"Question: {self.question}",
+            f"Final goal:\n{self.final_goal.compact()}",
+        ]
+        if self.candidate_answer:
+            parts.append(f"Candidate answer to revise/finalize:\n{self.candidate_answer}")
+        if self.accepted_facts:
+            parts.append(f"Accepted evidence facts:\n{self._facts_summary(limit=20, include_location=True)}")
+        if self.unresolved_issues:
+            parts.append("Known unresolved issues or required fixes:\n" + "\n".join(f"- {issue}" for issue in self.unresolved_issues[-10:]))
+        if self.rubric_results:
+            last_rubric = self.rubric_results[-1]
+            parts.append(
+                "Last rubric feedback:\n"
+                f"numeric_accuracy={last_rubric.numeric_accuracy}\n"
+                f"logic_correctness={last_rubric.logic_correctness}\n"
+                f"evidence_quality={last_rubric.evidence_quality}\n"
+                f"required_fixes={last_rubric.required_fixes}"
+            )
+        if self.final_attempts:
+            parts.append(f"Previous final attempts:\n{self._final_attempts_summary()}")
+        return "\n\n".join(parts)
+
+    def compact_context(self) -> str:
+        return self.for_planner()
+
+    def _facts_summary(self, limit: int, include_location: bool = False) -> str:
+        lines = []
+        for item in self.accepted_facts[-limit:]:
+            source = item.source_name or item.source_url or "n/a"
+            line = f"- {item.claim} | value={item.value or 'n/a'} | source={source} | confidence={item.confidence:.2f}"
+            if include_location and item.quote_or_location:
+                line += f" | location={item.quote_or_location}"
+            lines.append(line)
+        return "\n".join(lines)
+
+    def _capability_profiles_summary(self) -> str:
+        if not self.capability_profiles:
+            return "(none)"
+        return "\n".join(
+            f"- {profile.agent_name}: description={profile.description}, score={profile.score:.2f}, "
+            f"tags={profile.capability_tags}, "
+            f"success_examples={profile.representative_success_tasks[-2:]}, failures={profile.failure_cases[-2:]}"
+            for profile in self.capability_profiles.values()
+        )
+
+    def _task_assessment_summary(self, aggregation: AggregationResult) -> list[dict[str, object]]:
+        return [
+            {
+                "task_id": item.task_id,
+                "agent": item.assigned_agent,
+                "completed": item.completed,
+                "score": item.score,
+                "missing": item.missing_criteria,
+                "contradictions": item.contradictions,
+            }
+            for item in aggregation.task_assessments
+        ]
+
+    def _final_attempts_summary(self) -> list[dict[str, object]]:
+        return [
+            {
+                "iteration": attempt.iteration,
+                "score": attempt.rubric.score,
+                "passed": attempt.rubric.passed,
+                "trigger": attempt.trigger,
+                "required_fixes": attempt.rubric.required_fixes,
+            }
+            for attempt in self.final_attempts[-5:]
+        ]
+
+
+def _normalize_goal_text(text: str) -> str:
+    return " ".join(text.lower().strip().split())

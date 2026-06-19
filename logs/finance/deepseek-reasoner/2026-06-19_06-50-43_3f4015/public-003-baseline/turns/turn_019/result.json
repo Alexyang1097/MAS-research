@@ -1,0 +1,73 @@
+{
+  "query_result": {
+    "output_text": "",
+    "output_parsed": null,
+    "reasoning": "Let me try to find the actual AMD Q4 2024 earnings press release.",
+    "finish_reason": {
+      "reason": "tool_calls",
+      "raw": "tool_calls"
+    },
+    "metadata": {
+      "cost": {
+        "input": 0.0012199,
+        "output": 0.00013578,
+        "reasoning": 3.7229999999999994e-05,
+        "cache_read": 0.00666624,
+        "cache_write": null,
+        "total_override": null,
+        "total": 0.008059150000000001,
+        "total_input": 0.00788614,
+        "total_output": 0.00017301
+      },
+      "duration_seconds": 1.724806832993636,
+      "in_tokens": 2218,
+      "out_tokens": 62,
+      "reasoning_tokens": 17,
+      "cache_read_tokens": 47616,
+      "cache_write_tokens": null,
+      "extra": {},
+      "total_input_tokens": 49834,
+      "total_output_tokens": 79
+    },
+    "tool_calls": [
+      {
+        "id": "call_00_pvfIHgSc0qQ3AGaIeU6F8397",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"site:globenewswire.com AMD \\\"fourth quarter\\\" 2024 financial results\"}",
+        "parsed_args": {
+          "search_query": "site:globenewswire.com AMD \"fourth quarter\" 2024 financial results"
+        }
+      }
+    ],
+    "extras": {
+      "citations": []
+    }
+  },
+  "tool_call_records": [
+    {
+      "tool_call": {
+        "id": "call_00_pvfIHgSc0qQ3AGaIeU6F8397",
+        "call_id": null,
+        "name": "web_search",
+        "args": "{\"search_query\": \"site:globenewswire.com AMD \\\"fourth quarter\\\" 2024 financial results\"}",
+        "parsed_args": {
+          "search_query": "site:globenewswire.com AMD \"fourth quarter\" 2024 financial results"
+        }
+      },
+      "tool_output": {
+        "output": "[{\"url\": \"https://www.globenewswire.com/news-release/2024/07/30/2921412/0/en/amd-reports-second-quarter-2024-financial-results.html\", \"title\": \"AMD Reports Second Quarter 2024 Financial Results\", \"content\": \"Media Contact:  \\nDrew Prairie  \\nAMD Communications  \\n512-602-4425  \\ndrew.prairie@amd.com  \\n          \\nInvestor Contact:  \\nMitch Haws  \\nAMD Investor Relations  \\n408-749-3124  \\nmitch.haws@amd.com\\n\\n## Tags\\n\\n AMD   earnings   Instinct\\n\\n GlobeNewswire\\n\\n## Recommended Reading\\n\\n June 08, 2026 04:30 ET | Source: Advanced Micro Devices, Inc.\\n\\n  AMD Commits up to \\u00a32 Billion to Accelerate AI Innovation and Research in the United Kingdom\", \"score\": 0.9086031265793066, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2025/01/14/3009648/0/en/AMD-to-Report-Fiscal-Fourth-Quarter-and-Full-Year-2024-Financial-Results.html\", \"title\": \"AMD to Report Fiscal Fourth Quarter and Full Year 2024\", \"content\": \"AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and may be trademarks of their respective owners.\\n\\nContact  \\nDrew Prairie  \\nAMD Communications  \\n512-602-4425  \\ndrew.prairie@amd.com\\n\\nMatt Ramsay  \\nAMD Investor Relations  \\n512-496-0197  \\nMatthew.Ramsay@amd.com\\n\\n## Tags\\n\\n AMD earnings\\n\\n GlobeNewswire\\n\\n## Recommended Reading\\n\\n March 02, 2026 03:00 ET | Source: Advanced Micro Devices, Inc.\", \"score\": 0.9057379198706381, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2025/01/14/3009648/0/en/index.html\", \"title\": \"AMD to Report Fiscal Fourth Quarter and Full Year 2024\", \"content\": \"AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and may be trademarks of their respective owners.\\n\\nContact  \\nDrew Prairie  \\nAMD Communications  \\n512-602-4425  \\ndrew.prairie@amd.com\\n\\nMatt Ramsay  \\nAMD Investor Relations  \\n512-496-0197  \\nMatthew.Ramsay@amd.com\\n\\n## Tags\\n\\n AMD earnings\\n\\n GlobeNewswire\\n\\n## Recommended Reading\\n\\n June 08, 2026 04:30 ET | Source: Advanced Micro Devices, Inc.\", \"score\": 0.9057379198706381, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2024/07/16/2914166/0/en/AMD-to-Report-Fiscal-Second-Quarter-2024-Financial-Results.html\", \"title\": \"AMD to Report Fiscal Second Quarter 2024 Financial Results\", \"content\": \"AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and may be trademarks of their respective owners.\\n\\nContact  \\nDrew Prairie  \\nAMD Communications  \\n512-602-4425  \\ndrew.prairie@amd.com\\n\\nMitch Haws  \\nAMD Investor Relations  \\n408-749-3124  \\n mitch.haws@amd.com\\n\\n## Tags\\n\\n amd   earnings\\n\\n GlobeNewswire\\n\\n## Recommended Reading\\n\\n June 08, 2026 04:30 ET | Source: Advanced Micro Devices, Inc.\", \"score\": 0.9049249877685559, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2024/04/16/2864107/0/en/AMD-to-Report-Fiscal-First-Quarter-2024-Financial-Results.html\", \"title\": \"AMD to Report Fiscal First Quarter 2024 Financial Results\", \"content\": \"AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and may be trademarks of their respective owners.\\n\\nContact  \\nDrew Prairie  \\nAMD Communications  \\n512-602-4425  \\ndrew.prairie@amd.com\\n\\nMitch Haws  \\nAMD Investor Relations  \\n408-749-3124  \\n mitch.haws@amd.com\\n\\n## Tags\\n\\n AMD earnings\\n\\n GlobeNewswire\\n\\n## Recommended Reading\\n\\n June 08, 2026 04:30 ET | Source: Advanced Micro Devices, Inc.\", \"score\": 0.9049249877685559, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2025/02/11/3024593/0/en/Cricut-to-Announce-Fourth-Quarter-2024-Financial-Results-on-March-4-2025.html\", \"title\": \"Cricut to Announce Fourth Quarter 2024 Financial Results on\", \"content\": \"Investor Relations  \\nJim Suva  \\ninvestors@cricut.com\\n\\nSource: Cricut, Inc.\\n\\n  \\n\\n GlobeNewswire\\n\\n## Recommended Reading\\n\\n May 05, 2026 16:05 ET | Source: Cricut, Inc.\\n\\n  Cricut, Inc. Reports First Quarter 2026 Financial Results\\n\\n  Over 3 million Paid Subscribers, up 3% over Q1 2025   Q1 2026 revenue of $159.5 million, down 2% compared to Q1 2025 Net income of $20.3 million, down 15% compared to Q1 2025 Recurring semi-annual...\\n\\n  Read More\", \"score\": 0.8955482192744572, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2025/03/29/3051722/0/en/Financial-Results-for-the-Fourth-Quarter-of-2024.html\", \"title\": \"Financial Results for the Fourth Quarter of 2024\", \"content\": \"HFP's detailed fourth quarter report can be accessed at its website www.heliosinvestment.com/helios-fairfax-partners.\\n\\nAbout Helios Fairfax Partners Corporation\", \"score\": 0.8775701338200734, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2024/10/16/2964097/0/en/AMD-to-Report-Fiscal-Third-Quarter-2024-Financial-Results.html\", \"title\": \"AMD to Report Fiscal Third Quarter 2024 Financial Results\", \"content\": \"AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and may be trademarks of their respective owners.\\n\\nContact  \\nDrew Prairie  \\nAMD Communications  \\n512-602-4425  \\ndrew.prairie@amd.com\\n\\nMitch Haws  \\nAMD Investor Relations  \\n408-749-3124  \\n mitch.haws@amd.com\\n\\n## Tags\\n\\n## Recommended Reading\", \"score\": 0.8631996343010396, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2023/01/31/2598979/0/en/amd-reports-fourth-quarter-and-full-year-2022-financial-results.html\", \"title\": \"AMD Reports Fourth Quarter and Full Year 2022 Financial\", \"content\": \"AMD Teleconference  \\nAMD will hold a conference call for the financial community at 2:00 p.m. PT (5:00 p.m. ET) today to discuss its fourth quarter and full-year 2022 financial results. AMD will provide a real-time audio broadcast of the teleconference on the Investor Relations page of its website at www.amd.com.\", \"score\": 0.8508373533699993, \"raw_content\": null}, {\"url\": \"https://www.globenewswire.com/news-release/2025/01/16/3011149/0/en/Adeia-to-Release-Fourth-Quarter-2024-Financial-Results-on-February-18-2025.html\", \"title\": \"Adeia to Release Fourth Quarter 2024 Financial Results on\", \"content\": \"and play. For more, please visit www.adeia.com. Adeia Investor Contact:Chris Chaney. ## Tags. Adeia   earnings   IP   intellectual property   licensing   license agreement. ## Recommended Reading.  May 04, 2026 16:06 ET | Source: Adeia Inc. Adeia Announces CEO Paul Davis to Step Down by the Fourth Quarter of 2026; Board Launches Search Process. ADEIA ANNOUNCES CEO PAUL DAVIS TO STEP DOWN BY THE FOURTH QUARTER OF 2026; BOARD LAUNCHES SEARCH PROCESS.  May 04, 2026 16:05 ET | Source: Adeia Inc.\", \"score\": 0.8166202674279076, \"raw_content\": null}]",
+        "error": null,
+        "metadata": null,
+        "done": false,
+        "success": true
+      },
+      "duration_seconds": 1.008,
+      "error": null,
+      "success": true
+    }
+  ],
+  "duration_seconds": 2.752,
+  "retry_overhead_seconds": 0.016,
+  "effective_duration_seconds": 2.736
+}
